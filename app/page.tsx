@@ -7,7 +7,7 @@ export default function Home() {
             Dee Unbound
           </a>
 
-          <div className="hidden gap-6 text-sm text-neutral-300 md:flex">
+          <div className="hidden items-center gap-6 text-sm text-neutral-300 md:flex">
             <a href="/about" className="transition hover:text-white">
               About
             </a>
@@ -17,13 +17,47 @@ export default function Home() {
             <a href="/projects" className="transition hover:text-white">
               Projects
             </a>
-            <a href="#travel" className="transition hover:text-white">
-              Travel
-            </a>
+            <div className="relative group">
+              <button
+                type="button"
+                className="flex items-center gap-1 transition hover:text-white"
+              >
+                Travel
+                <span className="text-xs">▾</span>
+              </button>
+
+              <div className="absolute left-0 top-full mt-3 hidden min-w-[220px] rounded-2xl border border-white/10 bg-neutral-900/95 p-2 shadow-xl group-hover:block">
+                <a
+                  href="/travel/essentials"
+                  className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  Essentials
+                </a>
+                <a
+                  href="/travel/destinations"
+                  className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  Destinations
+                </a>
+                <a
+                  href="/travel/stories"
+                  className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  Stories
+                </a>
+                <a
+                  href="/travel/photos"
+                  className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  Photos
+                </a>
+              </div>
+            </div>
             <a href="#plants" className="transition hover:text-white">
               Plants
             </a>
           </div>
+          
         </nav>
       </header>
 
