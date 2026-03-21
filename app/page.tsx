@@ -8,13 +8,13 @@ export default function Home() {
           </a>
 
           <div className="hidden gap-6 text-sm text-neutral-300 md:flex">
-            <a href="#about" className="transition hover:text-white">
+            <a href="/about" className="transition hover:text-white">
               About
             </a>
-            <a href="#blog" className="transition hover:text-white">
+            <a href="/blog" className="transition hover:text-white">
               Blog
             </a>
-            <a href="#projects" className="transition hover:text-white">
+            <a href="/projects" className="transition hover:text-white">
               Projects
             </a>
             <a href="#travel" className="transition hover:text-white">
