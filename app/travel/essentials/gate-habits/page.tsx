@@ -15,7 +15,7 @@ export default function GateHabits() {
         The most underrated part of travel? Before boarding, I treat gate time like a "setup phase" instead of dead time. Future-me always thanks me for this.
       </p>
 
-      <div className="flex items-center gap-4 pb-8 border-b border-neutral-200 dark:border-neutral-800 text-xs text-[var(--muted)]">
+      <div className="flex items-center gap-4 pb-8 border-b border-[var(--border)] text-xs text-[var(--muted)]">
         <span>By Dee</span>
         <span className="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
         <span>7 min read</span>
@@ -29,7 +29,7 @@ export default function GateHabits() {
         {/* 1. Maps */}
         <StepCard number="1" color="teal">
           <StepHeader title="Download maps offline" tagline="Never get stuck searching for directions without signal" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               Google Maps offline is a lifesaver, especially when you land without signal or don't
               want to burn through roaming data. The key is to download by area — not just the
@@ -47,7 +47,7 @@ export default function GateHabits() {
         {/* 2. eSIM */}
         <StepCard number="2" color="gold">
           <StepHeader title="Get your eSIM ready" tagline="Land and get connected right away" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               This is the step that makes the biggest difference when you land. Instead of
               standing in arrivals hunting for a SIM kiosk, you activate your data in seconds.
@@ -77,7 +77,7 @@ export default function GateHabits() {
         {/* 3. Itinerary */}
         <StepCard number="3" color="blue">
           <StepHeader title="Keep your itinerary offline" tagline="Airport Wi-Fi is chaos — plan for it" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               I keep a dedicated Google Drive folder for every trip. Before I board, I make
               sure everything critical is available offline — no internet needed.
@@ -108,7 +108,7 @@ export default function GateHabits() {
         {/* 4. First day */}
         <StepCard number="4" color="orange">
           <StepHeader title="Plan your first day" tagline="Decision fatigue after travel is real" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               When you land jet-lagged and disoriented, even "where should we eat?" can feel
               overwhelming. Decide three things before you board:
@@ -128,7 +128,7 @@ export default function GateHabits() {
         {/* 5. Stay details */}
         <StepCard number="5" color="purple">
           <StepHeader title="Confirm stay details" tagline="Don't assume — verify while you still have Wi-Fi" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               Pull up your booking confirmation and double-check three things:{" "}
               <strong className="text-neutral-700 dark:text-neutral-300 font-medium">the exact address</strong>,{" "}
@@ -148,7 +148,7 @@ export default function GateHabits() {
         {/* 6. Share itinerary */}
         <StepCard number="6" color="teal">
           <StepHeader title="Share your itinerary" tagline="Just in case" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               Always send a copy to someone who isn't on the trip — a parent, a close friend,
               a partner staying home. Flight details, accommodation addresses, a contact number
@@ -164,7 +164,7 @@ export default function GateHabits() {
         {/* 7. World clocks */}
         <StepCard number="7" color="gold">
           <StepHeader title="Add world clocks" tagline="Especially useful if you're working across time zones" />
-          <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-[var(--muted)] space-y-3">
+          <div className="px-7 pb-7 text-sm leading-relaxed text-[var(--muted)] space-y-3">
             <p>
               On iPhone: <strong className="text-neutral-700 dark:text-neutral-300 font-medium">Clock app → World Clock → "+"</strong>.
               On Android: <strong className="text-neutral-700 dark:text-neutral-300 font-medium">Clock app → Add city</strong>.
@@ -180,13 +180,13 @@ export default function GateHabits() {
       </div>
 
       {/* ── Closing ── */}
-      <div className="mt-14 pt-10 border-t border-neutral-200 dark:border-neutral-800 space-y-4">
-        <p className="font-serif italic text-lg text-neutral-600 dark:text-[var(--muted)] leading-relaxed">
+      <div className="mt-14 pt-10 border-t border-[var(--border)] space-y-4">
+        <p className="font-serif italic text-lg text-[var(--muted)] leading-relaxed">
           None of this takes more than 20–30 minutes. You're sitting at the gate anyway —
           might as well use it. The version of you that lands tired, hungry, and slightly
           disoriented will be genuinely grateful you did this.
         </p>
-        <p className="font-serif italic text-lg text-neutral-600 dark:text-[var(--muted)]">Safe travels. ✈️</p>
+        <p className="font-serif italic text-lg text-[var(--muted)]">Safe travels. ✈️</p>
         <p className="text-sm text-[var(--muted)]">— Dee</p>
       </div>
 
@@ -210,7 +210,7 @@ const colorMap: Record<Color, { card: string; number: string }> = {
 function StepCard({ number, color, children }: { number: string; color: Color; children: React.ReactNode }) {
   const c = colorMap[color];
   return (
-    <article className={`border border-neutral-200 dark:border-neutral-800 rounded-xl bg-white dark:border-[var(--border)] overflow-hidden transition-shadow duration-200 hover:shadow-lg ${c.card}`}>
+    <article className={`border border-[var(--border)] rounded-xl bg-[var(--bg)] overflow-hidden transition-shadow duration-200 hover:shadow-lg ${c.card}`}>
       <div className="flex items-start gap-4 pt-6 px-7 pb-5">
         <div className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-sm font-medium mt-0.5 ${c.number}`}>
           {number}
@@ -259,7 +259,7 @@ function HowToBox({ color, steps }: { color: Color; steps: { n: string; text: Re
             <span className={`flex-shrink-0 w-6 h-6 rounded-full text-xs font-medium flex items-center justify-center mt-0.5 ${numBadgeMap[color]}`}>
               {s.n}
             </span>
-            <span className="text-neutral-600 dark:text-[var(--muted)] leading-relaxed">{s.text}</span>
+            <span className="text-[var(--muted)] leading-relaxed">{s.text}</span>
           </div>
         ))}
       </div>

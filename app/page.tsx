@@ -29,28 +29,28 @@ export default function Home() {
               </button>
 
               <div className="absolute left-0 top-full z-50 pt-1 opacity-0 invisible transition-all duration-150 group-hover:visible group-hover:opacity-100">
-                <div className="min-w-[220px] rounded-2xl border border-[var(--border)] bg-neutral-900 p-2 shadow-xl">
+                <div className="min-w-[220px] rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-2 shadow-xl">
                   <a
                     href="/travel/essentials"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
+                    className="block rounded-xl px-4 py-2 text-sm text-[var(--muted)] transition hover:bg-black/5 hover:text-[var(--text)]"
                   >
                     Essentials
                   </a>
                   <a
                     href="/travel/destinations"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
+                    className="block rounded-xl px-4 py-2 text-sm text-[var(--muted)] transition hover:bg-black/5 hover:text-[var(--text)]"
                   >
                     Destinations
                   </a>
                   <a
                     href="/travel/stories"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
+                    className="block rounded-xl px-4 py-2 text-sm text-[var(--muted)] transition hover:bg-black/5 hover:text-[var(--text)]"
                   >
                     Stories
                   </a>
                   <a
                     href="/travel/photos"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
+                    className="block rounded-xl px-4 py-2 text-sm text-[var(--muted)] transition hover:bg-black/5 hover:text-[var(--text)]"
                   >
                     Photos
                   </a>
