@@ -32,7 +32,7 @@ export default function GateHabits() {
 
         <h2 className="text-xl font-semibold mt-6">3. Keep itinerary offline</h2>
         <p>
-          Screenshots > emails. Always. Airports + bad WiFi = chaos.
+          Screenshots of emails. Always. Airports + bad WiFi = chaos.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">4. Plan your first day</h2>
