@@ -12,7 +12,7 @@ export default function GateHabits() {
             Dee Unbound
           </Link>
 
-          <nav className="flex items-center gap-4 text-xs uppercase tracking-[0.18em] text-[var(--muted)] md:text-sm">
+          <nav className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)] md:text-sm">
             <Link href="/travel" className="hover:text-[var(--text)]">
               Travel
             </Link>
@@ -31,17 +31,17 @@ export default function GateHabits() {
           Travel Essentials
         </span>
 
-        <h1 className="max-w-5xl font-serif text-5xl font-semibold leading-[1.05] tracking-tight text-[var(--text)] md:text-7xl">
+        <h1 className="max-w-5xl font-serif text-5xl font-semibold leading-[1.08] tracking-tight text-[var(--text)] md:text-6xl">
           What I Do at the Airport Gate That Saves Me Hours Later
         </h1>
 
-        <p className="mt-10 max-w-5xl text-2xl leading-[1.7] text-neutral-700">
+        <p className="mt-8 max-w-4xl text-xl leading-9 text-neutral-700">
           The most underrated part of travel? The time you spend waiting at the
           gate. This is where I quietly set up my entire next 24 hours — so
           future-me can actually enjoy the trip.
         </p>
 
-        <div className="mt-12 flex items-center gap-6 border-b border-[var(--border)] pb-12 text-sm text-[var(--muted)]">
+        <div className="mt-10 flex items-center gap-6 border-b border-[var(--border)] pb-10 text-sm text-[var(--muted)]">
           <span>By Dee</span>
           <span className="h-1 w-1 rounded-full bg-neutral-300" />
           <span>7 min read</span>
@@ -49,154 +49,194 @@ export default function GateHabits() {
           <span>Updated 2025</span>
         </div>
 
-        <blockquote className="mt-16 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-10 font-serif text-3xl italic leading-[1.6] text-[#5b4031]">
+        <blockquote className="mt-14 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-8 font-serif text-2xl italic leading-relaxed text-[#5b4031]">
           Before boarding, I treat gate time like a &quot;setup phase&quot;
           instead of dead time. Future-me always thanks me for this.
         </blockquote>
 
-        <section className="mt-14 space-y-10">
-          <StepCard number="1" title="Download maps offline" tagline="Never get stuck searching for directions without signal">
-            <p>
-              Google Maps offline is a lifesaver, especially when you land
-              without signal or don&apos;t want to burn through roaming data.
-              The key is to download by area — not just the country — so the
-              file stays manageable and searches stay fast.
-            </p>
-
-            <HowToBox
-              steps={[
-                <>
-                  Open Google Maps → tap your profile photo →{" "}
-                  <strong>Offline maps</strong> →{" "}
-                  <strong>Select your own map</strong>.
-                </>,
-                <>
-                  Zoom into the first city or region you&apos;ll visit.
-                  Download it and give it a clear name — e.g.{" "}
-                  <strong>&quot;Istanbul&quot;</strong>.
-                </>,
-                <>
-                  If you&apos;re continuing to another region, repeat for each
-                  one separately.
-                </>,
-                <>
-                  Refresh these downloads before every trip so they do not
-                  expire.
-                </>,
-              ]}
+        <section className="mt-14 space-y-8">
+          <StepCard number="1" color="teal">
+            <StepHeader
+              title="Download maps offline"
+              tagline="Never get stuck searching for directions without signal"
             />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                Google Maps offline is a lifesaver, especially when you land
+                without signal or don&apos;t want to burn through roaming data.
+                The key is to download by area — not just the country — so the
+                file stays manageable and searches stay fast.
+              </p>
+
+              <HowToBox
+                steps={[
+                  <>
+                    Open Google Maps → tap your profile photo →{" "}
+                    <strong>Offline maps</strong> →{" "}
+                    <strong>Select your own map</strong>.
+                  </>,
+                  <>
+                    Zoom into the first city or region you&apos;ll visit.
+                    Download it and give it a clear name — e.g.{" "}
+                    <strong>&quot;Istanbul&quot;</strong>.
+                  </>,
+                  <>
+                    If you&apos;re continuing to another region, repeat for each
+                    one separately.
+                  </>,
+                  <>
+                    Refresh these downloads before every trip so they do not
+                    expire.
+                  </>,
+                ]}
+              />
+            </div>
           </StepCard>
 
-          <StepCard number="2" title="Get your eSIM ready" tagline="Land and get connected right away">
-            <p>
-              This is the step that makes the biggest difference when you land.
-              Instead of standing in arrivals and hunting for a SIM kiosk, you
-              can have your data ready in seconds.
-            </p>
-
-            <p>
-              Buy the eSIM before you fly, install it while waiting at the gate,
-              and switch it on once you land.
-            </p>
-
-            <NoteBox>
-              If you plan to buy a physical SIM or airport Wi-Fi router instead,
-              do the comparison now while you still have reliable internet.
-            </NoteBox>
-          </StepCard>
-
-          <StepCard number="3" title="Keep your itinerary offline" tagline="Airport Wi-Fi is chaos — plan for it">
-            <p>
-              I keep a dedicated folder for every trip. Before boarding, I make
-              sure everything critical is available offline.
-            </p>
-
-            <ul className="list-disc space-y-2 pl-6">
-              <li>Day-by-day itinerary with addresses</li>
-              <li>Hotel details and check-in instructions</li>
-              <li>Tour tickets and QR codes</li>
-              <li>Boarding passes</li>
-              <li>Visa or entry documents</li>
-            </ul>
-
-            <p>
-              Do this on your phone before boarding, not while scrambling after
-              landing.
-            </p>
-          </StepCard>
-
-          <StepCard number="4" title="Plan your first day" tagline="Decision fatigue after travel is real">
-            <p>
-              When you land tired and disoriented, even simple decisions can
-              feel heavier than they should.
-            </p>
-
-            <HowToBox
-              steps={[
-                <>
-                  <strong>First meal.</strong> Pick one place near your
-                  accommodation and save it.
-                </>,
-                <>
-                  <strong>Airport transport.</strong> Know whether you are
-                  taking a train, bus, taxi, or rideshare.
-                </>,
-                <>
-                  <strong>One first stop.</strong> If you have energy, know
-                  where you want to go first.
-                </>,
-              ]}
+          <StepCard number="2" color="gold">
+            <StepHeader
+              title="Get your eSIM ready"
+              tagline="Land and get connected right away"
             />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                This is the step that makes the biggest difference when you
+                land. Instead of standing in arrivals and hunting for a SIM
+                kiosk, you can have your data ready in seconds.
+              </p>
+
+              <p>
+                Buy the eSIM before you fly, install it while waiting at the
+                gate, and switch it on once you land.
+              </p>
+
+              <NoteBox>
+                If you plan to buy a physical SIM or airport Wi-Fi router
+                instead, do the comparison now while you still have reliable
+                internet.
+              </NoteBox>
+            </div>
           </StepCard>
 
-          <StepCard number="5" title="Confirm stay details" tagline="Don’t assume — verify while you still have Wi-Fi">
-            <p>
-              Double-check the exact address, check-in time, and any special
-              instructions like a lockbox code or alternate entrance.
-            </p>
+          <StepCard number="3" color="blue">
+            <StepHeader
+              title="Keep your itinerary offline"
+              tagline="Airport Wi-Fi is chaos — plan for it"
+            />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                I keep a dedicated folder for every trip. Before boarding, I
+                make sure everything critical is available offline.
+              </p>
 
-            <p>
-              Save the address in your offline map too, so you can navigate
-              there even without signal.
-            </p>
+              <ul className="list-disc space-y-2 pl-6 text-lg leading-8 text-neutral-700">
+                <li>Day-by-day itinerary with addresses</li>
+                <li>Hotel details and check-in instructions</li>
+                <li>Tour tickets and QR codes</li>
+                <li>Boarding passes</li>
+                <li>Visa or entry documents</li>
+              </ul>
 
-            <NoteBox>
-              Screenshot everything: the booking reference, host contact,
-              address, and check-in instructions.
-            </NoteBox>
+              <p>
+                Do this on your phone before boarding, not while scrambling
+                after landing.
+              </p>
+            </div>
           </StepCard>
 
-          <StepCard number="6" title="Share your itinerary" tagline="Just in case">
-            <p>
-              Always send your itinerary to at least one person who is not on
-              the trip. Include flight details, accommodation addresses, and a
-              way to reach you.
-            </p>
+          <StepCard number="4" color="orange">
+            <StepHeader
+              title="Plan your first day"
+              tagline="Decision fatigue after travel is real"
+            />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                When you land tired and disoriented, even simple decisions can
+                feel heavier than they should.
+              </p>
 
-            <p>
-              Hopefully nobody ever needs it — but it gives everyone more peace
-              of mind.
-            </p>
+              <HowToBox
+                steps={[
+                  <>
+                    <strong>First meal.</strong> Pick one place near your
+                    accommodation and save it.
+                  </>,
+                  <>
+                    <strong>Airport transport.</strong> Know whether you are
+                    taking a train, bus, taxi, or rideshare.
+                  </>,
+                  <>
+                    <strong>One first stop.</strong> If you have energy, know
+                    where you want to go first.
+                  </>,
+                ]}
+              />
+            </div>
           </StepCard>
 
-          <StepCard number="7" title="Add world clocks" tagline="Especially useful if you’re working across time zones">
-            <p>
-              Add your home city and destination city to your world clock app.
-              It saves you from doing tired timezone math after landing.
-            </p>
+          <StepCard number="5" color="purple">
+            <StepHeader
+              title="Confirm stay details"
+              tagline="Don’t assume — verify while you still have Wi-Fi"
+            />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                Double-check the exact address, check-in time, and any special
+                instructions like a lockbox code or alternate entrance.
+              </p>
 
-            <p>
-              If you are traveling while working, also add your teammates&apos;
-              time zones so you do not accidentally schedule something at a
-              ridiculous hour.
-            </p>
+              <p>
+                Save the address in your offline map too, so you can navigate
+                there even without signal.
+              </p>
+
+              <NoteBox>
+                Screenshot everything: the booking reference, host contact,
+                address, and check-in instructions.
+              </NoteBox>
+            </div>
+          </StepCard>
+
+          <StepCard number="6" color="teal">
+            <StepHeader title="Share your itinerary" tagline="Just in case" />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                Always send your itinerary to at least one person who is not on
+                the trip. Include flight details, accommodation addresses, and a
+                way to reach you.
+              </p>
+
+              <p>
+                Hopefully nobody ever needs it — but it gives everyone more
+                peace of mind.
+              </p>
+            </div>
+          </StepCard>
+
+          <StepCard number="7" color="gold">
+            <StepHeader
+              title="Add world clocks"
+              tagline="Especially useful if you’re working across time zones"
+            />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                Add your home city and destination city to your world clock app.
+                It saves you from doing tired timezone math after landing.
+              </p>
+
+              <p>
+                If you are traveling while working, also add your
+                teammates&apos; time zones so you do not accidentally schedule
+                something at a ridiculous hour.
+              </p>
+            </div>
           </StepCard>
         </section>
 
-        <section className="mt-20 border-t border-[var(--border)] pt-10">
-          <div className="max-w-3xl space-y-6 font-serif text-xl italic leading-relaxed text-[#554a43]">
+        <section className="mt-16 border-t border-[var(--border)] pt-10">
+          <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
-              None of this takes more than 20-30 minutes. You&apos;re sitting at
+              None of this takes more than 20–30 minutes. You&apos;re sitting at
               the gate anyway — might as well use it.
             </p>
 
@@ -205,9 +245,9 @@ export default function GateHabits() {
               disoriented will be genuinely grateful you did this.
             </p>
 
-            <p className="mt-6">Safe travels ✈️</p>
+            <p>Safe travels ✈️</p>
 
-            <p className="mt-2">— Dee</p>
+            <p>— Dee</p>
           </div>
         </section>
       </main>
@@ -232,57 +272,75 @@ export default function GateHabits() {
   );
 }
 
+type Color = "teal" | "gold" | "blue" | "orange" | "purple" | "green";
+
+const colorMap: Record<Color, { badge: string }> = {
+  teal: { badge: "bg-[#dce7e6] text-teal-700" },
+  gold: { badge: "bg-amber-100 text-amber-700" },
+  blue: { badge: "bg-blue-100 text-blue-700" },
+  orange: { badge: "bg-orange-100 text-orange-700" },
+  purple: { badge: "bg-purple-100 text-purple-700" },
+  green: { badge: "bg-green-100 text-green-700" },
+};
+
 function StepCard({
   number,
-  title,
-  tagline,
+  color,
   children,
 }: {
   number: string;
-  title: string;
-  tagline: string;
+  color: Color;
   children: React.ReactNode;
 }) {
+  const c = colorMap[color];
+
   return (
-    <article className="rounded-[28px] border border-[var(--border)] bg-[var(--card)] px-10 py-10">
-      <div className="flex items-start gap-6">
-        <div className="flex h-[72px] w-[72px] flex-shrink-0 items-center justify-center rounded-full bg-[#dce7e6] text-3xl font-medium text-teal-700">
+    <article className="rounded-2xl border border-[var(--border)] bg-[var(--card)] px-7 py-7">
+      <div className="flex items-start gap-5">
+        <div
+          className={`mt-1 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full text-base font-medium ${c.badge}`}
+        >
           {number}
         </div>
-
-        <div className="min-w-0 flex-1">
-          <h2 className="font-serif text-4xl font-semibold leading-tight text-[var(--text)]">
-            {title}
-          </h2>
-          <p className="mt-2 text-2xl italic leading-relaxed text-[var(--muted)]">
-            {tagline}
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-10 space-y-6 pl-[98px] text-[clamp(1.45rem,1.75vw,1.85rem)] leading-[1.8] text-neutral-700">
-        {children}
+        <div className="min-w-0 flex-1">{children}</div>
       </div>
     </article>
   );
 }
 
+function StepHeader({
+  title,
+  tagline,
+}: {
+  title: string;
+  tagline: string;
+}) {
+  return (
+    <div className="mb-5">
+      <h2 className="font-serif text-2xl font-semibold leading-snug text-[var(--text)]">
+        {title}
+      </h2>
+      <p className="mt-1 text-base italic leading-relaxed text-[var(--muted)]">
+        {tagline}
+      </p>
+    </div>
+  );
+}
+
 function HowToBox({ steps }: { steps: React.ReactNode[] }) {
   return (
-    <div className="rounded-2xl border border-teal-700/60 bg-[#dfe5e4] px-8 py-8">
-      <p className="mb-6 text-sm font-medium uppercase tracking-[0.22em] text-[var(--muted)]">
+    <div className="rounded-xl border border-teal-200 bg-[#dfe5e4] px-6 py-6">
+      <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)]">
         How to do it
       </p>
 
-      <div className="space-y-6">
+      <div className="space-y-4">
         {steps.map((step, index) => (
-          <div key={index} className="flex items-start gap-5">
-            <span className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-[#cfe2e0] text-xl font-medium text-teal-700">
+          <div key={index} className="flex items-start gap-4">
+            <span className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#cfe2e0] text-sm font-medium text-teal-700">
               {index + 1}
             </span>
-            <div className="text-[clamp(1.35rem,1.6vw,1.6rem)] leading-[1.7] text-neutral-700">
-              {step}
-            </div>
+            <div className="text-lg leading-8 text-neutral-700">{step}</div>
           </div>
         ))}
       </div>
@@ -292,7 +350,7 @@ function HowToBox({ steps }: { steps: React.ReactNode[] }) {
 
 function NoteBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-6 py-5 text-[clamp(1.2rem,1.4vw,1.35rem)] leading-[1.7] text-[#5b4031]">
+    <div className="rounded-r-xl border-l-4 border-amber-700 bg-[#efe7df] px-5 py-4 text-base leading-7 text-[#5b4031]">
       {children}
     </div>
   );
