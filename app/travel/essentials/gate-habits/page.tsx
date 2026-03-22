@@ -12,8 +12,7 @@ export default function GateHabits() {
       </h1>
 
       <p className="text-lg leading-relaxed text-neutral-600 dark:text-neutral-400 max-w-xl mb-8">
-        The most underrated part of travel? The time you spend waiting at the gate. This is
-        where I quietly set up my entire next 24 hours — so future-me can actually enjoy the trip.
+        The most underrated part of travel? Before boarding, I treat gate time like a "setup phase" instead of dead time. Future-me always thanks me for this.
       </p>
 
       <div className="flex items-center gap-4 pb-8 border-b border-neutral-200 dark:border-neutral-800 text-xs text-neutral-400">
@@ -21,40 +20,33 @@ export default function GateHabits() {
         <span className="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
         <span>7 min read</span>
         <span className="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
-        <span>Updated 2025</span>
+        <span>Updated Mar 22 2026</span>
       </div>
-
-      {/* ── Intro pull-quote ── */}
-      <blockquote className="my-10 pl-6 border-l-4 border-amber-600 bg-amber-50 dark:bg-amber-950/30 rounded-r-lg py-5 pr-6 italic font-serif text-lg text-amber-900 dark:text-amber-200 leading-relaxed">
-        Before boarding, I treat gate time like a "setup phase" instead of dead time.
-        Future-me always thanks me for this.
-      </blockquote>
 
       {/* ── Step cards ── */}
       <div className="flex flex-col gap-8">
 
         {/* 1. Maps */}
         <StepCard number="1" color="teal">
-          <StepHeader icon="🗺️" title="Download maps offline" tagline="Never get stuck searching for directions without signal" />
+          <StepHeader title="Download maps offline" tagline="Never get stuck searching for directions without signal" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               Google Maps offline is a lifesaver, especially when you land without signal or don't
               want to burn through roaming data. The key is to download by area — not just the
-              country — so the file stays manageable and searches stay fast.
+              country — so the file size stays manageable and searches stay fast.
             </p>
             <HowToBox color="teal" steps={[
               { n: "1", text: <span>Open Google Maps → tap your profile photo → <strong className="text-neutral-700 dark:text-neutral-300 font-medium">Offline maps</strong> → <strong className="text-neutral-700 dark:text-neutral-300 font-medium">Select your own map</strong>.</span> },
               { n: "2", text: <span>Zoom into the first city you'll visit. Download it and name it clearly — e.g. <strong className="text-neutral-700 dark:text-neutral-300 font-medium">"Istanbul"</strong>.</span> },
               { n: "3", text: <span>If you're continuing to another region (Cappadocia, Antalya), repeat for each and name them separately. No hunting mid-trip.</span> },
-              { n: "4", text: <span>Offline maps expire after 30 days — download fresh before every trip, not the night before (large files take time on slow airport Wi-Fi).</span> },
+              { n: "4", text: <span>Offline maps expire after 30 days — download fresh before every trip (Also note that large files take time on slow airport Wi-Fi).</span> },
             ]} />
-            <TipChip text="Maps.me and Apple Maps also support offline — useful as a backup in areas where Google coverage is patchy." />
           </div>
         </StepCard>
 
         {/* 2. eSIM */}
         <StepCard number="2" color="gold">
-          <StepHeader icon="📱" title="Get your eSIM ready" tagline="Walk off the plane already connected" />
+          <StepHeader title="Get your eSIM ready" tagline="Land and get connected right away" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               This is the step that makes the biggest difference when you land. Instead of
@@ -74,38 +66,37 @@ export default function GateHabits() {
               when you land. Most of the time Airalo works out cheaper than airport SIM counters
               or renting a pocket Wi-Fi router.
             </p>
-            <NoteBox color="gold">
-              <strong className="font-medium text-amber-800 dark:text-amber-300">If you're buying a physical SIM or Wi-Fi router at the airport:</strong>{" "}
+            <p>
+              If you're buying a physical SIM or Wi-Fi router at the airport:
               Do the research now, while you have reliable Wi-Fi. Check which provider has
-              the best coverage and compare data rates. Prices at airport counters are often
-              inflated — knowing the going rate means you won't overpay.
-            </NoteBox>
+              the best coverage and compare data rates.
+            </p>
           </div>
         </StepCard>
 
         {/* 3. Itinerary */}
         <StepCard number="3" color="blue">
-          <StepHeader icon="📁" title="Keep your itinerary offline" tagline="Airport Wi-Fi is chaos — plan for it" />
+          <StepHeader title="Keep your itinerary offline" tagline="Airport Wi-Fi is chaos — plan for it" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               I keep a dedicated Google Drive folder for every trip. Before I board, I make
               sure everything critical is available offline — no internet needed.
             </p>
-            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-              <p className="text-xs uppercase tracking-widest text-blue-500 dark:text-blue-400 font-medium mb-3">My trip folder includes</p>
-              {[
-                { icon: "📄", label: "Itinerary doc (day-by-day plan with addresses)" },
-                { icon: "🏨", label: "Hotel info — address, check-in instructions, confirmation" },
-                { icon: "🎫", label: "Tour tickets & QR codes" },
-                { icon: "✈️", label: "Boarding passes (downloaded to Wallet too)" },
-                { icon: "📋", label: "Visa / entry docs if required" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-3 py-2 border-b border-blue-100 dark:border-blue-900 last:border-0 text-blue-900 dark:text-blue-200">
-                  <span className="text-base">{item.icon}</span>
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
+            <p>
+              My trip folder includes:
+            </p>
+            <p>
+              Itinerary doc (day-by-day plan with addresses of the accommodations and activities)
+            </p>
+            <p>
+              Tour tickets & QR codes
+            </p>
+            <p>
+              Boarding passes (downloaded to Wallet too)
+            </p>
+            <p>
+              Visa / entry docs if required
+            </p>
             <p>
               In Google Drive, open each doc → tap the three-dot menu → toggle{" "}
               <strong className="text-neutral-700 dark:text-neutral-300 font-medium">Make available offline</strong>.
@@ -116,23 +107,27 @@ export default function GateHabits() {
 
         {/* 4. First day */}
         <StepCard number="4" color="orange">
-          <StepHeader icon="🍜" title="Plan your first day" tagline="Decision fatigue after travel is real — remove it now" />
+          <StepHeader title="Plan your first day" tagline="Decision fatigue after travel is real" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               When you land jet-lagged and disoriented, even "where should we eat?" can feel
               overwhelming. Decide three things before you board:
             </p>
-            <HowToBox color="orange" steps={[
-              { n: "🍽", text: <span><strong className="text-neutral-700 dark:text-neutral-300 font-medium">First meal.</strong> Look up one place near your accommodation, save it to Google Maps. Done.</span> },
-              { n: "🚌", text: <span><strong className="text-neutral-700 dark:text-neutral-300 font-medium">Airport transport.</strong> Train, bus, taxi, or rideshare? Know the route and rough cost — scammers target people who look lost.</span> },
-              { n: "📍", text: <span><strong className="text-neutral-700 dark:text-neutral-300 font-medium">One afternoon stop.</strong> If you have energy, where will you go first? Leaving it open usually means doing nothing.</span> },
-            ]} />
+            <p>
+              <strong>First meal.</strong> Look up one place near your accommodation, save it to Google Maps. Done.
+            </p>
+            <p>
+              <strong>Airport transport.</strong> Train, bus, taxi, or rideshare? Know the route and rough cost — scammers target people who look lost.
+            </p>
+            <p>
+              <strong>One afternoon stop.</strong> If you have energy, where will you go first? Leaving it open usually means doing nothing.
+            </p>
           </div>
         </StepCard>
 
         {/* 5. Stay details */}
         <StepCard number="5" color="purple">
-          <StepHeader icon="🏨" title="Confirm stay details" tagline="Don't assume — verify while you still have Wi-Fi" />
+          <StepHeader title="Confirm stay details" tagline="Don't assume — verify while you still have Wi-Fi" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               Pull up your booking confirmation and double-check three things:{" "}
@@ -152,23 +147,23 @@ export default function GateHabits() {
 
         {/* 6. Share itinerary */}
         <StepCard number="6" color="teal">
-          <StepHeader icon="📤" title="Share your itinerary" tagline="Just in case" />
+          <StepHeader title="Share your itinerary" tagline="Just in case" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               Always send a copy to someone who isn't on the trip — a parent, a close friend,
               a partner staying home. Flight details, accommodation addresses, a contact number
-              for your first night.
+              for your accommodations.
             </p>
             <p>
               You'll hopefully never need them to use it. But knowing someone has it gives
-              you (and them) real peace of mind. Takes two minutes.
+              you (and them) real peace of mind.
             </p>
           </div>
         </StepCard>
 
         {/* 7. World clocks */}
         <StepCard number="7" color="gold">
-          <StepHeader icon="🕐" title="Add world clocks" tagline="Especially useful if you're working across time zones" />
+          <StepHeader title="Add world clocks" tagline="Especially useful if you're working across time zones" />
           <div className="px-7 pb-7 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 space-y-3">
             <p>
               On iPhone: <strong className="text-neutral-700 dark:text-neutral-300 font-medium">Clock app → World Clock → "+"</strong>.
@@ -179,7 +174,6 @@ export default function GateHabits() {
               If you're on calls or working remotely, also add your colleagues' time zones.
               You don't want to accidentally schedule a meeting at 11pm local time.
             </p>
-            <TipChip text="For remote workers: World Time Buddy (worldtimebuddy.com) is excellent for scheduling across multiple zones." />
           </div>
         </StepCard>
 
@@ -227,10 +221,10 @@ function StepCard({ number, color, children }: { number: string; color: Color; c
   );
 }
 
-function StepHeader({ icon, title, tagline }: { icon: string; title: string; tagline: string }) {
+function StepHeader({ icon, title, tagline }: { icon?: string; title: string; tagline: string }) {
   return (
     <div className="flex-1 -mt-1">
-      <div className="text-lg mb-0.5">{icon}</div>
+      {icon ? <div className="text-lg mb-0.5">{icon}</div> : null}
       <h2 className="font-serif text-xl font-semibold text-neutral-900 dark:text-neutral-100 leading-snug">{title}</h2>
       <p className="text-xs italic text-neutral-400 mt-0.5">{tagline}</p>
     </div>
