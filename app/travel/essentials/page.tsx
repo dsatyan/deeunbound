@@ -22,6 +22,7 @@ export default function EssentialsPage() {
       <div className="grid md:grid-cols-2 gap-6">
         {posts.map((post) => (
           <Link
+            key={post.slug}
             href={`/travel/essentials/${post.slug}`}
             className="rounded-2xl border border-[var(--border)] bg-white p-6 transition hover:shadow-md"
           >
