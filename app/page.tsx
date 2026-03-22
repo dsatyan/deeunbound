@@ -1,20 +1,20 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-neutral-950/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#" className="text-xl font-semibold tracking-tight">
             Dee Unbound
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-neutral-300 md:flex">
-            <a href="/about" className="transition hover:text-white">
+            <a href="/about" className="transition hover:text-[var(--text)]">
               About
             </a>
-            <a href="/blog" className="transition hover:text-white">
+            <a href="/blog" className="transition hover:text-[var(--text)]">
               Blog
             </a>
-            <a href="/projects" className="transition hover:text-white">
+            <a href="/projects" className="transition hover:text-[var(--text)]">
               Projects
             </a>
 
@@ -22,35 +22,35 @@ export default function Home() {
             <div className="relative group">
               <button
                 type="button"
-                className="flex items-center gap-1 py-2 transition hover:text-white"
+                className="flex items-center gap-1 py-2 transition hover:text-[var(--text)]"
               >
                 Travel
                 <span className="text-xs">▾</span>
               </button>
 
               <div className="absolute left-0 top-full z-50 pt-1 opacity-0 invisible transition-all duration-150 group-hover:visible group-hover:opacity-100">
-                <div className="min-w-[220px] rounded-2xl border border-white/10 bg-neutral-900 p-2 shadow-xl">
+                <div className="min-w-[220px] rounded-2xl border border-[var(--border)] bg-neutral-900 p-2 shadow-xl">
                   <a
                     href="/travel/essentials"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
                   >
                     Essentials
                   </a>
                   <a
                     href="/travel/destinations"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
                   >
                     Destinations
                   </a>
                   <a
                     href="/travel/stories"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
                   >
                     Stories
                   </a>
                   <a
                     href="/travel/photos"
-                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-white"
+                    className="block rounded-xl px-4 py-2 text-sm text-neutral-300 transition hover:bg-white/5 hover:text-[var(--text)]"
                   >
                     Photos
                   </a>
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
 
-            <a href="#plants" className="transition hover:text-white">
+            <a href="#plants" className="transition hover:text-[var(--text)]">
               Plants
             </a>
           </div>
@@ -96,26 +96,26 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-sky-500/10 p-8 shadow-2xl shadow-black/30">
+        <div className="rounded-3xl border border-[var(--border)] bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-sky-500/10 p-8 shadow-2xl shadow-black/30">
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-sm text-neutral-400">Current focus</p>
+            <div className="rounded-2xl border border-[var(--border)] bg-white/5 p-5">
+              <p className="text-sm text-[var(--muted)]">Current focus</p>
               <h3 className="mt-2 text-xl font-semibold">Travel + Plants</h3>
               <p className="mt-2 text-sm leading-6 text-neutral-300">
                 Building this space one thoughtful section at a time.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-sm text-neutral-400">What lives here</p>
+            <div className="rounded-2xl border border-[var(--border)] bg-white/5 p-5">
+              <p className="text-sm text-[var(--muted)]">What lives here</p>
               <h3 className="mt-2 text-xl font-semibold">Blog + Projects</h3>
               <p className="mt-2 text-sm leading-6 text-neutral-300">
                 Notes, experiments, reflections, and a few rabbit holes.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:col-span-2">
-              <p className="text-sm text-neutral-400">Vibe</p>
+            <div className="rounded-2xl border border-[var(--border)] bg-white/5 p-5 sm:col-span-2">
+              <p className="text-sm text-[var(--muted)]">Vibe</p>
               <h3 className="mt-2 text-xl font-semibold">
                 A little grounded, a little wandering
               </h3>
@@ -131,7 +131,7 @@ export default function Home() {
         id="about"
         className="mx-auto max-w-6xl px-6 py-16"
       >
-        <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+        <div className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-8 md:p-10">
           <p className="text-sm uppercase tracking-[0.2em] text-emerald-400">
             About
           </p>
@@ -160,14 +160,14 @@ export default function Home() {
               Latest writing
             </h2>
           </div>
-          <a href="#" className="text-sm text-neutral-300 hover:text-white">
+          <a href="#" className="text-sm text-neutral-300 hover:text-[var(--text)]">
             View all posts →
           </a>
         </div>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-            <p className="text-sm text-neutral-400">Travel</p>
+          <article className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6">
+            <p className="text-sm text-[var(--muted)]">Travel</p>
             <h3 className="mt-3 text-xl font-semibold">
               A placeholder for your first travel post
             </h3>
@@ -177,8 +177,8 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-            <p className="text-sm text-neutral-400">Plants</p>
+          <article className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6">
+            <p className="text-sm text-[var(--muted)]">Plants</p>
             <h3 className="mt-3 text-xl font-semibold">
               A placeholder for your first plant post
             </h3>
@@ -188,8 +188,8 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-            <p className="text-sm text-neutral-400">Coming soon</p>
+          <article className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6">
+            <p className="text-sm text-[var(--muted)]">Coming soon</p>
             <h3 className="mt-3 text-xl font-semibold">
               More stories are on the way
             </h3>
@@ -213,14 +213,14 @@ export default function Home() {
         </h2>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+          <div className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-8">
             <h3 className="text-xl font-semibold">This website</h3>
             <p className="mt-3 text-sm leading-6 text-neutral-300">
               A fast personal site built with Next.js, GitHub, and Vercel.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+          <div className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-8">
             <h3 className="text-xl font-semibold">More coming soon</h3>
             <p className="mt-3 text-sm leading-6 text-neutral-300">
               You can later add project writeups, tools, experiments, or code
@@ -248,7 +248,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+          <div className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-8">
             <ul className="space-y-4 text-neutral-300">
               <li>• Trip ideas and destination notes</li>
               <li>• Itinerary planning and reflections</li>
@@ -277,7 +277,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+          <div className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-8">
             <ul className="space-y-4 text-neutral-300">
               <li>• Plant diaries and care observations</li>
               <li>• Soil, light, and watering experiments</li>
@@ -287,17 +287,17 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="mt-16 border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-neutral-400 md:flex-row md:items-center md:justify-between">
+      <footer className="mt-16 border-t border-[var(--border)]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between">
           <p>© 2026 Dee Unbound. Built with curiosity.</p>
           <div className="flex gap-4">
-            <a href="#about" className="hover:text-white">
+            <a href="#about" className="hover:text-[var(--text)]">
               About
             </a>
-            <a href="#blog" className="hover:text-white">
+            <a href="#blog" className="hover:text-[var(--text)]">
               Blog
             </a>
-            <a href="#projects" className="hover:text-white">
+            <a href="#projects" className="hover:text-[var(--text)]">
               Projects
             </a>
           </div>

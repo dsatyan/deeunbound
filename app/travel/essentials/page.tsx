@@ -15,19 +15,23 @@ export default function EssentialsPage() {
 
       <h1 className="text-4xl font-bold mb-4">Essentials</h1>
 
-      <p className="text-neutral-400 mb-10 max-w-2xl">
+      <p className="text-[var(--muted)] mb-10 max-w-2xl">
         Packing lists, planning systems, and tiny habits that make travel smoother.
       </p>
 
       <div className="grid md:grid-cols-2 gap-6">
         {posts.map((post) => (
           <Link
-            key={post.slug}
             href={`/travel/essentials/${post.slug}`}
-            className="rounded-2xl border border-white/10 p-6 hover:bg-white/5 transition"
+            className="rounded-2xl border border-[var(--border)] bg-white p-6 transition hover:shadow-md"
           >
-            <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-            <p className="text-neutral-400 text-sm">{post.description}</p>
+            <h3 className="text-lg font-semibold">
+              {post.title}
+            </h3>
+
+            <p className="mt-2 text-sm text-[var(--muted)]">
+              {post.description}
+            </p>
           </Link>
         ))}
       </div>

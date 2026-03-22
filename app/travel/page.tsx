@@ -14,7 +14,7 @@ export default function TravelPage() {
       <div className="mt-10 grid gap-6 md:grid-cols-2">
         <a
           href="/travel/essentials"
-          className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
+          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
         >
           <h2 className="text-2xl font-semibold">Essentials</h2>
           <p className="mt-3 text-neutral-300">
@@ -24,7 +24,7 @@ export default function TravelPage() {
 
         <a
           href="/travel/destinations"
-          className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
+          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
         >
           <h2 className="text-2xl font-semibold">Destinations</h2>
           <p className="mt-3 text-neutral-300">
@@ -34,7 +34,7 @@ export default function TravelPage() {
 
         <a
           href="/travel/stories"
-          className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
+          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
         >
           <h2 className="text-2xl font-semibold">Stories</h2>
           <p className="mt-3 text-neutral-300">
@@ -44,7 +44,7 @@ export default function TravelPage() {
 
         <a
           href="/travel/photos"
-          className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
+          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
         >
           <h2 className="text-2xl font-semibold">Photos</h2>
           <p className="mt-3 text-neutral-300">
