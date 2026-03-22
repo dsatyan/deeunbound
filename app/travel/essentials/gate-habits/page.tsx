@@ -193,18 +193,21 @@ export default function GateHabits() {
           </StepCard>
         </section>
 
-        <section className="mt-20 border-t border-[var(--border)] pt-12">
-          <div className="max-w-5xl space-y-8 font-serif text-[clamp(2rem,3.2vw,3.25rem)] italic leading-[1.7] text-[#554a43]">
+        <section className="mt-20 border-t border-[var(--border)] pt-10">
+          <div className="max-w-3xl space-y-6 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
-              None of this takes more than 20–30 minutes. You&apos;re sitting at
-              the gate anyway — might as well use it. The version of you that
-              lands tired, hungry, and slightly disoriented will be genuinely
-              grateful you did this.
+              None of this takes more than 20-30 minutes. You&apos;re sitting at
+              the gate anyway — might as well use it.
             </p>
 
-            <p>Safe travels. ✈️</p>
+            <p>
+              The version of you that lands tired, hungry, and slightly
+              disoriented will be genuinely grateful you did this.
+            </p>
 
-            <p>— Dee</p>
+            <p className="mt-6">Safe travels ✈️</p>
+
+            <p className="mt-2">— Dee</p>
           </div>
         </section>
       </main>
