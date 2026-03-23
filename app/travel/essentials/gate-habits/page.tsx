@@ -1,32 +1,14 @@
-import Link from "next/link";
+import PageShell from "@/components/page-shell";
 
 export default function GateHabits() {
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <header className="border-b border-[var(--border)]">
-        <div classNa
-        me="mx-auto flex max-w-7xl items-center justify-between px-8 py-8">
-          <Link
-            href="/"
-            className="font-serif text-3xl italic tracking-tight text-[var(--text)]"
-          >
-            Dee Unbound
-          </Link>
-
-          <nav className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)] md:text-sm">
-            <Link href="/travel" className="hover:text-[var(--text)]">
-              Travel
-            </Link>
-            <span>/</span>
-            <Link href="/travel/essentials" className="hover:text-[var(--text)]">
-              Essentials
-            </Link>
-            <span>/</span>
-            <span className="text-[var(--text)]">Gate Habits</span>
-          </nav>
-        </div>
-      </header>
-
+    <PageShell
+      breadcrumbs={[
+        { label: "Travel", href: "/travel" },
+        { label: "Essentials", href: "/travel/essentials" },
+        { label: "Gate Habits" },
+      ]}
+    >
       <main className="mx-auto max-w-6xl px-8 py-20">
         <span className="mb-8 inline-block rounded-sm border border-amber-700 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-amber-700">
           Travel Essentials
@@ -264,24 +246,7 @@ export default function GateHabits() {
           </div>
         </section>
       </main>
-
-      <footer className="border-t border-[var(--border)]">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-8 py-8 text-sm text-[var(--muted)]">
-          <span>© Dee Unbound</span>
-          <span>·</span>
-          <Link href="/travel" className="underline hover:text-[var(--text)]">
-            Travel
-          </Link>
-          <span>·</span>
-          <Link
-            href="/travel/essentials"
-            className="underline hover:text-[var(--text)]"
-          >
-            Essentials
-          </Link>
-        </div>
-      </footer>
-    </div>
+    </PageShell>
   );
 }
 
