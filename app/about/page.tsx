@@ -1,4 +1,5 @@
 import PageShell from "@/components/page-shell";
+import AboutHeroPhoto from "@/components/about-hero-photo";
 
 // ─── Photo placeholder — swap src with your real image path ───────────────
 const HERO_PHOTO = "/images/dee-about.jpg"; // replace with your actual photo
@@ -15,20 +16,7 @@ export default function AboutPage() {
 
           {/* Photo */}
           <div className="flex-shrink-0">
-            <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[var(--card)] shadow-lg ring-1 ring-[var(--border)]">
-              <img
-                src={HERO_PHOTO}
-                alt="Dee"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  // graceful placeholder until real photo is added
-                  (e.target as HTMLImageElement).style.display = "none";
-                  (e.target as HTMLImageElement).parentElement!.classList.add("placeholder-photo");
-                }}
-              />
-              {/* Shows only while photo is missing */}
-              <style>{`.placeholder-photo { background: var(--card); display:flex; align-items:center; justify-content:center; font-size:64px; }`}</style>
-            </div>
+            <AboutHeroPhoto src={HERO_PHOTO} alt="Dee" />
           </div>
 
           {/* Text */}
