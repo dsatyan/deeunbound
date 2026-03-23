@@ -18,9 +18,6 @@ export default function SiteHeader() {
           <Link href="/blog" className="hover:text-[var(--text)]">
             Blog
           </Link>
-          <Link href="/projects" className="hover:text-[var(--text)]">
-            Projects
-          </Link>
 
           <div className="relative group">
             <button
