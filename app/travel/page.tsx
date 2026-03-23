@@ -1,57 +1,72 @@
+import Link from "next/link";
+import PageShell from "@/components/page-shell";
+
 export default function TravelPage() {
   return (
-    <main className="mx-auto max-w-5xl px-6 py-16 text-neutral-100">
-      <p className="text-sm uppercase tracking-[0.2em] text-emerald-400">
-        Travel
-      </p>
-      <h1 className="mt-3 text-4xl font-bold tracking-tight">
-        Travel
-      </h1>
-      <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300">
-        A home for travel planning, destination guides, stories, and photos.
-      </p>
+    <PageShell breadcrumbs={[{ label: "Travel" }]}>
+      <main className="mx-auto max-w-6xl px-8 py-16">
+        <p className="text-sm uppercase tracking-[0.2em] text-[var(--accent)]">
+          Travel
+        </p>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
-        <a
-          href="/travel/essentials"
-          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
-        >
-          <h2 className="text-2xl font-semibold">Essentials</h2>
-          <p className="mt-3 text-neutral-300">
-            Packing lists, planning notes, visas, gear, and travel basics.
-          </p>
-        </a>
+        <h1 className="mt-4 font-editorial text-5xl font-semibold leading-tight">
+          Travel
+        </h1>
 
-        <a
-          href="/travel/destinations"
-          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
-        >
-          <h2 className="text-2xl font-semibold">Destinations</h2>
-          <p className="mt-3 text-neutral-300">
-            Country and city pages, itineraries, and place-based guides.
-          </p>
-        </a>
+        <p className="mt-8 max-w-3xl text-xl leading-9 text-[var(--muted)]">
+          A home for travel planning, destination guides, stories, and photos.
+        </p>
 
-        <a
-          href="/travel/stories"
-          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
-        >
-          <h2 className="text-2xl font-semibold">Stories</h2>
-          <p className="mt-3 text-neutral-300">
-            Personal travel moments, reflections, and narrative posts.
-          </p>
-        </a>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <Link
+            href="/travel/essentials"
+            className="rounded-[28px] border border-[var(--border)] bg-[var(--card)] p-8 transition hover:bg-[var(--surface)]"
+          >
+            <h2 className="font-editorial text-3xl font-semibold">
+              Essentials
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
+              Packing lists, planning notes, visas, gear, and travel basics.
+            </p>
+          </Link>
 
-        <a
-          href="/travel/photos"
-          className="rounded-3xl border border-[var(--border)] bg-white/[0.03] p-6 transition hover:bg-white/[0.05]"
-        >
-          <h2 className="text-2xl font-semibold">Photos</h2>
-          <p className="mt-3 text-neutral-300">
-            Photo collections, visual highlights, and travel galleries.
-          </p>
-        </a>
-      </div>
-    </main>
+          <Link
+            href="/travel/destinations"
+            className="rounded-[28px] border border-[var(--border)] bg-[var(--card)] p-8 transition hover:bg-[var(--surface)]"
+          >
+            <h2 className="font-editorial text-3xl font-semibold">
+              Destinations
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
+              Country and city pages, itineraries, and place-based guides.
+            </p>
+          </Link>
+
+          <Link
+            href="/travel/stories"
+            className="rounded-[28px] border border-[var(--border)] bg-[var(--card)] p-8 transition hover:bg-[var(--surface)]"
+          >
+            <h2 className="font-editorial text-3xl font-semibold">
+              Stories
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
+              Personal travel moments, reflections, and narrative posts.
+            </p>
+          </Link>
+
+          <Link
+            href="/travel/photos"
+            className="rounded-[28px] border border-[var(--border)] bg-[var(--card)] p-8 transition hover:bg-[var(--surface)]"
+          >
+            <h2 className="font-editorial text-3xl font-semibold">
+              Photos
+            </h2>
+            <p className="mt-4 text-base leading-7 text-[var(--muted)]">
+              Photo collections, visual highlights, and travel galleries.
+            </p>
+          </Link>
+        </div>
+      </main>
+    </PageShell>
   );
 }
