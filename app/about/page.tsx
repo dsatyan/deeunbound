@@ -144,14 +144,6 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-
-          <div className="mt-6 bg-[var(--card)] border border-[var(--border)] rounded-xl px-6 py-5">
-            <p className="text-sm text-[var(--muted)] leading-relaxed">
-              <span className="font-medium text-[var(--text)]">I'm also vegetarian</span> — which
-              quietly shapes how I travel. What I eat, where I go, how I experience places. It's
-              less a constraint and more a lens.
-            </p>
-          </div>
         </section>
 
         <Divider />
