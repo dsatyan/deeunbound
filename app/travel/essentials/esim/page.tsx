@@ -1,3 +1,4 @@
+"use client";
 import type { PostMeta } from "@/app/travel/essentials/page";
  
 export const postMeta: PostMeta = {
@@ -8,7 +9,7 @@ export const postMeta: PostMeta = {
   tags: ["connectivity", "gear"],
 };
 
-"use client";
+
 
 
 import PageShell from "@/components/page-shell";
