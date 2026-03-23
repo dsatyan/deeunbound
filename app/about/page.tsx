@@ -28,7 +28,7 @@ export default function AboutPage() {
               I like living many lives in one.
             </h1>
             <p className="text-[var(--muted)] text-lg leading-relaxed max-w-xl">
-              Hi, I'm Dee — a software engineer by day, and a curious explorer of everything else.
+              Hi, I'm Dee — a software test engineer by day, and a curious explorer of everything else.
               I travel, grow (a lot of) plants, dance, cook, write, and occasionally pick up new
               hobbies just to see where they take me.
             </p>
@@ -80,8 +80,9 @@ export default function AboutPage() {
           <div className="space-y-4 text-[var(--muted)] leading-relaxed">
             <p>
               I grew up in Mysore, and now I live in Fremont, California. My days are structured
-              around code — I work as a software engineer at Cisco — but everything outside of
-              that is intentionally unstructured.
+              around test and code — I work as a software test engineer at Cisco — but everything outside of
+              that is intentionally unstructured. I met my husband Sunny in Niles, Fremont in 2017 and Kutti, our cheweenie,
+              came home in 2020 and has been our constant companion in all our adventures.
             </p>
             <p>
               Travel, for me, started with curiosity. I've always been drawn to how people
@@ -113,7 +114,7 @@ export default function AboutPage() {
               <p>
                 There are moments — somewhere over an ocean, when turbulence hits — where I
                 question everything. Why am I here? Why leave a life that already feels full —
-                my plants, my dog, my routines?
+                my plants, my family, my routines?
               </p>
               <p>
                 And then there are moments that answer that question completely. A festival in a
