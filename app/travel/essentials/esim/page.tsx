@@ -1,4 +1,15 @@
+import type { PostMeta } from "@/app/travel/essentials/page";
+ 
+export const postMeta: PostMeta = {
+  title: "eSIMs: The Easiest Way to Stay Connected When You Land",
+  description: "No queues, no SIM kiosks. Land already connected.",
+  emoji: "📱",
+  readingTime: "6 min read",
+  tags: ["connectivity", "gear"],
+};
+
 "use client";
+
 
 import PageShell from "@/components/page-shell";
 import { useState } from "react";
