@@ -18,7 +18,6 @@ export default function EssentialsPage() {
       ]}
     >
       <main className="mx-auto max-w-5xl px-6 py-16">
-        <p className="mb-2 text-sm text-teal-400">TRAVEL</p>
 
         <h1 className="mb-4 text-4xl font-bold">Essentials</h1>
 
