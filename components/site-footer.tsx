@@ -1,18 +1,30 @@
 import Link from "next/link";
 
-export default function SiteFooter() {
+export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-[var(--border)]">
-      <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-8 py-8 text-sm text-[var(--muted)]">
-        <span>© 2026 Dee Unbound</span>
-        <span>·</span>
-        <Link href="/travel" className="underline hover:text-[var(--text)]">
-          Travel
-        </Link>
-        <span>·</span>
-        <Link href="/travel/essentials" className="underline hover:text-[var(--text)]">
-          Essentials
-        </Link>
+    <footer className="mt-24 border-t border-[var(--border)] px-6 py-8 text-sm text-[var(--muted)]">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 md:flex-row md:justify-between">
+        
+        {/* Left: Copyright */}
+        <p className="tracking-wide">
+          © {new Date().getFullYear()} Dee Unbound
+        </p>
+
+        {/* Right: Navigation */}
+        <div className="flex gap-4">
+          <Link href="/about" className="hover:text-[var(--text)]">
+            About
+          </Link>
+          <Link href="/blog" className="hover:text-[var(--text)]">
+            Blog
+          </Link>
+          <Link href="/travel" className="hover:text-[var(--text)]">
+            Travel
+          </Link>
+          <Link href="/plants" className="hover:text-[var(--text)]">
+            Plants
+          </Link>
+        </div>
       </div>
     </footer>
   );

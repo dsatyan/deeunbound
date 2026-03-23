@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Playfair_Display } from "next/font/google";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -19,8 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} bg-[var(--bg)] text-[var(--text)]`}>
-        {children}
+      <body
+        className={`${playfair.variable} flex min-h-screen flex-col bg-[var(--bg)] text-[var(--text)]`}
+      >
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   );

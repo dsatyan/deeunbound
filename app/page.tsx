@@ -1,13 +1,8 @@
 import Link from "next/link";
-import SiteHeader from "@/components/site-header";
-import SiteFooter from "@/components/site-footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <SiteHeader />
-
-      <main>
+    <main>
         <section className="mx-auto grid max-w-7xl gap-12 px-8 py-20 md:grid-cols-2 md:py-24">
           <div className="flex flex-col justify-center">
             <p className="mb-5 text-sm uppercase tracking-[0.25em] text-[var(--accent)]">
@@ -139,9 +134,6 @@ export default function Home() {
             </article>
           </div>
         </section>
-      </main>
-
-      <SiteFooter />
-    </div>
+    </main>
   );
 }
