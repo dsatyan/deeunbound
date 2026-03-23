@@ -1,14 +1,32 @@
-import PageShell from "@/components/page-shell";
+import Link from "next/link";
 
 export default function GateHabits() {
   return (
-    <PageShell
-      breadcrumbs={[
-        { label: "Travel", href: "/travel" },
-        { label: "Essentials", href: "/travel/essentials" },
-        { label: "Gate Habits" },
-      ]}
-    >
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+      <header className="border-b border-[var(--border)]">
+        <div classNa
+        me="mx-auto flex max-w-7xl items-center justify-between px-8 py-8">
+          <Link
+            href="/"
+            className="font-serif text-3xl italic tracking-tight text-[var(--text)]"
+          >
+            Dee Unbound
+          </Link>
+
+          <nav className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-[var(--muted)] md:text-sm">
+            <Link href="/travel" className="hover:text-[var(--text)]">
+              Travel
+            </Link>
+            <span>/</span>
+            <Link href="/travel/essentials" className="hover:text-[var(--text)]">
+              Essentials
+            </Link>
+            <span>/</span>
+            <span className="text-[var(--text)]">Gate Habits</span>
+          </nav>
+        </div>
+      </header>
+
       <main className="mx-auto max-w-6xl px-8 py-20">
         <span className="mb-8 inline-block rounded-sm border border-amber-700 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-amber-700">
           Travel Essentials
@@ -104,26 +122,37 @@ export default function GateHabits() {
           <StepCard number="3" color="blue">
             <StepHeader
               title="Keep your itinerary offline"
-              tagline="Airport Wi-Fi is chaos — plan for it"
+              tagline="Do not rely on network everywhere — plan for it"
             />
             <div className="space-y-4 text-lg leading-8 text-neutral-700">
               <p>
-                I keep a dedicated folder for every trip. Before boarding, I
+                I keep a dedicated Google drive folder for every trip. Before boarding, I
                 make sure everything critical is available offline.
               </p>
 
               <ul className="list-disc space-y-2 pl-6 text-lg leading-8 text-neutral-700">
-                <li>Day-by-day itinerary with addresses</li>
-                <li>Hotel details and check-in instructions</li>
+                <li>Day-by-day itinerary with accommodation addresses and contact details</li>
+                <li>Hotel check-in instructions if any</li>
                 <li>Tour tickets and QR codes</li>
                 <li>Boarding passes</li>
                 <li>Visa or entry documents</li>
               </ul>
 
-              <p>
-                Do this on your phone before boarding, not while scrambling
-                after landing.
-              </p>
+              <HowToBox
+                steps={[
+                  <>
+                    Open Google Drive → Click on ellipsis (...) 
+                    of the files you wish to download 
+                  </>,
+                  <>
+                    select <strong>Make Available Offline</strong>
+                  </>,
+                  <>
+                    Toggle to airplane mode and verify if you have access to
+                    the files
+                  </>,
+                ]}
+              />
             </div>
           </StepCard>
 
@@ -159,23 +188,24 @@ export default function GateHabits() {
 
           <StepCard number="5" color="purple">
             <StepHeader
-              title="Confirm stay details"
-              tagline="Don’t assume — verify while you still have Wi-Fi"
+              title="Save places in Google Maps"
+              tagline="Helps to navigate efficiently"
             />
             <div className="space-y-4 text-lg leading-8 text-neutral-700">
               <p>
-                Double-check the exact address, check-in time, and any special
-                instructions like a lockbox code or alternate entrance.
+                Save places in Google Maps by searching for a location, 
+                tapping <strong>Save</strong>, and adding it to a new or existing list eg: Paris-List
               </p>
 
               <p>
-                Save the address in your offline map too, so you can navigate
-                there even without signal.
+                Change the color and icon of saved lists to distinguish 
+                between restaurants, hotels, and attractions.
               </p>
 
               <NoteBox>
-                Screenshot everything: the booking reference, host contact,
-                address, and check-in instructions.
+                Google <strong>"My Maps"</strong>: 
+                For more advanced planning, use Google My Maps to create custom maps with plotted points, 
+                allowing you to draw lines and measure distances.
               </NoteBox>
             </div>
           </StepCard>
@@ -234,7 +264,24 @@ export default function GateHabits() {
           </div>
         </section>
       </main>
-    </PageShell>
+
+      <footer className="border-t border-[var(--border)]">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-8 py-8 text-sm text-[var(--muted)]">
+          <span>© Dee Unbound</span>
+          <span>·</span>
+          <Link href="/travel" className="underline hover:text-[var(--text)]">
+            Travel
+          </Link>
+          <span>·</span>
+          <Link
+            href="/travel/essentials"
+            className="underline hover:text-[var(--text)]"
+          >
+            Essentials
+          </Link>
+        </div>
+      </footer>
+    </div>
   );
 }
 
@@ -320,4 +367,4 @@ function NoteBox({ children }: { children: React.ReactNode }) {
       {children}
     </div>
   );
-}
+} 
