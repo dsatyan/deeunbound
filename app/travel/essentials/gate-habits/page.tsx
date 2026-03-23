@@ -127,7 +127,7 @@ export default function GateHabits() {
                     of the files you wish to download 
                   </>,
                   <>
-                    select <strong>Make Available Offline</strong>
+                    Select <strong>Make Available Offline</strong>
                   </>,
                   <>
                     Toggle to airplane mode and verify if you have access to
@@ -230,10 +230,6 @@ export default function GateHabits() {
 
         <section className="mt-16 border-t border-[var(--border)] pt-10">
           <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
-            <p>
-              None of this takes more than 20–30 minutes. You&apos;re sitting at
-              the gate anyway — might as well use it.
-            </p>
 
             <p>
               The version of you that lands tired, hungry, and slightly
@@ -242,7 +238,7 @@ export default function GateHabits() {
 
             <p>Safe travels ✈️</p>
 
-            <p>— Dee</p>
+            <p>- Dee</p>
           </div>
         </section>
       </main>
