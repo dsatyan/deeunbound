@@ -211,11 +211,6 @@ export default function JapanVisaPage() {
               and submit a new application from scratch with all the corrected documents.
             </NoteBox>
 
-            {/* Screenshot placeholder */}
-            <ScreenshotPlaceholder
-              label="Screenshot: Rejection email"
-              note="Blur your personal details (name, receipt number) before uploading"
-            />
           </section>
 
           {/* ── Section 4: How to apply ── */}
@@ -288,16 +283,10 @@ export default function JapanVisaPage() {
             </div>
 
             {/* Screenshot placeholders for the portal flow */}
-            <div className="grid gap-4 sm:grid-cols-2 mt-4">
-              <ScreenshotPlaceholder
-                label="Screenshot: 'Add family member' option"
-                note="Shows the save + add family member button at the end of the application form"
-              />
-              <ScreenshotPlaceholder
-                label="Screenshot: Application list with solid/hollow dots"
-                note="Shows how to identify which application to select for submission"
-              />
-            </div>
+            <ScreenshotPlaceholder
+              label="Screenshot: Application list with solid/hollow dots"
+              note="Shows how to identify which application to select for submission"
+            />
           </section>
 
           {/* ── Section 5: Timeline ── */}
@@ -436,10 +425,7 @@ export default function JapanVisaPage() {
               </a>
             </p>
 
-            <ScreenshotPlaceholder
-              label="Screenshot: Visa issuance notice display screen"
-              note="Shows the portal screen where you select the applicant and click 'Visa issuance notice (to display)'"
-            />
+
           </section>
 
           {/* ── Section 7: Tips ── */}
