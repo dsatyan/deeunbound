@@ -49,9 +49,6 @@ export default function EssentialsPage() {
 
         {/* Header */}
         <div className="mb-12 max-w-2xl">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-[var(--accent)]">
-            Travel · Essentials
-          </p>
           <h1 className="font-serif text-5xl font-semibold leading-tight text-[var(--text)]">
             Essentials
           </h1>
