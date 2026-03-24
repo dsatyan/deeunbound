@@ -48,7 +48,23 @@ const posts: Post[] = [
     description: "Read this, before you book your next flight.",
     emoji: "🛫",
     readingTime: "9 min read",
-    tags: ["planning", "systems"],
+    tags: ["flights", "planning", "money"],
+  },
+  {
+    slug: "daypack-system",
+    title: "The Daypack System That Saves You Hours Every Trip",
+    description: "One pre-packed bag, always ready to go",
+    emoji: "🎒",
+    readingTime: "7 min read",
+    tags: ["packing", "systems", "gear"],
+  },
+  {
+    slug: "after-landing",
+    title: "The First 30 Minutes After Landing",
+    description: "Connect, withdraw cash, activate your eSIM",
+    emoji: "🛫",
+    readingTime: "4 min read",
+    tags: ["arrival", "connectivity", "money"],
   },
   // Add new posts here ↓
 ];
