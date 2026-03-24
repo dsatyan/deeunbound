@@ -27,15 +27,14 @@ const COUNTRIES: Country[] = [
     continent: "Asia",
     postCount: 1,
   },
-  // Next country goes here ↓
-  // {
-  //   slug: "new-zealand",
-  //   name: "New Zealand",
-  //   emoji: "🇳🇿",
-  //   description: "South + North Island road trip, Milford Sound, and everything in between.",
-  //   continent: "Oceania",
-  //   postCount: 0,
-  // },
+  {
+    slug: "new-zealand",
+    name: "New Zealand",
+    emoji: "🇳🇿",
+    description: "South + North Island road trip, Milford Sound, and everything in between.",
+    continent: "Oceania",
+    postCount: 1,
+  },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
 

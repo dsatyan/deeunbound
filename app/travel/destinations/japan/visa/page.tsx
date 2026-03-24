@@ -523,11 +523,11 @@ function ScreenshotPlaceholder({ label, note }: { label: string; note?: string }
     <div className="rounded-xl border-2 border-dashed border-[var(--border)] bg-[var(--surface)] px-5 py-6 text-center">
       <p className="text-sm font-medium text-[var(--muted)]">📸 {label}</p>
       {note && <p className="mt-1 text-xs text-[var(--muted)] italic">{note}</p>}
-      {/* Replace this component with:
-          <img src="/images/japan-visa/YOUR-FILENAME.png"
+      {/* Replace this component with:*/
+          <img src="/images/travel/japan/japan-visa/japan-visa-screenshot.png"
                alt="DESCRIPTION"
                className="rounded-lg w-full max-w-sm mx-auto mt-3" />
-      */}
+      }
     </div>
   );
 }
