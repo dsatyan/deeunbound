@@ -2,7 +2,7 @@
 //
 // HOW TO ADD A NEW JAPAN PAGE:
 //   1. Create app/travel/destinations/japan/[topic]/page.tsx
-//   2. Add one entry to the JAPAN_PAGES array below — done.
+//   2. Add one entry to the JAPAN_PAGES array below - done.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from "next/link";
@@ -21,7 +21,7 @@ type JapanPage = {
 const JAPAN_PAGES: JapanPage[] = [
   {
     slug: "visa",
-    title: "Japan eVisa — Indian Passport, US Resident (H1B)",
+    title: "Japan eVisa - Indian Passport, US Resident (H1B)",
     description: "Step-by-step: how to apply online, what got our application rejected the first time, applying for a family member, and the full timeline from submission to issuance.",
     emoji: "📋",
     readingTime: "10 min read",
@@ -30,7 +30,7 @@ const JAPAN_PAGES: JapanPage[] = [
   // ↓ Add new Japan pages here
   // {
   //   slug: "tokyo",
-  //   title: "Tokyo — What We Did, What We'd Skip",
+  //   title: "Tokyo - What We Did, What We'd Skip",
   //   description: "...",
   //   emoji: "🗼",
   // },
@@ -62,8 +62,10 @@ export default function JapanPage() {
             </div>
           </div>
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            Practical guides for Japan — written from the perspective of an
-            Indian passport holder living in the US.
+            一期一会 Ichi-go ichi-e -  "One time, one meeting" 
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
+            This moment will never come again.
           </p>
           <div className="mt-6 h-px w-16 bg-[var(--accent)]" />
         </div>

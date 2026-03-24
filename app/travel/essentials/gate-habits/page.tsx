@@ -227,6 +227,19 @@ export default function GateHabits() {
               </p>
             </div>
           </StepCard>
+
+          <StepCard number="8" color="blue">
+            <StepHeader
+              title="Download Songs"
+              tagline="If you plan on long drives, having songs ready can make the journey more enjoyable"
+            />
+            <div className="space-y-4 text-lg leading-8 text-neutral-700">
+              <p>
+                My goto music is Spotify. I save the playlist locally on my phone, so I can
+                listen to it even without internet. 
+              </p>
+            </div>
+          </StepCard>
         </section>
 
         <section className="mt-16 border-t border-[var(--border)] pt-10">

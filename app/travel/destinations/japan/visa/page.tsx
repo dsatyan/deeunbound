@@ -83,7 +83,7 @@ export default function JapanVisaPage() {
                 {
                   title: "Multiple-entry visa",
                   pros: ["Enter Japan multiple times within the validity period", "Useful if you travel to Japan often"],
-                  cons: ["Must physically mail your passport to the SF Consulate", "Longer processing time", "Higher fee", "No passport = can't travel elsewhere while it's being processed"],
+                  cons: ["Must physically mail your passport to the SF Consulate", "Slightly Longer time due to mailing process", "No passport = can't travel elsewhere while it's being processed"],
                   highlight: false,
                 },
               ].map((opt) => (
@@ -137,15 +137,13 @@ export default function JapanVisaPage() {
               >
                 sf.us.emb-japan.go.jp (PDF checklist)
               </a>
-              . Here's what we uploaded for a straightforward tourist application
-              with no guarantor in Japan:
             </p>
             <div className="space-y-2">
               {[
-                { doc: "Valid passport (bio page scan)", note: "Must be valid for at least 6 months beyond your return date" },
-                { doc: "Current US visa (H1B)", note: "Scan of your H1B stamp - proves legal residency in the US" },
+                { doc: "Valid passport (bio page scan)", note: "Must be valid for at least 6 months beyond your return date. Just the front and back pages with your photo and details are needed" },
+                { doc: "Current US visa (H1B)", note: "Scan of your H1B stamp from your passport - proves legal residency in the US. Also provide i-797 approval notice" },
                 { doc: "I-94 printout", note: "Download from i94.cbp.dhs.gov - shows your current entry record" },
-                { doc: "Round-trip flight itinerary", note: "Confirmation showing your exact entry and exit dates from Japan" },
+                { doc: "Round-trip flight itinerary", note: "Confirmation showing your exact entry and exit dates from Japan. Also the applicant names must be identical to the passport" },
                 { doc: "Hotel/accommodation bookings", note: "For every night of the stay - must match your flight dates exactly" },
                 { doc: "Day-by-day schedule", note: "⚠️ This is what got us rejected first time - see below" },
                 { doc: "Bank statements (3 months)", note: "To show you can cover your expenses" },
@@ -521,9 +519,7 @@ export default function JapanVisaPage() {
           <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
               The Japan eVisa process is genuinely fast and straightforward once
-              you know what to prepare. The rejection stung a little - but getting
-              a same-day response with a clear reason is honestly better than
-              weeks of silence. Fix the itinerary, reapply, done.
+              you know what to prepare.
             </p>
             <p>Safe travels ✈️</p>
             <p>- Dee</p>
