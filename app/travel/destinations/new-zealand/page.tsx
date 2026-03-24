@@ -15,7 +15,7 @@ const NZ_PAGES: NZPage[] = [
     slug: "travel-tips",
     title: "New Zealand Travel Tips — Things I Wish I'd Known",
     description: "Speed cameras, 7kg carry-on rules, why you shouldn't tip, the best souvenir towns, and 18 practical tips from a South + North Island road trip.",
-    emoji: "📝",
+    emoji: "🐑",
     readingTime: "10 min read",
     tags: ["road trip", "practical", "driving", "food"],
   },
