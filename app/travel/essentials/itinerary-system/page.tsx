@@ -2,7 +2,7 @@
 import PageShell from "@/components/page-shell";
 
 export const postMeta = {
-  title: "How I Plan Every Trip — My Two-Tool System",
+  title: "How I Plan Every Trip - My Two-Tool System",
   description:
     "One Google Doc, one map app, zero scattered tabs. The exact folder structure and template I use for every trip.",
   emoji: "🗂️",
@@ -27,14 +27,12 @@ export default function ItinerarySystemPage() {
         </span>
 
         <h1 className="max-w-5xl font-serif text-5xl font-semibold leading-[1.08] tracking-tight text-[var(--text)] md:text-6xl">
-          How I Plan Every Trip — My Two-Tool System
+          How I Plan Every Trip - My Two-Tool System
         </h1>
 
         <p className="mt-8 max-w-4xl text-xl leading-9 text-neutral-700">
           One Google Doc. One map app. Everything in one folder, available offline,
-          shareable with one link. This is the exact system I use for every trip —
-          built from years of having things scattered everywhere and finally getting
-          tired of it.
+          shareable with one link. This is the exact system I use for every trip.
         </p>
 
         <div className="mt-10 flex items-center gap-6 border-b border-[var(--border)] pb-10 text-sm text-[var(--muted)]">
@@ -48,7 +46,7 @@ export default function ItinerarySystemPage() {
         <blockquote className="mt-14 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-8 font-serif text-2xl italic leading-relaxed text-[#5b4031]">
           I used to start every trip with 40 open browser tabs, three different
           notes apps, and confirmation emails buried somewhere in my inbox. Now
-          everything lives in two places — and I can find anything in under 10 seconds.
+          everything lives in two places - and I can find anything in under 10 seconds.
         </blockquote>
 
         <div className="mt-14 space-y-16">
@@ -67,7 +65,7 @@ export default function ItinerarySystemPage() {
               And then you land. You have no signal. None of it is accessible.
             </p>
             <p>
-              This isn't about being obsessively organized — it's about making the
+              This isn't about being obsessively organized - it's about making the
               actual travel part easier. Good planning is what lets you be spontaneous,
               because the non-negotiables (where you're sleeping, how you're getting
               there, what time check-in closes) are already handled.
@@ -77,7 +75,7 @@ export default function ItinerarySystemPage() {
           {/* ── Section 2: The System Overview ── */}
           <section className="space-y-5">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              The system — two tools, one folder
+              The system - two tools, one folder
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
               Everything I do for trip planning runs through two tools:
@@ -136,13 +134,6 @@ export default function ItinerarySystemPage() {
               that no amount of document-writing can solve: seeing everything on a map at
               the same time.
             </p>
-            <p>
-              For my New Zealand trip, this was invaluable. I had stops in Auckland,
-              Queenstown, Te Anau, Wanaka, and Christchurch across two islands. It's easy
-              to think a routing makes sense on paper and only realize when you look at it
-              visually that you've planned an unnecessary 3-hour backtrack. Wanderlog
-              shows you this before you've booked anything.
-            </p>
 
             <h3 className="font-serif text-2xl font-semibold text-[var(--text)]">
               What I actually use it for
@@ -163,7 +154,7 @@ export default function ItinerarySystemPage() {
                 {
                   title: "Notes on each place",
                   detail:
-                    "Every pin has a notes field. I dump my research here — opening hours, price notes, 'locals say avoid weekends', links to AllTrails pages. It keeps everything attached to the place it belongs to.",
+                    "Every pin has a notes field. I dump my research here - opening hours, price notes, 'locals say avoid weekends', links to AllTrails pages. It keeps everything attached to the place it belongs to.",
                 },
                 {
                   title: "Budget tracker",
@@ -183,7 +174,7 @@ export default function ItinerarySystemPage() {
 
             <div className="rounded-r-xl border-l-4 border-amber-700 bg-[#efe7df] px-5 py-4 text-base leading-7 text-[#5b4031]">
               <strong>A note on Google My Maps:</strong> You can absolutely use Google My Maps
-              for the visual layer — I used it for years and it works well for dropping pins
+              for the visual layer - I used it for years and it works well for dropping pins
               and color-coding by day. Wanderlog's advantage is that travel times populate
               automatically and the budget tracker is built in. If you're already deep in the
               Google ecosystem and don't want another tool, My Maps is a completely valid choice.
@@ -197,11 +188,7 @@ export default function ItinerarySystemPage() {
             </h2>
             <p>
               Once the route is settled in Wanderlog, I open Google Drive and create
-              a folder. The folder name is always the country and year —{" "}
-              <strong className="text-[var(--text)] font-medium">New Zealand 2025</strong>,{" "}
-              <strong className="text-[var(--text)] font-medium">Turkey 2024</strong>. Simple,
-              searchable, and easy to find two years later when you're trying to remember
-              the name of that restaurant in Queenstown.
+              a folder. The folder name could be country and year, eg: New Zealand 2025. 
             </p>
 
             <h3 className="font-serif text-2xl font-semibold text-[var(--text)]">
@@ -213,7 +200,7 @@ export default function ItinerarySystemPage() {
                 Folder structure
               </p>
               {[
-                { icon: "📄", name: "Itinerary Doc", desc: "The main document — day by day, everything in one place" },
+                { icon: "📄", name: "Itinerary Doc", desc: "The main document - day by day, everything in one place" },
                 { icon: "✈️", name: "Flights", desc: "Boarding passes, confirmation emails saved as PDF" },
                 { icon: "🏨", name: "Accommodation", desc: "Booking confirmations, check-in instructions, addresses" },
                 { icon: "🎫", name: "Tickets & Tours", desc: "QR codes, booking confirmations for activities" },
@@ -227,7 +214,7 @@ export default function ItinerarySystemPage() {
                   <span className="text-base">{item.icon}</span>
                   <div>
                     <span className="font-medium text-[#3a4470]">{item.name}</span>
-                    <span className="text-[#6370a0]"> — {item.desc}</span>
+                    <span className="text-[#6370a0]"> - {item.desc}</span>
                   </div>
                 </div>
               ))}
@@ -237,26 +224,24 @@ export default function ItinerarySystemPage() {
               Before I board, I make every file in this folder available offline on my phone.
               In Google Drive: tap the three-dot menu on each file → toggle{" "}
               <strong className="text-[var(--text)] font-medium">Make available offline</strong>.
-              Takes two minutes at the gate, saves you from a lot of stress at baggage claim.
+              Takes two minutes at the gate, saves you from a lot of stress later.
             </p>
           </section>
 
           {/* ── Section 5: The Doc itself ── */}
           <section className="space-y-5 text-lg leading-8 text-neutral-700">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              The itinerary doc — how I actually structure it
+              The itinerary doc - how I actually structure it
             </h2>
             <p>
-              This is the part most itinerary templates get wrong. They give you a rigid
-              table with columns for "Activity", "Time", "Cost" — and then your actual
-              trip doesn't fit the table.
+              I generally don't follow any itinerary templates as I find it very rigid.
             </p>
             <p>
-              My doc is a Google Doc with proper heading hierarchy. Heading 1 for each day.
-              Heading 2 for each section within a day (Transport, Accommodation, Things to do).
+              My doc is a Google Doc with just proper heading hierarchy. Heading 1 for each day.
+              Heading 2 for each section within a day (Accommodation, Things to do, Restaurants).
               The reason this matters: Google Docs generates a navigation sidebar from your
               headings automatically. On a 12-day trip, being able to jump directly to
-              "Jan 6 — Wanaka" from a sidebar is the difference between useful and useless.
+              "Jan 6 - Wanaka" from a sidebar is the difference between useful and useless.
             </p>
 
             <h3 className="font-serif text-2xl font-semibold text-[var(--text)]">
@@ -275,11 +260,11 @@ export default function ItinerarySystemPage() {
                 },
                 {
                   label: "📍 Things to do",
-                  content: "Not a rigid schedule — a list with context. What's the backup if it rains? What needs a booking and what doesn't? What's worth the detour and what's a 'skip if tired'?",
+                  content: "Not a rigid schedule - a list with context. What's the backup if it rains? What needs a booking and what doesn't? What's worth the detour and what's a 'skip if tired'?",
                 },
                 {
                   label: "🍽️ Food",
-                  content: "Two or three options per meal, not one — so you're not stranded if something is closed or full. For vegetarian-specific notes, I flag those clearly.",
+                  content: "Two or three options per meal, not one - so you're not stranded if something is closed or full. For vegetarian-specific notes, I flag those clearly.",
                 },
                 {
                   label: "📝 Notes & research",
@@ -295,35 +280,19 @@ export default function ItinerarySystemPage() {
                 </div>
               ))}
             </div>
-
-            <div className="rounded-r-xl border-l-4 border-teal-600 bg-[#dfe5e4] px-5 py-4 text-base leading-7 text-[#1e4a45]">
-              <strong>Why Google Docs specifically and not Notion, Notes, or anything else:</strong>{" "}
-              Offline access is free, no account needed to share read-only, it works on any device,
-              and the hierarchical heading navigation is genuinely the best for a long document.
-              The left sidebar outline view is something I haven't found replicated as cleanly elsewhere.
-            </div>
           </section>
 
           {/* ── Section 6: Sharing ── */}
           <section className="space-y-5 text-lg leading-8 text-neutral-700">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Sharing — one link, everyone knows where you are
+              Sharing - one link, everyone knows where you are
             </h2>
             <p>
               Before every trip, I share the Google Drive folder (view-only) with at
-              least one person who isn't on the trip. Parents, a close friend — someone
+              least one person who isn't on the trip. Parents, a close friend - someone
               who would know to check it if they couldn't reach me.
-            </p>
-            <p>
               They get the full itinerary, accommodation addresses, flight numbers, and
-              contact details for every place I'm staying. It takes 30 seconds to share
-              and gives them (and honestly, you) a lot of peace of mind.
-            </p>
-            <p>
-              The same link works for travel companions — instead of a chain of
-              WhatsApp messages with addresses and times, there's one place everyone
-              looks. When someone asks "what time does the tour start?" the answer is
-              "check the doc".
+              contact details for every place I'm staying.
             </p>
           </section>
 
@@ -354,42 +323,18 @@ export default function ItinerarySystemPage() {
             </div>
           </section>
 
-          {/* ── Section 8: The short version ── */}
-          <section className="space-y-5 text-lg leading-8 text-neutral-700">
-            <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              The short version if you want to start today
-            </h2>
-            <ol className="space-y-4 pl-1">
-              {[
-                "Create a Google Drive folder named after your destination and year.",
-                "Open Wanderlog, create a trip, and drop pins for everywhere you're thinking of going. Look at the map. Adjust the order if anything looks obviously inefficient.",
-                "Open a new Google Doc in the folder. Set up one Heading 1 per day of your trip.",
-                "Under each day, add: how you're getting there, where you're sleeping (with the full address), what you're planning to do, where you'll eat, and any notes.",
-                "Upload your tickets, confirmations, and travel documents to the folder.",
-                "Before boarding: make the folder available offline on your phone. Share the folder with someone at home.",
-              ].map((step, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="mt-1 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#dce7e6] text-sm font-medium text-teal-700">
-                    {i + 1}
-                  </span>
-                  <span>{step}</span>
-                </li>
-              ))}
-            </ol>
-          </section>
-
         </div>
 
         {/* ── Closing ── */}
         <section className="mt-16 border-t border-[var(--border)] pt-10">
           <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
-              The goal isn't a perfect itinerary — plans change the moment you land anyway.
+              The goal isn't a perfect itinerary - plans change the moment you land anyway.
               The goal is having the non-negotiables sorted so that everything else can be
               spontaneous.
             </p>
             <p>Safe travels ✈️</p>
-            <p>— Dee</p>
+            <p>- Dee</p>
           </div>
         </section>
 
