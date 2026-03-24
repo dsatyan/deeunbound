@@ -34,6 +34,14 @@ const posts: Post[] = [
     readingTime: "6 min read",
     tags: ["connectivity", "gear"],
   },
+  {
+    slug: "itinerary-system",
+    title: "How I Plan Every Trip — My Two-Tool System",
+    description: "One Google Doc, one map app, zero scattered tabs.",
+    emoji: "🗂️",
+    readingTime: "8 min read",
+    tags: ["planning", "systems"],
+  },
   // Add new posts here ↓
 ];
 
