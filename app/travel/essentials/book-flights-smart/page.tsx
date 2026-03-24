@@ -27,7 +27,7 @@ export default function BookFlightsSmartPage() {
         </span>
 
         <h1 className="max-w-5xl font-serif text-5xl font-semibold leading-[1.08] tracking-tight text-[var(--text)] md:text-6xl">
-          How to Book Flights Smart (Save $1000+ Without Stress)
+          How to Book Flights Smart
         </h1>
 
         <p className="mt-8 max-w-4xl text-xl leading-9 text-neutral-700">
@@ -44,12 +44,6 @@ export default function BookFlightsSmartPage() {
           <span className="h-1 w-1 rounded-full bg-neutral-300" />
           <span>Updated 2025</span>
         </div>
-
-        <blockquote className="mt-14 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-8 font-serif text-2xl italic leading-relaxed text-[#5b4031]">
-          Most of these things take under five minutes. The one about checking two
-          different airline websites for the same flight once saved me over $400.
-          None of it requires a points obsession or a spreadsheet.
-        </blockquote>
 
         <div className="mt-14 space-y-8">
 
@@ -80,11 +74,65 @@ export default function BookFlightsSmartPage() {
                 can save $100–300 on international flights. The grid makes this
                 obvious in seconds instead of you having to check dates one by one.
               </p>
-              <NoteBox>
-                Google Flights is a search tool, not a booking site. Use it to find
-                the best fare and the best airline - then take that information
-                directly to the airline's website to actually book. More on why below.
-              </NoteBox>
+              {/* Destination tip */}
+                <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-5">
+                <p className="mb-2 font-medium text-[var(--text)]">
+                    💡 Search the city, not just one airport
+                </p>
+                <p className="text-base leading-7 text-neutral-600">
+                    When you type your destination, choose the city (e.g.Tokyo, Japan) rather
+                    than a specific airport. Google Flights will search across all airports
+                    serving that city - for Tokyo, that means both Haneda (HND) and Narita
+                    (NRT). You might find the same flight significantly cheaper into the
+                    other airport, or a better layover option you'd have missed entirely.
+                </p>
+                </div>
+                {/* Two passengers tip */}
+                <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-5">
+                <p className="mb-2 font-medium text-[var(--text)]">
+                    💡 Traveling with someone? Search for 1 passenger first
+                </p>
+                <p className="text-base leading-7 text-neutral-600">
+                    Airlines sell seats in "fare buckets" - a limited number of seats
+                    at each price tier. If there's only one seat left at the lowest
+                    price, booking two passengers at once forces both tickets into the next (more expensive) bucket. The
+                    result: you pay more per person than if you'd booked separately.
+                </p>
+                <p className="mt-3 text-base leading-7 text-neutral-600">
+                    Always search with{" "}
+                    <strong className="font-medium text-[var(--text)]">1 passenger first</strong>{" "}
+                    to see the lowest available fare. Then check the price for 2
+                    passengers. If the per-person price is higher when you search for
+                    2, make two separate bookings - one right after the other.
+                </p>
+                <p className="mt-3 text-base leading-7 text-neutral-600">
+                    If you book separately, call the airline afterward and ask them to
+                    link the two reservations. This matters if there's a disruption -
+                    it helps the airline keep you together when rebooking.
+                </p>
+                </div>
+                {/* Seat assignment tip */}
+                <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-5">
+                <p className="mb-2 font-medium text-[var(--text)]">
+                    💡 Always select a seat - don't leave it unassigned
+                </p>
+                <p className="text-base leading-7 text-neutral-600">
+                    When a flight is oversold (which airlines do intentionally), they
+                    need to decide who gets bumped. The US Department of Transportation
+                    allows airlines to set their own criteria - and having{" "}
+                    <strong className="font-medium text-[var(--text)]">no seat assignment</strong>{" "}
+                    is one of the most common factors airlines use to determine who goes
+                    first. American Airlines states this explicitly in their conditions
+                    of carriage.
+                </p>
+                <p className="mt-3 text-base leading-7 text-neutral-600">
+                    Selecting a seat does costs extra, but it's a small thing that meaningfully reduces your risk of being
+                    pulled off an oversold flight - especially during peak travel
+                    periods when overbooking is most common. If your fare charges for
+                    seat selection, at minimum check in online the moment the 24-hour
+                    window opens and grab whatever's free.
+                </p>
+                </div>
             </div>
           </StepCard>
 
@@ -103,36 +151,9 @@ export default function BookFlightsSmartPage() {
               </p>
               <p>
                 Several airlines let you hold a fare for a small fee - typically
-                $5–15 - while you decide. You're paying for the insurance that
+                $5–30 - while you decide. You're paying for the insurance that
                 the price won't change on you.
               </p>
-              <div className="overflow-x-auto">
-                <table className="w-full rounded-xl border border-[var(--border)] text-sm">
-                  <thead>
-                    <tr className="bg-[var(--surface)] text-left text-xs uppercase tracking-widest text-[var(--muted)]">
-                      <th className="px-5 py-3 font-medium">Airline / Service</th>
-                      <th className="px-5 py-3 font-medium">Hold period</th>
-                      <th className="px-5 py-3 font-medium">Fee</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-[var(--border)]">
-                    {[
-                      ["United FareLock", "3, 7, or 14 days", "~$10–20"],
-                      ["Qatar Airways", "72 hours", "Small fee"],
-                      ["Copa Airlines", "3 or 7 days", "Small fee"],
-                      ["Aer Lingus", "24 hours", "Small deposit"],
-                      ["Any airline (US flights)", "24 hours FREE", "No charge - US law"],
-                      ["Hopper / Kiwi.com", "Up to 72 hours", "~10% of ticket"],
-                    ].map(([airline, period, fee]) => (
-                      <tr key={airline} className="text-neutral-700">
-                        <td className="px-5 py-3 font-medium text-[var(--text)]">{airline}</td>
-                        <td className="px-5 py-3">{period}</td>
-                        <td className="px-5 py-3">{fee}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
               <NoteBox>
                 <strong>US law protects you for free:</strong> For any flight
                 booked at least 7 days in advance, US airlines must either let
@@ -169,18 +190,13 @@ export default function BookFlightsSmartPage() {
                   no prior notice. Because we'd booked directly, the airline's own
                   staff were right there to deal with it. They pulled up our
                   booking, apologized, and moved us onto an American Airlines
-                  flight leaving a few hours later. Sorted within 20 minutes.
+                  flight leaving a few hours later.
                 </p>
                 <p className="mt-3 text-base leading-7 text-neutral-700">
                   Others at the same counter had booked through a third-party app.
                   The airline wouldn't touch their reservations - "you need to call
                   Expedia." Expedia's hold times were over an hour. The airline
-                  staff couldn't override anything for them. Some of them missed
-                  their rebooked flight while they were still on hold.
-                </p>
-                <p className="mt-3 text-sm italic text-[var(--muted)]">
-                  The price was the same. The direct booking cost nothing extra
-                  and saved us an entire travel day.
+                  staff couldn't override anything for them.
                 </p>
               </div>
 
@@ -196,7 +212,7 @@ export default function BookFlightsSmartPage() {
           <StepCard number="4" color="orange">
             <StepHeader
               title="Seat selection matters more than most people realize"
-              tagline="Two tools make this easy: SeatGuru and windowseat.aero"
+              tagline="Two tools make this easy: SeatMaps and whichsideoftheplane.com"
             />
             <div className="space-y-4 text-lg leading-8 text-neutral-700">
               <p>
@@ -213,12 +229,12 @@ export default function BookFlightsSmartPage() {
                 on any aircraft - constant foot traffic, doors banging, crew
                 activity. Before you pick a seat, go to{" "}
                 <a
-                  href="https://www.seatguru.com"
+                  href="https://www.SeatMaps.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-teal-700 underline underline-offset-2"
                 >
-                  SeatGuru.com
+                  SeatMaps.com
                 </a>
                 , enter your flight number, and it shows the exact seat map with
                 color-coded warnings: yellow and red seats mark problem spots -
@@ -250,12 +266,12 @@ export default function BookFlightsSmartPage() {
               <p>
                 Use{" "}
                 <a
-                  href="https://windowseat.aero"
+                  href="whichsideoftheplane.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-teal-700 underline underline-offset-2"
                 >
-                  windowseat.aero
+                  whichsideoftheplane.com
                 </a>{" "}
                 - enter your route and it tells you exactly which side to sit on
                 and what you'll see. Takes 30 seconds and it's one of my favourite
@@ -282,21 +298,6 @@ export default function BookFlightsSmartPage() {
                 qualifying activity (a flight, a hotel stay with a partner, even
                 a credit card purchase) within 18–24 months. You don't need to be
                 a frequent flyer for this to matter.
-              </p>
-              <NoteBox>
-                <strong>Where points are most valuable:</strong> Redeem miles for
-                international business or first class when possible - that's where
-                the value per point is highest. Using miles to save $80 on a
-                domestic economy ticket is usually a poor trade. Save them for
-                the long-haul redemption where a business class seat would otherwise
-                cost $4,000–8,000 in cash.
-              </NoteBox>
-              <p>
-                If you have a travel credit card with a signup bonus, check whether
-                those points transfer to your airline's program. Many do. A single
-                credit card signup bonus is often enough for a free international
-                flight - which is a separate rabbit hole worth exploring when you're
-                ready for it.
               </p>
             </div>
           </StepCard>
@@ -329,7 +330,7 @@ export default function BookFlightsSmartPage() {
                 <ol className="space-y-2 text-base leading-7 text-neutral-700">
                   {[
                     "Go to latamairlines.com - it'll default to the US version.",
-                    "In the top right corner, change the country to your destination (e.g. Peru, Chile, Brazil).",
+                    "In the top right corner, change the country to your destination https://www.latamairlines.com/pe/es (e.g. Peru, Chile, Brazil).",
                     "Search the same route. Compare the price you see now to what the US site showed.",
                     "If the local site is cheaper and your credit card can process it without a foreign transaction fee - book there.",
                   ].map((step, i) => (
@@ -348,11 +349,7 @@ export default function BookFlightsSmartPage() {
                 site are designated "resident only" - booking these as a non-resident
                 can result in a penalty fee at the airport ($177+ in some reported
                 cases). The non-resident fares on the local site are still usually
-                cheaper than the US site and are fine to book. If you're unsure
-                whether a fare is resident-only, call LATAM's local customer service
-                line to confirm before buying. Also: US credit cards sometimes get
-                declined on local Latin American airline sites - use a card with no
-                foreign transaction fees and try a few times if the first attempt fails.
+                cheaper than the US site and are fine to book.
               </NoteBox>
 
               <p>
@@ -386,10 +383,7 @@ export default function BookFlightsSmartPage() {
               </p>
               <p>
                 The prerequisite: use a credit card with no foreign transaction
-                fee. Most travel cards qualify - Chase Sapphire, Amex Platinum,
-                Capital One Venture, and Charles Schwab's debit card all work.
-                A foreign transaction fee (usually 3%) wipes out the local
-                currency benefit entirely.
+                fee.
               </p>
             </div>
           </StepCard>
@@ -408,18 +402,6 @@ export default function BookFlightsSmartPage() {
                 If you've been putting regular spending on a travel card, the
                 balance adds up faster than you realize.
               </p>
-              <p>
-                Also check whether your airline has a credit card partnership -
-                most major airlines have co-branded cards with signup bonuses that
-                are worth checking when you're planning a big trip. The signup
-                bonus alone on many travel cards covers a round-trip international
-                economy flight.
-              </p>
-              <NoteBox>
-                If you have airline miles sitting in a loyalty account from past
-                flights, log in and check the balance before booking. Miles don't
-                earn interest - unused points are just value sitting idle.
-              </NoteBox>
             </div>
           </StepCard>
 
@@ -440,10 +422,12 @@ export default function BookFlightsSmartPage() {
               "Use a no-foreign-transaction-fee card. Pay in local currency. Decline DCC.",
               "Book directly on the airline's website - not a third-party app.",
               "If I'm not ready to commit, use the 24-hour free hold (US law) or pay for a price lock.",
-              "Check SeatGuru for my flight's seat map. Pick a seat in the front third, away from toilets.",
-              "Check windowseat.aero for which side has better views on my route.",
+              "Check SeatMaps for my flight's seat map. Pick a seat in the front third, away from toilets.",
+              "Check whichsideoftheplane.com for which side has better views on my route.",
               "Add my frequent flyer number to the booking.",
               "Check my credit card points balance before paying.",
+              "If you need special meals, do not forget to book it well in advance",
+              "Reserve the seat in advance for gaunranteed booking"
             ].map((step, i) => (
               <li key={i} className="flex items-start gap-4 text-sm leading-7 text-neutral-700">
                 <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#dce7e6] text-xs font-medium text-teal-700">
@@ -459,11 +443,7 @@ export default function BookFlightsSmartPage() {
         <section className="mt-16 border-t border-[var(--border)] pt-10">
           <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
-              None of this takes long. The date grid check is a minute. SeatGuru
-              is 90 seconds. The local site comparison is two minutes. The total
-              overhead on a flight booking, done properly, is maybe 15 minutes
-              more than just searching and clicking buy - and it's a very good
-              use of 15 minutes.
+              "The journey not the arrival matters." - T.S. Eliot
             </p>
             <p>Safe travels ✈️</p>
             <p>- Dee</p>

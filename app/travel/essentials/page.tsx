@@ -45,9 +45,9 @@ const posts: Post[] = [
   {
     slug: "book-flights-smart",
     title: "How to Book Flights Smart",
-    description: "",
-    emoji: "",
-    readingTime: "8 min read",
+    description: "Read this, before you book your next flight.",
+    emoji: "🛫",
+    readingTime: "9 min read",
     tags: ["planning", "systems"],
   },
   // Add new posts here ↓
