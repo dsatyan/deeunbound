@@ -1,16 +1,4 @@
 "use client";
-import type { PostMeta } from "@/app/travel/essentials/page";
- 
-export const postMeta: PostMeta = {
-  title: "eSIMs: The Easiest Way to Stay Connected When You Land",
-  description: "No queues, no SIM kiosks. Land already connected.",
-  emoji: "📱",
-  readingTime: "6 min read",
-  tags: ["connectivity", "gear"],
-};
-
-
-
 
 import PageShell from "@/components/page-shell";
 import { useState } from "react";
@@ -41,7 +29,7 @@ export default function EsimPage() {
 
         <p className="mt-8 max-w-4xl text-xl leading-9 text-neutral-700">
           No more hunting for SIM kiosks in arrivals. No more overpriced airport
-          data plans. An eSIM lets you land already connected — set up at the
+          data plans. An eSIM lets you land already connected - set up at the
           gate before you even board.
         </p>
 
@@ -54,7 +42,7 @@ export default function EsimPage() {
         </div>
 
         <blockquote className="mt-14 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-8 font-serif text-2xl italic leading-relaxed text-[#5b4031]">
-          I used to waste 20–30 minutes at baggage claim finding a SIM counter,
+          I used to waste 20-30 minutes at baggage claim finding a SIM counter,
           comparing plans, and waiting in line. Now I walk off the plane, toggle
           one switch, and I&apos;m online.
         </blockquote>
@@ -64,14 +52,14 @@ export default function EsimPage() {
           <StepCard number="?" color="blue">
             <StepHeader
               title="What exactly is an eSIM?"
-              tagline="Skip this if you already know — jump straight to Airalo setup"
+              tagline="Skip this if you already know - jump straight to Airalo setup"
             />
             <div className="space-y-4 text-lg leading-8 text-neutral-700">
               <p>
                 An eSIM (embedded SIM) is a digital SIM card built into your
                 phone. Instead of physically swapping a plastic chip, you scan a
                 QR code and a carrier profile is loaded onto your device. Your
-                physical SIM slot stays untouched — both lines run at the same
+                physical SIM slot stays untouched - both lines run at the same
                 time.
               </p>
               <p>
@@ -160,7 +148,7 @@ export default function EsimPage() {
                 >
                   Airalo
                 </a>{" "}
-                is the largest eSIM marketplace — they aggregate plans from
+                is the largest eSIM marketplace - they aggregate plans from
                 local carriers in 200+ countries. The prices are almost always
                 cheaper than airport counters, and you can compare everything
                 side by side before you commit.
@@ -174,7 +162,7 @@ export default function EsimPage() {
                   </>,
                   <>
                     Search for your destination country. You&apos;ll see
-                    options sorted by data size and price — e.g.{" "}
+                    options sorted by data size and price - e.g.{" "}
                     <strong>1 GB / 7 days</strong> or{" "}
                     <strong>5 GB / 30 days</strong>.
                   </>,
@@ -185,7 +173,7 @@ export default function EsimPage() {
                   </>,
                   <>
                     Purchase the plan. You&apos;ll immediately receive a{" "}
-                    <strong>QR code</strong> in the app — this is your eSIM.
+                    <strong>QR code</strong> in the app - this is your eSIM.
                     Don&apos;t activate it yet.
                   </>,
                 ]}
@@ -194,7 +182,7 @@ export default function EsimPage() {
               <NoteBox>
                 <strong>Regional vs. country packs:</strong> If you&apos;re
                 visiting multiple countries (e.g. a Europe trip), look for
-                regional eSIMs — one plan that covers 30+ countries. Often
+                regional eSIMs - one plan that covers 30+ countries. Often
                 cheaper than buying separately per country. Airalo has Europe,
                 Southeast Asia, and Middle East regional packs.
               </NoteBox>
@@ -204,13 +192,13 @@ export default function EsimPage() {
           {/* ── Step 2: Install ── */}
           <StepCard number="2" color="gold">
             <StepHeader
-              title="Install the eSIM — still at the gate"
+              title="Install the eSIM - still at the gate"
               tagline="Takes about 2 minutes on good Wi-Fi"
             />
             <div className="space-y-4 text-lg leading-8 text-neutral-700">
               <p>
                 Install the eSIM while you&apos;re still at the gate with
-                airport Wi-Fi. Once installed, it sits on your phone quietly —
+                airport Wi-Fi. Once installed, it sits on your phone quietly -
                 it doesn&apos;t activate or cost anything until you switch it
                 on.
               </p>
@@ -230,7 +218,7 @@ export default function EsimPage() {
                   <>
                     Your phone will download the carrier profile (takes 30–60
                     seconds on good Wi-Fi). You&apos;ll see it appear as a
-                    second line — labelled with the carrier name.
+                    second line - labelled with the carrier name.
                   </>,
                   <>
                     <strong>Do not turn it on yet.</strong> Leave it installed
@@ -251,7 +239,7 @@ export default function EsimPage() {
           {/* ── Step 3: Activation stepper ── */}
           <StepCard number="3" color="orange">
             <StepHeader
-              title="Activate on landing — order matters"
+              title="Activate on landing - order matters"
               tagline="Do these steps in sequence or you may get charged by your home carrier"
             />
             <div className="space-y-5 text-lg leading-8 text-neutral-700">
@@ -288,7 +276,7 @@ export default function EsimPage() {
                   },
                   {
                     problem: "Airplane mode toggle not helping",
-                    fix: "Remove the eSIM and re-add it. In Airalo, your QR code is still there — just scan it again. Your data balance is saved on the carrier side, not the QR code.",
+                    fix: "Remove the eSIM and re-add it. In Airalo, your QR code is still there - just scan it again. Your data balance is saved on the carrier side, not the QR code.",
                   },
                   {
                     problem: "eSIM plan shows in settings but won't connect",
@@ -296,7 +284,7 @@ export default function EsimPage() {
                   },
                   {
                     problem: "Airalo app says 'installation failed'",
-                    fix: "This is almost always a Wi-Fi issue — weak airport Wi-Fi drops the download halfway. Connect to a stronger network (a café, lounge, or your home Wi-Fi if you haven't left yet) and retry.",
+                    fix: "This is almost always a Wi-Fi issue - weak airport Wi-Fi drops the download halfway. Connect to a stronger network (a café, lounge, or your home Wi-Fi if you haven't left yet) and retry.",
                   },
                   {
                     problem: "Ran out of data mid-trip",
@@ -331,7 +319,7 @@ export default function EsimPage() {
                   {
                     tip: "Label your eSIM lines clearly",
                     detail:
-                      'Rename them in Settings so you know which is which — "Home" and "Turkey 2025" is much easier to manage than "Primary" and "Unknown Carrier".',
+                      'Rename them in Settings so you know which is which - "Home" and "Turkey 2025" is much easier to manage than "Primary" and "Unknown Carrier".',
                   },
                   {
                     tip: "Keep Wi-Fi Calling on your home line",
@@ -378,7 +366,7 @@ export default function EsimPage() {
               plastic chip over an airport toilet. Just land, tap, done.
             </p>
             <p>Safe travels ✈️</p>
-            <p>— Dee</p>
+            <p>- Dee</p>
           </div>
         </section>
       </main>
@@ -394,20 +382,20 @@ const ACTIVATION_STEPS = [
     icon: "📵",
     detail:
       "Before you remove airplane mode, go to Settings → Cellular and toggle OFF your home SIM / primary line. This stops your home carrier from auto-connecting and racking up international roaming charges the moment you land.",
-    warning: "Do this first — before anything else.",
+    warning: "Do this first - before anything else.",
   },
   {
     label: "Remove airplane mode",
     icon: "✈️",
     detail:
-      "Now toggle airplane mode off. Your phone will start scanning for networks — but because your primary line is off, it won't connect to it.",
+      "Now toggle airplane mode off. Your phone will start scanning for networks - but because your primary line is off, it won't connect to it.",
     warning: null,
   },
   {
     label: "Connect to airport Wi-Fi",
     icon: "📶",
     detail:
-      "Join any available Wi-Fi network. This isn't for browsing — it just lets your phone finalize the eSIM carrier registration in the background.",
+      "Join any available Wi-Fi network. This isn't for browsing - it just lets your phone finalize the eSIM carrier registration in the background.",
     warning: null,
   },
   {
@@ -415,7 +403,7 @@ const ACTIVATION_STEPS = [
     icon: "🌐",
     detail:
       'Go to Settings → Cellular → tap your eSIM line → turn on "Data Roaming". This is off by default and is the step most people miss. Without it, the eSIM won\'t use mobile data even when it\'s active.',
-    warning: "Most missed step — don't skip it.",
+    warning: "Most missed step - don't skip it.",
   },
   {
     label: "Set eSIM as your default data line",
@@ -428,7 +416,7 @@ const ACTIVATION_STEPS = [
     label: "Test your connection",
     icon: "✅",
     detail:
-      "Open a browser and load any page. If it works — you're done. If not, try the airplane mode toggle trick: flip it on for 10 seconds, then off. This forces a fresh network scan and fixes most remaining issues.",
+      "Open a browser and load any page. If it works - you're done. If not, try the airplane mode toggle trick: flip it on for 10 seconds, then off. This forces a fresh network scan and fixes most remaining issues.",
     warning: null,
   },
 ];

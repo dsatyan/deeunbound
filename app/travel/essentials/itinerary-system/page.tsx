@@ -312,7 +312,7 @@ export default function ItinerarySystemPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <a
-                href="#"
+                href="https://docs.google.com/document/d/1Z6FceHA4Wgg03dDSDuPUGJYV-N-Ew2nc/copy"
                 className="rounded-full bg-[var(--text)] px-6 py-3 text-sm font-medium text-[var(--bg)] transition hover:opacity-90"
               >
                 Copy the template →

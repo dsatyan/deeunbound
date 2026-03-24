@@ -1,3 +1,4 @@
+
 import PageShell from "@/components/page-shell";
 
 export default function GateHabits() {
@@ -20,7 +21,7 @@ export default function GateHabits() {
 
         <p className="mt-8 max-w-4xl text-xl leading-9 text-neutral-700">
           The most underrated part of travel? The time you spend waiting at the
-          gate. This is where I quietly set up my entire next 24 hours — so
+          gate. This is where I quietly set up my entire next 24 hours - so
           future-me can actually enjoy the trip.
         </p>
 
@@ -47,7 +48,7 @@ export default function GateHabits() {
               <p>
                 Google Maps offline is a lifesaver, especially when you land
                 without signal or don&apos;t want to burn through roaming data.
-                The key is to download by area — not just the country — so the
+                The key is to download by area - not just the country - so the
                 file stays manageable and searches stay fast.
               </p>
 
@@ -60,7 +61,7 @@ export default function GateHabits() {
                   </>,
                   <>
                     Zoom into the first city or region you&apos;ll visit.
-                    Download it and give it a clear name — e.g.{" "}
+                    Download it and give it a clear name - e.g.{" "}
                     <strong>&quot;Istanbul&quot;</strong>.
                   </>,
                   <>
@@ -104,7 +105,7 @@ export default function GateHabits() {
           <StepCard number="3" color="blue">
             <StepHeader
               title="Keep your itinerary offline"
-              tagline="Do not rely on network everywhere — plan for it"
+              tagline="Do not rely on network everywhere - plan for it"
             />
             <div className="space-y-4 text-lg leading-8 text-neutral-700">
               <p>
@@ -202,7 +203,7 @@ export default function GateHabits() {
               </p>
 
               <p>
-                Hopefully nobody ever needs it — but it gives everyone more
+                Hopefully nobody ever needs it - but it gives everyone more
                 peace of mind.
               </p>
             </div>
