@@ -2,7 +2,7 @@
 //
 // HOW TO ADD A NEW POST:
 //   1. Create app/travel/essentials/your-slug/page.tsx
-//   2. Add one entry to the POSTS array below — done.
+//   2. Add one entry to the POSTS array below - done.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from "next/link";
@@ -36,7 +36,7 @@ const posts: Post[] = [
   },
   {
     slug: "itinerary-system",
-    title: "How I Plan Every Trip — My Two-Tool System",
+    title: "How I Plan Every Trip - My Two-Tool System",
     description: "One Google Doc, one map app, zero scattered tabs.",
     emoji: "🗂️",
     readingTime: "8 min read",
@@ -68,12 +68,21 @@ const posts: Post[] = [
   },
   {
     slug: "in-flight",
-    title: "My In-Flight Survival Pouch — What I Actually Use on a Long-Haul Flight",
+    title: "My In-Flight Survival Pouch - What I Actually Use on a Long-Haul Flight",
     description:
-      "The exact items in my carry-on pouch for long flights — including a few things you won't find on other lists.",
-    emoji: "✈️",
+      "The exact items in my carry-on pouch for long flights - including a few things you won't find on other lists.",
+    emoji: "🛫",
     readingTime: "6 min read",
     tags: ["flights", "comfort", "packing"],
+  },
+  {
+    slug: "phone-fails",
+    title: "When Your Phone Dies Mid-Trip - What I Learned in Switzerland",
+    description:
+      "iPhone thermal shutdown in Lugano. eSIM data gone in the middle of nowhere. Here's what saved us - and what to do before it happens to you.",
+    emoji: "📵",
+    readingTime: "4 min read",
+    tags: ["connectivity", "eSIM", "offline", "phone"],
   },
   // Add new posts here ↓
 ];

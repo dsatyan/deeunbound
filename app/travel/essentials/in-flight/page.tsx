@@ -31,8 +31,7 @@ export default function InflightComfortPage() {
 
         <p className="mt-8 max-w-4xl text-xl leading-9 text-neutral-700">
           Not a generic list. These are the things that actually live in my
-          carry-on pouch on every long flight - earned over 40+ trips. A few of
-          them you won't see on other lists.
+          carry-on pouch on every long flight.
         </p>
 
         <div className="mt-10 flex items-center gap-6 border-b border-[var(--border)] pb-10 text-sm text-[var(--muted)]">
@@ -40,12 +39,6 @@ export default function InflightComfortPage() {
           <span className="h-1 w-1 rounded-full bg-neutral-300" />
           <span>6 min read</span>
         </div>
-
-        <blockquote className="mt-14 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-8 font-serif text-2xl italic leading-relaxed text-[#5b4031]">
-          Long-haul flights are not something that just happen to you. With the
-          right small bag, you can land feeling like a person instead of a
-          crumpled receipt.
-        </blockquote>
 
         <div className="mt-14 space-y-16">
 
@@ -61,9 +54,7 @@ export default function InflightComfortPage() {
               unbuckling and standing up.
             </p>
             <p>
-              The goal is to arrive having slept, not dehydrated, with skin that
-              doesn't feel like parchment, and without having disturbed everyone
-              around me six times. This pouch makes that possible.
+              The goal is to arrive having slept and not dehydrated with dry skin.
             </p>
           </section>
 
@@ -76,27 +67,22 @@ export default function InflightComfortPage() {
             {/* Category: Skin + face */}
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
               <div className="bg-amber-50 border-b border-amber-100 px-6 py-4 flex items-center gap-3">
-                <span className="text-xl">🧴</span>
                 <h3 className="font-serif text-lg font-semibold text-amber-900">Skin & face</h3>
               </div>
               <div className="divide-y divide-[var(--border)]">
                 {[
                   {
                     item: "Squalane oil",
-                    note: "This is my most non-obvious recommendation and the one I get asked about most. Cabin air is extremely dry - your face and hands will feel it within a few hours. I use squalane oil, which is the lightest oil you can put on your skin. It absorbs instantly, doesn't feel greasy, and works on both face and hands. A small bottle lasts for many flights. Regular moisturizer works too, but squalane is more versatile and lighter to carry.",
+                    note: "This is my most non-obvious recommendation and the one I get asked about most. Cabin air is extremely dry - your face and hands will feel it within a few hours. I use squalane oil, which is the lightest oil you can put on your skin. It absorbs instantly, doesn't feel greasy, and works on both face and hands. Regular moisturizer works too, but squalane is more versatile and lighter to carry.",
                     highlight: true,
                   },
                   {
-                    item: "Lip balm with SPF",
+                    item: "Lip balm",
                     note: "Lips dry out faster than any other part of your face in the air. Apply before you board, again when you wake up.",
                   },
                   {
-                    item: "Alcohol wipes / sanitary wipes",
-                    note: "Wipe down your tray table, armrests, and the screen before you settle in. Not paranoia - just practical. Also useful mid-flight for a quick refresh.",
-                  },
-                  {
-                    item: "Alcohol spray (small)",
-                    note: "For hands when the bathroom queue is long. Doubles as a surface disinfectant.",
+                    item: "Alcohol spray",
+                    note: "For hands and surfaces. Wipe down your tray table, armrests, and the screen before you settle in.",
                   },
                 ].map((row) => (
                   <ItemRow key={row.item} item={row.item} note={row.note} highlight={row.highlight} />
@@ -107,14 +93,18 @@ export default function InflightComfortPage() {
             {/* Category: Comfort + sleep */}
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
               <div className="bg-[#dce7e6] border-b border-teal-100 px-6 py-4 flex items-center gap-3">
-                <span className="text-xl">😴</span>
                 <h3 className="font-serif text-lg font-semibold text-teal-900">Comfort & sleep</h3>
               </div>
               <div className="divide-y divide-[var(--border)]">
                 {[
                   {
-                    item: "Ear seal / noise-isolating earplugs",
-                    note: "Not just any earplugs. Proper ear seals that physically block sound. Wax or foam that moulds to your ear canal. Combined with an eye mask, this is the closest thing to a sleep button for a plane. The engine noise alone on a 15-hour flight is exhausting - blocking it out makes a significant difference.",
+                      item: "Silicone putty earplugs - not foam",
+                      note: "There's an important difference between the two. Foam earplugs have to be compressed and inserted deep into the ear canal to work - over time this can push earwax further in, causing compaction and raising infection risk. Silicone putty earplugs (like Mack's earplugs) work differently: you press them over the ear canal opening without inserting them inside. They seal the entrance from the outside. Same noise blocking, none of the wax-pushing problem.",
+                      highlight: true,
+                      link: {
+                        href: "https://www.amazon.com/Macks-Pillow-Soft-Silicone-Earplugs/dp/B07G1MWHNR/",
+                        label: "Mack's Pillow Soft Silicone Earplugs (Amazon)",
+                      },
                   },
                   {
                     item: "Eye mask",
@@ -130,14 +120,25 @@ export default function InflightComfortPage() {
                   },
                   {
                     item: "Mask",
-                    note: "Keeps cabin air from drying out your nose and throat, especially useful on very long flights. Also filters out some of what other passengers are breathing.",
+                    note: "For two situations: you're flying with a cold or allergy and the cold cabin air is making it worse, or the passenger next to you is coughing. Either way, mask on and you stop worrying about it.",
                   },
                   {
                     item: "Loose slip-on shoes or socks only",
                     note: "Remove your regular shoes as soon as you sit down. Feet swell during long flights - keeping shoes on makes this worse. If you don't want to pad around in just socks, pack a loose pair of slip-ons in your carry-on.",
                   },
+                  {
+                    item: "Bucket hat",
+                    highlight: true,
+                    note: "My secret weapon that no one talks about - I wear a bucket hat on every flight. The brim blocks peripheral light and screens from the sides, the fabric keeps your head warm in cold cabin air, and pulling it down slightly signals to everyone around you that you are not available for conversation. It does everything an eye mask does for light, plus keeps you warm, plus adds a layer of social invisibility. Soft bucket hats pack flat and weigh nothing.",
+                  },
                 ].map((row) => (
-                  <ItemRow key={row.item} item={row.item} note={row.note} />
+                  <ItemRow
+                    key={row.item}
+                    item={row.item}
+                    note={row.note}
+                    highlight={row.highlight}
+                    link={row.link}
+                  />
                 ))}
               </div>
             </div>
@@ -145,7 +146,6 @@ export default function InflightComfortPage() {
             {/* Category: Food + drinks */}
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
               <div className="bg-green-50 border-b border-green-100 px-6 py-4 flex items-center gap-3">
-                <span className="text-xl">🍵</span>
                 <h3 className="font-serif text-lg font-semibold text-green-900">Food & drinks</h3>
               </div>
               <div className="divide-y divide-[var(--border)]">
@@ -172,7 +172,6 @@ export default function InflightComfortPage() {
             {/* Category: Practical */}
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
               <div className="bg-purple-50 border-b border-purple-100 px-6 py-4 flex items-center gap-3">
-                <span className="text-xl">🔌</span>
                 <h3 className="font-serif text-lg font-semibold text-purple-900">Practical</h3>
               </div>
               <div className="divide-y divide-[var(--border)]">
@@ -187,7 +186,7 @@ export default function InflightComfortPage() {
                   },
                   {
                     item: "Panty liner",
-                    note: "Practical, lightweight, and one of those things you'll quietly thank yourself for on a 14-hour flight. Plane restrooms are small and hygiene routines get disrupted.",
+                    note: "Practical, lightweight, and one of those things you'll quietly thank yourself for on a 14-hour flight. Provides an alternative to changing underwear and helps you feel clean.",
                   },
                 ].map((row) => (
                   <ItemRow key={row.item} item={row.item} note={row.note} />
@@ -198,7 +197,6 @@ export default function InflightComfortPage() {
             {/* Category: For the feet */}
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] overflow-hidden">
               <div className="bg-orange-50 border-b border-orange-100 px-6 py-4 flex items-center gap-3">
-                <span className="text-xl">🦶</span>
                 <h3 className="font-serif text-lg font-semibold text-orange-900">For your feet (avoid elephant feet)</h3>
               </div>
               <div className="divide-y divide-[var(--border)]">
@@ -207,17 +205,39 @@ export default function InflightComfortPage() {
                     item: "Foot roller (small massage ball or roller)",
                     note: "Feet and ankles swell on long flights - it's called dependent edema and it's very common. A small massage ball or foot roller that you use while seated keeps circulation moving. Roll your feet under the seat every hour or so. It's one of those things that sounds minor until you're on a 15-hour flight and your ankles look like balloons.",
                     highlight: true,
-                  },
-                  {
-                    item: "Compression socks",
-                    note: "If you're prone to swollen feet or have a very long flight, compression socks are genuinely effective. They're especially worth it if you have a long day of walking ahead of you on arrival.",
+                    link: {
+                      href: "https://www.amazon.com/Due-North-Massage-Plantar-Fasciitus/dp/B002QEY6NK/",
+                      label: "The one I use - Rubz foot massage ball (Amazon)",
+                    },
                   },
                   {
                     item: "Get up every 2 hours",
-                    note: "Yes it disturbs your sleep. Yes it's worth it. Walk to the back galley, do a few calf raises, walk back. Two minutes is enough. The difference in how your legs feel on arrival is significant. Aisle seat helps.",
+                    note: "Yes it disturbs your sleep. Yes it's worth it. Walk to the back galley, do a few calf raises, walk back. Two minutes is enough. The difference in how your legs and lower back feel on arrival is significant. Aisle seat helps.",
+                    highlight: false,
+                    link: null,
                   },
                 ].map((row) => (
-                  <ItemRow key={row.item} item={row.item} note={row.note} highlight={row.highlight} />
+                  <div key={row.item} className={`px-6 py-4 ${row.highlight ? "bg-amber-50/50" : ""}`}>
+                    <div className="flex items-center gap-2 mb-1">
+                      {row.highlight && (
+                        <span className="text-xs font-medium text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full flex-shrink-0">
+                          Non-obvious
+                        </span>
+                      )}
+                    </div>
+                    <p className="font-medium text-[var(--text)] text-sm">{row.item}</p>
+                    <p className="mt-1 text-sm leading-7 text-neutral-600">{row.note}</p>
+                    {row.link && (
+                      <a
+                        href={row.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-teal-700 underline underline-offset-2 hover:text-teal-900"
+                      >
+                        🛒 {row.link.label} ↗
+                      </a>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
@@ -231,10 +251,9 @@ export default function InflightComfortPage() {
             <div className="grid gap-2 sm:grid-cols-2">
               {[
                 "Squalane oil",
-                "Lip balm with SPF",
-                "Alcohol wipes",
+                "Lip balm",
                 "Alcohol spray (small)",
-                "Ear seal / noise-isolating earplugs",
+                "Ear seal",
                 "Eye mask",
                 "Wired earphones",
                 "Light shawl or throw",
@@ -246,7 +265,7 @@ export default function InflightComfortPage() {
                 "Plastic bag",
                 "Panty liner",
                 "Foot roller or massage ball",
-                "Compression socks (optional)",
+                "Bucket hat",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-sm text-neutral-700">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-teal-600" />
@@ -262,9 +281,7 @@ export default function InflightComfortPage() {
           <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
               None of this is expensive or heavy. The whole pouch fits in a large
-              ziplock bag. It's the kind of thing you assemble once and then just
-              refill before each trip - and it quietly makes every long flight
-              better.
+              ziplock bag.
             </p>
             <p>Safe travels ✈️</p>
             <p>- Dee</p>
@@ -280,10 +297,15 @@ function ItemRow({
   item,
   note,
   highlight,
+  link,
 }: {
   item: string;
   note: string;
   highlight?: boolean;
+  link?: {
+    href: string;
+    label: string;
+  };
 }) {
   return (
     <div className={`px-6 py-4 ${highlight ? "bg-amber-50/50" : ""}`}>
@@ -296,6 +318,16 @@ function ItemRow({
       </div>
       <p className="font-medium text-[var(--text)] text-sm mt-1">{item}</p>
       <p className="mt-1 text-sm leading-7 text-neutral-600">{note}</p>
+      {link && (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-teal-700 underline underline-offset-2 hover:text-teal-900"
+        >
+          🛒 {link.label} ↗
+        </a>
+      )}
     </div>
   );
 }
