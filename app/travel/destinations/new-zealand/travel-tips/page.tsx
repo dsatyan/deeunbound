@@ -38,9 +38,8 @@ export default function NZTravelTipsPage() {
 
         <blockquote className="mt-14 rounded-r-2xl border-l-4 border-amber-700 bg-[#efe7df] px-8 py-8 font-serif text-2xl italic leading-relaxed text-[#5b4031]">
           New Zealand is one of those places where the planning pays off
-          more than almost anywhere else - because the distances are real,
-          the bookings fill up, and the small-town surprises are genuinely
-          the best part.
+          more than almost anywhere else - because the distances are real 
+          and the bookings fill up.
         </blockquote>
 
         <div className="mt-14 space-y-6">
@@ -58,10 +57,11 @@ export default function NZTravelTipsPage() {
                 className="font-medium text-teal-700 underline underline-offset-2">
                 immigration.govt.nz
               </a>{" "}
-              online or through the NZeTA app. Processing is usually within 72
-              hours but give it a week. It costs NZD ~$17 and is valid for two
-              years once granted. Do this before you book flights - you don't
-              want to discover you have an issue after you've already committed.
+              online or through the NZeTA app. It took roughly 4 hours for us to upload the docs and apply for e-visa. 
+              Processing usually takes a week and it costed us around NZD 541 for 2 people. 
+              Status of the application moved from "Identity and document checks" to "Application received and 
+              completed" to "Under assessment no medicals required" to "Approved".
+              It's valid for one year once granted, with multiple entries allowed.
             </p>
           </TipCard>
 
@@ -72,8 +72,7 @@ export default function NZTravelTipsPage() {
               Good campervans from reputable operators like Jucy, Britz, or
               Wilderness sell out months ahead in peak summer season. Waiting
               until a few weeks out means you'll either pay a premium or not find
-              what you want. This is not like booking a hotel. Treat it like
-              booking a flight.
+              what you want.
             </p>
           </TipCard>
 
@@ -82,31 +81,25 @@ export default function NZTravelTipsPage() {
 
           <TipCard number="3" color="teal" title="Drive on the left - and watch for one-lane bridges">
             <p>
-              If you're coming from the US or India, you'll be driving on the
-              left. Most people adapt within a day. The trickier adjustment is
-              one-lane bridges, which are extremely common in NZ, especially on
-              the South Island. There are signs at each end indicating which
-              direction has right of way - always check before crossing, or you'll
-              get honked at (or worse). Also add significant buffer to any Google
-              Maps estimate: winding roads, photo stops, and sheep crossing add
-              time.
+              You'll be driving on the
+              left. Most people adapt within a day. One-lane bridges are common in NZ, especially on
+              the South Island. Always check before crossing. 
+              Roundabouts are common too, so familiarize yourself with the rules.
+              Also add significant buffer to any Google
+              Maps estimate: winding roads and photo stops addtime.
             </p>
           </TipCard>
 
-          <TipCard number="4" color="red" title="Speed cameras are automatic - and the fine follows you home">
+          <TipCard number="4" color="red" title="Speed cameras are automatic - and the fine follows you credit card">
             <p>
               New Zealand's speed cameras are everywhere and fully automated.
-              From late 2025, fines are issued digitally within hours of the
+              Fines are issued digitally within hours of the
               offence - no police stop, no warning. The camera reads the plate,
               the notice goes to the registered owner (your rental company), and
-              they charge your credit card. On top of the speeding fine (which
-              can reach NZD $1,000 for serious breaches), rental companies add
-              an admin fee for processing the transfer.
+              they charge your credit card.
             </p>
             <p className="mt-3">
-              The tolerance is tight - fines can be issued for as little as 4
-              km/h over the limit during holiday periods. The roads are scenic
-              and beautiful. Drive slow enough to actually see them.
+              The roads are scenic and beautiful. Drive slow enough to actually see them.
             </p>
             <NoteBox>
               The same applies to parking fines. Paid parking is enforced and
@@ -128,17 +121,14 @@ export default function NZTravelTipsPage() {
 
           <TipCard number="6" color="orange" title="Taking your car on a ferry is expensive - plan for it">
             <p>
-              The Interislander or Bluebridge ferry between Wellington and Picton
-              (North to South Island or vice versa) costs roughly NZD $200+ per
-              vehicle one way. If you're renting a car, check whether your rental
-              company allows inter-island travel - not all do. Some require you
-              to drop the car in Wellington and pick up a new one in Picton.
+              If you're renting a car, check whether your rental
+              company allows inter-island travel - not all do.
             </p>
             <p className="mt-3">
-              Closer to home: the ferry from Auckland to Waiheke Island costs
+              The ferry from Auckland to Waiheke Island costs
               around NZD $200 one way per car. For a day trip, that's a lot. Consider
               going as a foot passenger and renting a car or e-bike on Waiheke
-              instead - it works out cheaper and less stressful.
+              instead.
             </p>
           </TipCard>
 
@@ -149,16 +139,8 @@ export default function NZTravelTipsPage() {
             <p>
               Air New Zealand's economy carry-on allowance is 7kg including your
               personal item. On domestic flights especially, they weigh bags
-              right before boarding at the gate. Not at check-in - at the gate.
-              So you can't sweet-talk your way through with an overweight bag
-              that slipped past check-in.
-            </p>
-            <p className="mt-3">
-              The 7kg total includes everything you carry on - your backpack, your
-              duty-free bag from the airport shops, your jacket stuffed with things.
-              If you've been shopping and you're heading home via a domestic
-              connection, be ruthless. Redistribute into your checked bag before
-              the domestic leg.
+              right before boarding at the gate. So if you purchase anything in 
+              the airport that is also counted into your 7kg limit.
             </p>
           </TipCard>
 
@@ -168,15 +150,13 @@ export default function NZTravelTipsPage() {
           <TipCard number="8" color="teal" title="Don't tip - and don't feel awkward about it">
             <p>
               Tipping is not customary in New Zealand. Hospitality staff are paid
-              a living wage - NZ's minimum wage is around NZD $23/hour - so they
-              don't depend on tips the way US service workers do. Most Kiwis
+              a living wage so they don't depend on tips the way US service workers do. Most Kiwis
               don't tip and won't expect you to.
             </p>
             <p className="mt-3">
               Some EFTPOS machines will offer a tip option, and some cafés have
               tip jars. You can leave something for exceptional service if you
-              want to - it'll be genuinely appreciated. But don't budget for tips
-              the way you would in the US, and don't feel rude for not leaving one.
+              want to - it'll be genuinely appreciated.
             </p>
             <NoteBox>
               One exception: on public holidays, many cafes and restaurants add a
@@ -188,7 +168,7 @@ export default function NZTravelTipsPage() {
 
           <TipCard number="9" color="blue" title="NZ is nearly cashless - card works almost everywhere">
             <p>
-              New Zealand runs on EFTPOS (card payments) for almost everything.
+              New Zealand runs on card payments for almost everything.
               Most places - including small cafes, markets, and parking meters -
               accept card. You won't need much cash, but carry a small amount for
               farmers markets, roadside stalls, and DOC huts in very remote areas.
@@ -204,21 +184,22 @@ export default function NZTravelTipsPage() {
             <p>
               Auckland's souvenir shops are tourist-priced and often generic.
               The best places to buy things that are actually made in New Zealand:
-              Geraldine (South Island), Hokitika (greenstone and jade), Wānaka,
-              and any small town market you pass through. You'll find better
+              Geraldine (South Island) and any small town market you pass through. You'll find better
               quality, more interesting pieces, and friendlier prices than the
               big Auckland tourist shops.
             </p>
             <p className="mt-3">
               Exception: Auckland Airport is genuinely good for last-minute
               shopping. Whittaker's chocolate (a NZ institution), merino wool
-              products from Icebreaker or similar, and pounamu (greenstone/jade)
-              jewelry are all well-represented and decent value compared to
-              downtown Auckland shops.
+              products, and pounamu (greenstone/jade)
+              jewelry are all well-represented and decent value.
             </p>
           </TipCard>
 
           <TipCard number="11" color="teal" title="Things you must try">
+            <p>
+              New Zealand is known for its fresh produce, seafood and milk products. As we are vegetarian, we cannot recommend meat-based dishes, but we can recommend the following:
+            </p>
             <div className="space-y-3">
               {[
                 {
@@ -231,15 +212,15 @@ export default function NZTravelTipsPage() {
                 },
                 {
                   item: "Vegetable pie",
-                  note: "NZ is pie country. Most bakeries and dairies (corner shops) sell pies. As a vegetarian, the vegetable or pumpkin pie is your friend - genuinely good, and NZD $5–7. Miles Better Pies in Te Anau is excellent.",
+                  note: "NZ is pie country. Most bakeries and dairies (corner shops) sell pies. As a vegetarian, the vegetable or pumpkin pie is your friend - genuinely good, and NZD $5–7.",
                 },
                 {
                   item: "Flat white",
-                  note: "NZ (and Australia) invented the flat white. Coffee culture is excellent even in small towns. Don't order a 'latte' if you want something strong.",
+                  note: "Coffee culture is excellent even in small towns. Don't order a 'latte' if you want something strong.",
                 },
                 {
                   item: "Kapiti ice cream",
-                  note: "A premium NZ ice cream brand sold in supermarkets and some cafes. The salted caramel and boysenberry flavors are worth seeking out.",
+                  note: "A premium NZ ice cream brand sold in supermarkets and some cafes.",
                 },
               ].map((food) => (
                 <div key={food.item} className="flex items-start gap-3">
@@ -302,8 +283,7 @@ export default function NZTravelTipsPage() {
               Hostels charge for towel hire. Beaches are everywhere and you'll
               want to swim. Changing out of wet gear in a public car park or by
               a roadside waterfall is a real scenario. A thin towel doubles as a
-              wrap for exactly this - change under it, dry off, pack it down to
-              nothing in your daypack.
+              wrap for exactly this - change under it, dry off and pack it.
             </p>
           </TipCard>
 
@@ -315,7 +295,8 @@ export default function NZTravelTipsPage() {
               cloudy days. SPF 50+ is not overkill; it's correct. Reapply every
               two hours if you're outside. This is one of those tips that sounds
               like standard travel advice but is actually more important in NZ
-              than almost anywhere else.
+              than almost anywhere else. If you are driving, cover your hands with sun protection gloves.
+              My husband drove in NZ for the most part, his hands were not protected and he got severe burns - small boils all over his hands.
             </p>
           </TipCard>
 
@@ -323,10 +304,8 @@ export default function NZTravelTipsPage() {
             <p>
               Around Milford Sound, Doubtful Sound, Te Anau, and most of
               Fiordland: sandflies. They're tiny, silent, and their bites itch
-              for days. DEET-based repellent works. Covering your ankles and
-              arms when you're near water is also effective. Don't make the
-              mistake of standing still in a beautiful spot by the water for too
-              long without protection - you'll only notice the bites hours later.
+              for days, but you'll only notice hours later. DEET-based repellent works. 
+              But me mindful while spraying - so many times it has hit my eyes through wind when others were spraying nearby.
             </p>
           </TipCard>
 
@@ -353,13 +332,11 @@ export default function NZTravelTipsPage() {
               { label: "Speed cameras", value: "Automatic, instant fine, via rental company" },
               { label: "Pedestrian right of way", value: "Not automatic - wait for cars to stop" },
               { label: "Cash needed?", value: "Minimal - NZ is almost cashless" },
-              { label: "Best souvenir towns", value: "Geraldine, Hokitika, Wānaka" },
               { label: "Auckland airport souvenirs", value: "Whittaker's, merino wool, pounamu" },
-              { label: "Must-try food", value: "Real fruit ice cream, veggie pie, flat white" },
               { label: "Reliable hostel chain", value: "Haka Hostel" },
               { label: "UV levels", value: "High - SPF 50+ always" },
               { label: "NZeTA required?", value: "Yes - Indian passport holders must apply" },
-              { label: "Driving side", value: "Left - and watch one-lane bridges" },
+              { label: "Driving side", value: "Left" },
             ].map((item) => (
               <div key={item.label} className="flex items-start justify-between gap-3 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm">
                 <span className="text-[var(--muted)]">{item.label}</span>
@@ -375,8 +352,7 @@ export default function NZTravelTipsPage() {
             <p>
               New Zealand rewards the people who plan ahead and stay curious about
               the small towns. The big sights are spectacular - Milford Sound,
-              Hobbiton, Roy's Peak - but the conversations at a roadside pie shop
-              in Geraldine or a random pull-off with a view in the Mackenzie Country
+              Hobbiton, Roy's Peak - but the random pull-off with a view and conversations with the sheeps
               are what I actually remember.
             </p>
             <p>Safe travels ✈️</p>

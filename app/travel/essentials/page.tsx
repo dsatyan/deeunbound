@@ -66,6 +66,15 @@ const posts: Post[] = [
     readingTime: "4 min read",
     tags: ["arrival", "connectivity", "money"],
   },
+  {
+    slug: "in-flight",
+    title: "My In-Flight Survival Pouch — What I Actually Use on a Long-Haul Flight",
+    description:
+      "The exact items in my carry-on pouch for long flights — including a few things you won't find on other lists.",
+    emoji: "✈️",
+    readingTime: "6 min read",
+    tags: ["flights", "comfort", "packing"],
+  },
   // Add new posts here ↓
 ];
 
