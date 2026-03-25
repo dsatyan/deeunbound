@@ -219,7 +219,7 @@ export default function PhoneFailsPage() {
                     link: null,
                 },
                 {
-                    text: "eSIM data topped up — check balance before departing",
+                    text: "eSIM data topped up - check balance before departing",
                     link: { href: "/travel/essentials/esim", label: "eSIM guide" },
                 },
                 {
@@ -243,7 +243,7 @@ export default function PhoneFailsPage() {
                     {item.text}
                     {item.link && (
                         <>
-                        {" — "}
+                        {" - "}
                         <a
                             href={item.link.href}
                             className="font-medium text-teal-700 underline underline-offset-2 hover:text-teal-900"
