@@ -5,7 +5,7 @@ import PageShell from "@/components/page-shell";
 export const storyMeta = {
   title: "The Paris Morning I Was Late - And What It Changed",
   description:
-    "A solo trip, a disgruntled Uber driver, heavy Monday morning traffic, and ten minutes that taught me to always leave thirty minutes early.",
+    "A solo trip, a disgruntled Uber driver, heavy Monday morning traffic, and 15 minutes that taught me to always leave thirty minutes early.",
   emoji: "🗼",
   readingTime: "5 min read",
   location: "Paris, France",
@@ -176,15 +176,13 @@ export default function ParisRashUberPage() {
             Mozart said the music lives
             not in the notes but in the silence between them. A trip needs
             that silence too. Not every hour accounted for. Not every moment
-            optimised. Just you, a street you don't know yet, and enough time
-            to let it become familiar.
+            optimised.
           </p>
 
         </article>
 
         {/* ── Sign off ── */}
         <div className="mt-16 border-t border-[var(--border)] pt-10">
-        <p>"C’est la vie" - That’s life.</p>
           <p className="font-serif text-xl italic leading-relaxed text-[#554a43]">
             - Dee
           </p>
