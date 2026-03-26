@@ -15,10 +15,11 @@ export default function TravelPhotosPage() {
   const filterRef = useRef<HTMLDivElement>(null);
 
   // Filtered photos based on active country
-  const filtered =
+  const filtered = (
     activeCountry === "All"
       ? PHOTOS
-      : PHOTOS.filter((p) => p.country === activeCountry);
+      : PHOTOS.filter((p) => p.country === activeCountry)
+  ).sort((a, b) => b.date.localeCompare(a.date)); //newest first
 
   // Open modal
   const openModal = useCallback(

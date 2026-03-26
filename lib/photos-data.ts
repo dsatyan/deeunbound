@@ -12,6 +12,7 @@ export type Photo = {
   location: string;   // Shown on hover and in modal e.g. "Aoraki / Mount Cook, New Zealand"
   country: string;    // Must match a value in COUNTRIES below for filtering
   caption?: string;   // Optional longer description shown in modal
+  date: string; // "YYYY-MM" — month precision is enough, no need for exact day
 };
 
 // ── Countries shown in the filter bar (add new ones here as you travel) ───────
@@ -44,7 +45,8 @@ export const PHOTOS: Photo[] = [
     location: "Sealy Tarns, Aoraki / Mount Cook, New Zealand",
     country: "New Zealand",
     caption: "The hike up to Sealy Tarns with the Aoraki valley at sunrise",
-  }
+    date: "2026-01",
+  },
   // ── JAPAN ────────────────────────────────────────────────────────────────────
   // {
   //   publicId: "travel/japan/tokyo-shibuya-night",
