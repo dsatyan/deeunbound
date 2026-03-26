@@ -38,8 +38,8 @@ export default function ParisRashUberPage() {
           </h1>
 
           <p className="mt-6 text-xl leading-9 text-neutral-600 font-serif italic">
-            A solo trip, a disgruntled Uber driver, heavy Monday morning
-            traffic, and 15 minutes that quietly rearranged how I plan trip since.
+            A solo trip, a disgruntled Uber driver and heavy Monday morning
+            traffic, that quietly rearranged how I plan trip since.
           </p>
 
           <div className="mt-8 flex items-center gap-5 text-sm text-[var(--muted)]">
@@ -125,7 +125,7 @@ export default function ParisRashUberPage() {
           </h2>
 
           <p>
-            I leave thirty to forty minutes earlier than I think I need to.
+            I leave thirty to forty minutes earlier than I think I need to. Especially if it is the first day in a new city.
           </p>
 
           <p>

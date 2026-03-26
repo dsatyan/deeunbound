@@ -1,7 +1,7 @@
 import PageShell from "@/components/page-shell";
 import AboutHeroPhoto from "@/components/about-hero-photo";
 
-// ─── Photo placeholder — swap src with your real image path ───────────────
+// ─── Photo placeholder - swap src with your real image path ───────────────
 const HERO_PHOTO = "/images/dee-about.jpg"; // replace with your actual photo
 
 export default function AboutPage() {
@@ -9,7 +9,7 @@ export default function AboutPage() {
     <PageShell>
 
       {/* ══════════════════════════════════════════
-          HERO — full-width warm band
+          HERO - full-width warm band
       ══════════════════════════════════════════ */}
       <section className="bg-[var(--surface)] border-b border-[var(--border)]">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12 md:gap-16">
@@ -28,13 +28,13 @@ export default function AboutPage() {
               I like living many lives in one.
             </h1>
             <p className="text-[var(--muted)] text-lg leading-relaxed max-w-xl">
-              Hi, I'm Dee — a software test engineer by day, and a curious explorer of everything else.
+              Hi, I'm Dee - a software test engineer by day, and a curious explorer of everything else.
               I travel, grow (a lot of) plants, dance, cook, write, and occasionally pick up new
               hobbies just to see where they take me.
             </p>
             <p className="text-[var(--muted)] text-lg leading-relaxed max-w-xl mt-4">
               I don't really believe in choosing one thing and sticking to it forever. I'd rather
-              be a little bit of everything — a work in progress, always.
+              be a little bit of everything - a work in progress, always.
             </p>
           </div>
         </div>
@@ -47,12 +47,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-5xl px-6 py-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             {[
-              { emoji: "🌎", label: "Countries visited", value: "—" },
+              { emoji: "🌎", label: "Countries visited", value: "24" },
               { emoji: "🌿", label: "Plants at home", value: "~300" },
-              { emoji: "🐶", label: "Dog", value: "1 chiweenie" },
               { emoji: "💻", label: "Profession", value: "Software Engineer" },
               { emoji: "✈️", label: "Travel style", value: "Experience first" },
-              { emoji: "🎲", label: "Also into", value: "Dance · Games · Food" },
+              { emoji: "🎲", label: "Also into", value: "Dance · Board Games " },
             ].map((f) => (
               <div key={f.label} className="flex flex-col items-center gap-1 py-2">
                 <span className="text-2xl">{f.emoji}</span>
@@ -80,19 +79,15 @@ export default function AboutPage() {
           <div className="space-y-4 text-[var(--muted)] leading-relaxed">
             <p>
               I grew up in Mysore, and now I live in Fremont, California. My days are structured
-              around test and code — I work as a software test engineer at Cisco — but everything outside of
-              that is intentionally unstructured. I met my husband Sunny in Niles, Fremont in 2017 and Kutti, our cheweenie,
+              around test and code - I work as a software test engineer at Cisco - but everything outside of
+              that is intentionally unstructured. 
+              I met my husband Sunny in Niles, Fremont in 2017.
+              Kutti, our cheweenie,
               came home in 2020 and has been our constant companion in all our adventures.
             </p>
             <p>
-              Travel, for me, started with curiosity. I've always been drawn to how people
-              live — their food, their languages, their small daily rituals. I like observing,
-              listening, and sometimes just existing quietly in a place that's completely
-              unfamiliar.
-            </p>
-            <p>
-              Dee Unbound started very simply — I've always written things down. Thoughts,
-              moments, random reflections. This is just an extension of that — a space to
+              Dee Unbound started very simply - I've always written things down. Thoughts,
+              moments, random reflections. This is just an extension of that - a space to
               document, but also to make it useful, thoughtful, and maybe a little enjoyable
               for someone else reading it.
             </p>
@@ -112,8 +107,8 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4 text-[var(--muted)] leading-relaxed">
               <p>
-                There are moments — somewhere over an ocean, when turbulence hits — where I
-                question everything. Why am I here? Why leave a life that already feels full —
+                There are moments - somewhere over an ocean, when turbulence hits - where I
+                question everything. Why am I here? Why leave a life that already feels full -
                 my plants, my family, my routines?
               </p>
               <p>
@@ -122,8 +117,8 @@ export default function AboutPage() {
                 than expected. A quiet street that feels oddly familiar.
               </p>
               <p>
-                I lean toward planning, but I won't wait for the perfect plan. If it's between a
-                spontaneous trip and no trip — I'll go.
+                I lean towards planning, but I won't wait for the perfect plan. If it's between a
+                spontaneous trip and no trip - I'll go.
               </p>
             </div>
           </div>
@@ -148,56 +143,6 @@ export default function AboutPage() {
 
         <Divider />
 
-        {/* ── What You'll Find Here ── */}
-        <section className="grid md:grid-cols-[1fr_2fr] gap-10 items-start">
-          <div>
-            <SectionLabel>What You'll Find Here</SectionLabel>
-            <h2 className="font-editorial text-3xl text-[var(--text)] leading-snug">
-              This isn't a typical travel blog.
-            </h2>
-          </div>
-          <div className="space-y-3">
-            {[
-              {
-                icon: "🗂️",
-                title: "Practical things that actually help",
-                desc: "Like how I prepare at the airport gate, or how I find vegetarian food anywhere.",
-              },
-              {
-                icon: "📖",
-                title: "Stories that feel real",
-                desc: "Not curated perfection — just what actually happened and what I made of it.",
-              },
-              {
-                icon: "⚙️",
-                title: "Small systems that make travel smoother",
-                desc: "The kind of stuff I wish someone had written down for me.",
-              },
-              {
-                icon: "💭",
-                title: "Observations that don't fit neat categories",
-                desc: "Thoughts about place, people, and what it means to keep moving.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="flex gap-4 items-start bg-[var(--surface)] border border-[var(--border)] rounded-xl px-5 py-4"
-              >
-                <span className="text-xl mt-0.5 flex-shrink-0">{item.icon}</span>
-                <div>
-                  <p className="font-medium text-[var(--text)] text-sm">{item.title}</p>
-                  <p className="text-sm text-[var(--muted)] mt-0.5 leading-snug">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-            <p className="text-sm text-[var(--muted)] pt-2 leading-relaxed italic">
-              I'm not trying to sell a version of travel. I'm just trying to document mine — honestly.
-            </p>
-          </div>
-        </section>
-
-        <Divider />
-
         {/* ── Beyond Travel ── */}
         <section>
           <div className="grid md:grid-cols-[1fr_2fr] gap-10 items-start">
@@ -209,20 +154,24 @@ export default function AboutPage() {
             </div>
             <div className="space-y-4 text-[var(--muted)] leading-relaxed">
               <p>
-                When I'm not traveling, I'm usually at home — which, surprisingly, feels just as
-                full. I have around 300 plants (yes, really 🌿). I have a small dog — a chiweenie
-                — who runs the house. I practice Bharatanatyam. I play board games. I cook,
-                experiment, and occasionally paint.
+                When I'm not traveling, I'm usually at home - which, surprisingly, feels just as
+                full. I live among a house full of plants - many of which have grown so much that we’re honestly running out of space to stretch. I have a small dog - a chiweenie
+                - who runs the house, and a life filled with little rituals I love.
               </p>
               <p>
-                I like building a life that feels full — whether I'm in a new country or just at
+                I practice Bharatanatyam, play board games (often with my Fremont board game community), 
+                cook and experiment in the kitchen, and occasionally paint. Some days are slow—lazy weekends 
+                spent watching TV with my husband, or beautiful evenings with neighbors who’ve become close friends.
+              </p>
+              <p>
+                I like building a life that feels full - whether I'm in a new country or just at
                 home watering plants.
               </p>
             </div>
           </div>
 
           {/* Interest chips */}
-          <div className="mt-8 flex flex-wrap gap-2">
+          {/* <div className="mt-8 flex flex-wrap gap-2">
             {["🌱 Plants (×300)", "🐾 Chiweenie", "💃 Bharatanatyam", "🎲 Board games", "🍳 Cooking", "✍️ Writing", "🎨 Painting", "💻 Engineering"].map(
               (tag) => (
                 <span
@@ -233,34 +182,9 @@ export default function AboutPage() {
                 </span>
               )
             )}
-          </div>
+          </div> */}
         </section>
 
-        <Divider />
-
-        {/* ── How I Travel ── */}
-        <section className="grid md:grid-cols-[1fr_2fr] gap-10 items-start">
-          <div>
-            <SectionLabel>How I Travel</SectionLabel>
-            <h2 className="font-editorial text-3xl text-[var(--text)] leading-snug">
-              Things I care about on the road.
-            </h2>
-          </div>
-          <ul className="space-y-3">
-            {[
-              "Using less plastic where I can",
-              "Eating fresh, simple, vegetarian food",
-              "Buying groceries and cooking occasionally instead of eating out all the time",
-              "Moving slower, even when the itinerary is full",
-              "Leaving places a little better than I found them",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-[var(--muted)] leading-relaxed">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--accent)] flex-shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </section>
 
         <Divider />
 
@@ -273,7 +197,7 @@ export default function AboutPage() {
           <p className="mt-6 text-[var(--muted)] text-sm leading-relaxed">
             This space is just a reflection of that.
           </p>
-          <p className="mt-4 font-editorial italic text-[var(--accent)] text-lg">— Dee</p>
+          <p className="mt-4 font-editorial italic text-[var(--accent)] text-lg">- Dee</p>
         </section>
 
       </div>

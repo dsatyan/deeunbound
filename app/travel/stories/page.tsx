@@ -24,7 +24,7 @@ const STORIES: Story[] = [
     slug: "paris-rash-uber",
     title: "The Paris Morning I Was Late - And What It Changed",
     description:
-      "A solo trip, a disgruntled Uber driver, heavy Monday morning traffic, and 15 minutes that taught me to always leave thirty minutes early.",
+      "A solo trip, a disgruntled Uber driver, heavy Monday morning traffic - all that taught me to always leave early.",
     emoji: "🗼",
     location: "Paris, France",
     readingTime: "3 min read",
