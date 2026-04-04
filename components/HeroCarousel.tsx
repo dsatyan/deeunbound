@@ -43,51 +43,58 @@ const SLIDES: { publicId: string; alt: string }[][] = [
 const MOBILE_SLIDES = SLIDES.flat();
 const DESKTOP_TOTAL = SLIDES.length;
 const MOBILE_TOTAL = MOBILE_SLIDES.length;
- 
+
+// touch-action: manipulation removes the 300ms iOS tap delay without
+// suppressing pointer events the way onPointerUp can be.
+const tapStyle = { touchAction: "manipulation" } as const;
+
 export default function HeroCarousel() {
   const [desktopIdx, setDesktopIdx] = useState(0);
   const [mobileIdx, setMobileIdx] = useState(0);
- 
-  // Touch tracking refs
+
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
- 
+
   const prevDesktop = () =>
     setDesktopIdx((i) => (i - 1 + DESKTOP_TOTAL) % DESKTOP_TOTAL);
   const nextDesktop = () =>
     setDesktopIdx((i) => (i + 1) % DESKTOP_TOTAL);
- 
+
   const prevMobile = () =>
     setMobileIdx((i) => (i - 1 + MOBILE_TOTAL) % MOBILE_TOTAL);
   const nextMobile = () =>
     setMobileIdx((i) => (i + 1) % MOBILE_TOTAL);
- 
+
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
   };
- 
-  const onTouchEnd = (e: React.TouchEvent, onLeft: () => void, onRight: () => void) => {
+
+  const onTouchEnd = (
+    e: React.TouchEvent,
+    onLeft: () => void,
+    onRight: () => void
+  ) => {
     if (touchStartX.current === null || touchStartY.current === null) return;
     const dx = e.changedTouches[0].clientX - touchStartX.current;
     const dy = e.changedTouches[0].clientY - touchStartY.current;
-    // Only treat as horizontal swipe if horizontal movement dominates
     if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
       dx < 0 ? onRight() : onLeft();
     }
     touchStartX.current = null;
     touchStartY.current = null;
   };
- 
+
   return (
     <div className="relative w-full overflow-hidden border-b border-[var(--border)]">
- 
+
       {/* ── MOBILE carousel (hidden on md+) ── */}
       <div
-        className="md:hidden"
+        className="relative md:hidden"
         onTouchStart={onTouchStart}
         onTouchEnd={(e) => onTouchEnd(e, prevMobile, nextMobile)}
       >
+        {/* Track */}
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${mobileIdx * 100}%)` }}
@@ -108,29 +115,32 @@ export default function HeroCarousel() {
             </div>
           ))}
         </div>
- 
-        {/* Mobile arrows */}
+
+        {/* Mobile arrows — z-20 so they sit above the image layer */}
         <button
-          onPointerUp={prevMobile}
+          onClick={prevMobile}
+          style={tapStyle}
           aria-label="Previous photo"
-          className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[var(--bg)]/80 text-[var(--muted)] backdrop-blur-sm"
+          className="absolute left-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--bg)]/80 text-lg text-[var(--muted)] backdrop-blur-sm"
         >
           ←
         </button>
         <button
-          onPointerUp={nextMobile}
+          onClick={nextMobile}
+          style={tapStyle}
           aria-label="Next photo"
-          className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[var(--bg)]/80 text-[var(--muted)] backdrop-blur-sm"
+          className="absolute right-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--bg)]/80 text-lg text-[var(--muted)] backdrop-blur-sm"
         >
           →
         </button>
- 
+
         {/* Mobile dots */}
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
+        <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-1.5">
           {MOBILE_SLIDES.map((_, i) => (
             <button
               key={i}
-              onPointerUp={() => setMobileIdx(i)}
+              onClick={() => setMobileIdx(i)}
+              style={tapStyle}
               aria-label={`Go to photo ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 i === mobileIdx
@@ -141,10 +151,10 @@ export default function HeroCarousel() {
           ))}
         </div>
       </div>
- 
+
       {/* ── DESKTOP carousel (hidden below md) ── */}
       <div
-        className="hidden md:block"
+        className="relative hidden md:block"
         onTouchStart={onTouchStart}
         onTouchEnd={(e) => onTouchEnd(e, prevDesktop, nextDesktop)}
       >
@@ -172,29 +182,32 @@ export default function HeroCarousel() {
             </div>
           ))}
         </div>
- 
+
         {/* Desktop arrows */}
         <button
-          onPointerUp={prevDesktop}
+          onClick={prevDesktop}
+          style={tapStyle}
           aria-label="Previous photos"
-          className="absolute left-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[var(--bg)]/80 text-[var(--muted)] backdrop-blur-sm transition hover:bg-[var(--bg)] hover:text-[var(--text)]"
+          className="absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--bg)]/80 text-lg text-[var(--muted)] backdrop-blur-sm transition hover:bg-[var(--bg)] hover:text-[var(--text)]"
         >
           ←
         </button>
         <button
-          onPointerUp={nextDesktop}
+          onClick={nextDesktop}
+          style={tapStyle}
           aria-label="Next photos"
-          className="absolute right-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-[var(--bg)]/80 text-[var(--muted)] backdrop-blur-sm transition hover:bg-[var(--bg)] hover:text-[var(--text)]"
+          className="absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--bg)]/80 text-lg text-[var(--muted)] backdrop-blur-sm transition hover:bg-[var(--bg)] hover:text-[var(--text)]"
         >
           →
         </button>
- 
+
         {/* Desktop dots */}
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
+        <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
           {SLIDES.map((_, i) => (
             <button
               key={i}
-              onPointerUp={() => setDesktopIdx(i)}
+              onClick={() => setDesktopIdx(i)}
+              style={tapStyle}
               aria-label={`Go to slide ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-300 ${
                 i === desktopIdx
@@ -205,7 +218,7 @@ export default function HeroCarousel() {
           ))}
         </div>
       </div>
- 
+
     </div>
   );
 }

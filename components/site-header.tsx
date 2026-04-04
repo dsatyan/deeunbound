@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+const tapStyle = { touchAction: "manipulation" } as const;
+
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [travelOpen, setTravelOpen] = useState(false);
@@ -16,7 +18,7 @@ export default function SiteHeader() {
     <header className="relative z-50 border-b border-[var(--border)] bg-[var(--bg)]">
       <div className="mx-auto grid max-w-7xl grid-cols-3 items-center px-6 py-5 md:px-8 md:py-6">
 
-        {/* ── Left: desktop nav / mobile hamburger ── */}
+        {/* ── Left: hamburger (mobile) / nav (desktop) ── */}
         <div className="flex items-center">
 
           {/* Desktop nav */}
@@ -28,10 +30,10 @@ export default function SiteHeader() {
               Blog
             </Link>
 
-            {/* Travel dropdown */}
             <div className="group relative">
               <button
                 type="button"
+                style={tapStyle}
                 className="flex items-center gap-1 py-2 transition-colors hover:text-[var(--text)]"
               >
                 Travel <span className="text-xs">▾</span>
@@ -61,45 +63,36 @@ export default function SiteHeader() {
             </a>
           </nav>
 
-          {/* Mobile hamburger — onPointerUp fires on real touch devices */}
+          {/* Mobile hamburger */}
           <button
             type="button"
-            onPointerUp={() => setMenuOpen((o) => !o)}
+            onClick={() => setMenuOpen((o) => !o)}
+            style={tapStyle}
             className="flex flex-col items-center justify-center gap-1.5 p-2 md:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <span
-              className={`block h-0.5 w-6 bg-[var(--text)] transition-all duration-200 ${
-                menuOpen ? "translate-y-2 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-[var(--text)] transition-all duration-200 ${
-                menuOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-[var(--text)] transition-all duration-200 ${
-                menuOpen ? "-translate-y-2 -rotate-45" : ""
-              }`}
-            />
+            <span className={`block h-0.5 w-6 bg-[var(--text)] transition-all duration-200 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-[var(--text)] transition-all duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-[var(--text)] transition-all duration-200 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
           </button>
         </div>
 
         {/* ── Centre: logo ── */}
         <Link
           href="/"
-          onPointerUp={closeAll}
+          onClick={closeAll}
+          style={tapStyle}
           className="justify-self-center font-editorial text-2xl italic tracking-tight text-[var(--text)] md:text-3xl"
         >
           Dee Unbound
         </Link>
 
-        {/* ── Right: contact ── */}
+        {/* ── Right: Contact — visible on BOTH mobile and desktop ── */}
         <div className="justify-self-end">
           <button
             type="button"
-            className="hidden rounded-full border border-[var(--border)] px-5 py-2 text-sm text-[var(--muted)] transition hover:border-[var(--text)] hover:text-[var(--text)] md:block"
+            style={tapStyle}
+            className="rounded-full border border-[var(--border)] px-4 py-1.5 text-xs text-[var(--muted)] transition hover:border-[var(--text)] hover:text-[var(--text)] md:px-5 md:py-2 md:text-sm"
           >
             Contact
           </button>
@@ -113,7 +106,8 @@ export default function SiteHeader() {
 
             <Link
               href="/about"
-              onPointerUp={closeAll}
+              onClick={closeAll}
+              style={tapStyle}
               className="rounded-xl px-4 py-3 hover:bg-black/5 hover:text-[var(--text)]"
             >
               About
@@ -121,24 +115,21 @@ export default function SiteHeader() {
 
             <Link
               href="/blog"
-              onPointerUp={closeAll}
+              onClick={closeAll}
+              style={tapStyle}
               className="rounded-xl px-4 py-3 hover:bg-black/5 hover:text-[var(--text)]"
             >
               Blog
             </Link>
 
-            {/* Travel expandable */}
             <button
               type="button"
-              onPointerUp={() => setTravelOpen((o) => !o)}
+              onClick={() => setTravelOpen((o) => !o)}
+              style={tapStyle}
               className="flex items-center justify-between rounded-xl px-4 py-3 text-left hover:bg-black/5 hover:text-[var(--text)]"
             >
               Travel
-              <span
-                className={`text-xs transition-transform duration-200 ${
-                  travelOpen ? "rotate-180" : ""
-                }`}
-              >
+              <span className={`text-xs transition-transform duration-200 ${travelOpen ? "rotate-180" : ""}`}>
                 ▾
               </span>
             </button>
@@ -154,7 +145,8 @@ export default function SiteHeader() {
                   <Link
                     key={href}
                     href={href}
-                    onPointerUp={closeAll}
+                    onClick={closeAll}
+                    style={tapStyle}
                     className="rounded-xl px-3 py-2.5 hover:bg-black/5 hover:text-[var(--text)]"
                   >
                     {label}
@@ -165,20 +157,13 @@ export default function SiteHeader() {
 
             <a
               href="/#plants"
-              onPointerUp={closeAll}
+              onClick={closeAll}
+              style={tapStyle}
               className="rounded-xl px-4 py-3 hover:bg-black/5 hover:text-[var(--text)]"
             >
               Plants
             </a>
 
-            <div className="mt-2 border-t border-[var(--border)] pt-3">
-              <button
-                type="button"
-                className="w-full rounded-xl px-4 py-3 text-left hover:bg-black/5 hover:text-[var(--text)]"
-              >
-                Contact
-              </button>
-            </div>
           </nav>
         </div>
       )}
