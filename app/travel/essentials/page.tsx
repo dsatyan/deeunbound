@@ -19,6 +19,13 @@ type Post = {
 
 const posts: Post[] = [
   {
+  slug: "packing-list",
+  title: "Complete Travel Packing Checklist",
+  description: "Interactive checklist — check off, skip, and customise for every trip.",
+  emoji: "🧳",
+  tags: ["packing", "essentials", "planning"],
+  },
+  {
     slug: "gate-habits",
     title: "What I Do at the Airport Gate That Saves Me Hours Later",
     description: "Turn waiting time into your biggest travel advantage.",
