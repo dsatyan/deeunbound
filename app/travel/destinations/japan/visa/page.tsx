@@ -1,5 +1,6 @@
 // app/travel/destinations/japan/visa/page.tsx
 import PageShell from "@/components/page-shell";
+import Link from "next/link";
 
 export default function JapanVisaPage() {
   return (
@@ -32,9 +33,7 @@ export default function JapanVisaPage() {
         <div className="mt-10 flex items-center gap-6 border-b border-[var(--border)] pb-10 text-sm text-[var(--muted)]">
           <span>By Dee</span>
           <span className="h-1 w-1 rounded-full bg-neutral-300" />
-          <span>10 min read</span>
-          <span className="h-1 w-1 rounded-full bg-neutral-300" />
-          <span>Applied March 2026</span>
+          <span>Applied in March 2026</span>
         </div>
 
         {/* ── Quick context box ── */}
@@ -146,7 +145,7 @@ export default function JapanVisaPage() {
                 { doc: "Round-trip flight itinerary", note: "Confirmation showing your exact entry and exit dates from Japan. Also the applicant names must be identical to the passport" },
                 { doc: "Hotel/accommodation bookings", note: "For every night of the stay - must match your flight dates exactly" },
                 { doc: "Day-by-day schedule", note: "⚠️ This is what got us rejected first time - see below" },
-                { doc: "Bank statements (3 months)", note: "To show you can cover your expenses" },
+                { doc: "Bank statement - latest", note: "To show you can cover your expenses" },
                 { doc: "Employment verification / pay stub", note: "Proves stable income and ties to the US" },
                 { doc: "Authorization letter (if applying for family member)", note: "Required when you submit on behalf of someone else - template link below" },
               ].map((item) => (
@@ -191,18 +190,15 @@ export default function JapanVisaPage() {
               </p>
             </div>
             <p>
-              The silver lining: they responded the same day, which means the
-              review process is fast. The problem was simple - our day-by-day
-              itinerary document said we'd be in Kyoto on a date when our flight
-              showed us still in transit. The dates didn't line up.
+              They responded the same day, which means the
+              review process is fast. The only mistake we made was, we had not added our flight takeoff date to our day-by-day schedule. We started the schedule from the day we landed in Japan.
             </p>
             <p>
-              The fix: make sure your day-by-day schedule starts on your actual
-              arrival date (not departure date from the US), ends on your actual
-              departure date from Japan, and every day is accounted for.
-              "Day 1: Arrive Tokyo, check in to hotel, rest" is fine - it doesn't
+              Make sure your day-by-day schedule starts from your departure date, ends on your actual
+              departure date from Japan, and every day is accounted for. Example: 
+              "Day 1: Depart from US, Day 2: Arrive Tokyo, check in to hotel ..." is fine - it doesn't
               have to be a rigid hour-by-hour plan. It just has to match the dates
-              on your flight booking exactly.
+              on your flight booking exactly and also with the hotel reservations, addresses and telephone numbers.
             </p>
             <NoteBox>
               <strong>After rejection, you must start a completely new application.</strong>{" "}
@@ -262,7 +258,7 @@ export default function JapanVisaPage() {
                 {
                   n: "6",
                   title: "Check for the confirmation email",
-                  detail: 'You should receive an email with subject "JAPAN eVISA [Notification of temporary reception of application]" and a receipt number. Keep this number. If you don\'t receive it within a few hours, check your spam folder.',
+                  detail: 'You should receive an email with subject "JAPAN eVISA [Notification of temporary reception of application]" and a receipt number. If you don\'t receive it within a few hours, check your spam folder.',
                 },
               ].map((step) => (
                 <div
@@ -315,28 +311,28 @@ export default function JapanVisaPage() {
                   type: "error",
                 },
                 {
-                  date: "Mar 12",
+                  date: "Day 3",
                   event: "Resubmitted (second attempt)",
                   status: "Temporarily received",
-                  detail: "New application with corrected itinerary. Confirmation email received with new receipt number. Note: added family member application this time.",
+                  detail: "New application with corrected itinerary. Confirmation email received with new receipt number.",
                   type: "normal",
                 },
                 {
-                  date: "Mar 16",
+                  date: "Day 7",
                   event: "Processing confirmation",
                   status: "Under examination",
-                  detail: 'Received email saying "we have received your visa application and will proceed." Also told us to expect a fee notice email on March 23. Explicitly said: do not call or email us.',
+                  detail: 'Received email saying "we have received your visa application and will proceed." Also told us to expect a fee notice email on a specific date. Explicitly said: do not call or email us.',
                   type: "normal",
                 },
                 {
-                  date: "Mar 23",
+                  date: "Fee payment date",
                   event: "Fee payment request",
                   status: "Fee payment",
                   detail: "Email arrived exactly on the scheduled date with credit card payment instructions. Fee: ¥1,664 for 2 people (~$11 total at the time).",
                   type: "payment",
                 },
                 {
-                  date: "Mar 24",
+                  date: "The day after fee payment",
                   event: "✅ Visa issued",
                   status: "Issued",
                   detail: 'Email arrived the next day: "JAPAN eVISA [Notification of electronic visa issuance]". Each applicant gets a separate issuance number. Visa is displayed digitally - no sticker in passport.',
@@ -387,16 +383,8 @@ export default function JapanVisaPage() {
               How to show your visa at the airport
             </h2>
             <p>
-              The Japan eVisa is digital - there's no sticker in your passport.
-              At check-in at your departure airport, you'll be asked to display
-              the "Visa Issuance Notice" on your phone screen.
-            </p>
-            <p>
-              <strong className="font-medium text-[var(--text)]">Important:</strong>{" "}
               Screenshots and printed PDFs are NOT accepted. You must show it
-              live on the eVisa portal on your device. Make sure you have internet
-              access at the airport (or download it for offline viewing beforehand
-              - see instructions below).
+              live on the eVisa portal on your phone. You can connect to the wifi at the airport once you arrive.
             </p>
             <div className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-5 space-y-2">
               <p className="font-medium text-[var(--text)] mb-3">How to display the visa issuance notice</p>
@@ -436,12 +424,8 @@ export default function JapanVisaPage() {
             <div className="space-y-3">
               {[
                 {
-                  tip: "Apply within 3 months of your travel date",
-                  detail: "Single-entry visas are valid for 3 months from issuance. Apply too early and your visa could expire before your trip. Apply too close and you risk not having it in time.",
-                },
-                {
                   tip: "Your day-by-day itinerary must match your flights exactly",
-                  detail: "This is the most common rejection reason. Day 1 should be your arrival date in Japan (not your departure from the US). Your last day should be your departure date from Japan.",
+                  detail: "This is the most common rejection reason. Day 1 should be your departure from your country. Your last day should be your departure date from Japan.",
                 },
                 {
                   tip: "The fee notice date is given to you in advance",
@@ -468,6 +452,33 @@ export default function JapanVisaPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <section className="rounded-2xl border border-teal-300 bg-[#dce7e6] px-8 py-8">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-teal-700 mb-4">
+              Next step before you fly
+            </p>
+            <div className="flex items-start gap-4">
+              <span className="text-3xl flex-shrink-0">📲</span>
+              <div className="flex-1">
+                <h2 className="font-serif text-2xl font-semibold text-[var(--text)] mb-2">
+                  Register on Visit Japan Web before you board
+                </h2>
+                <p className="text-base leading-7 text-neutral-700 mb-4">
+                  Once your visa is approved, the next thing to do is register on Japan's
+                  official Visit Japan Web service. It lets you complete immigration and
+                  customs procedures online and generates a QR code you show at the
+                  airport. Do it at the gate — not after landing. You'll need your
+                  passport, visa issuance number, and flight details.
+                </p>
+                <Link
+                  href="/travel/destinations/japan/japan-immigration-qr-code"
+                  className="inline-flex items-center gap-2 rounded-full bg-teal-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-teal-800 transition-colors"
+                >
+                  Read the full guide →
+                </Link>
+              </div>
             </div>
           </section>
 
@@ -504,8 +515,7 @@ export default function JapanVisaPage() {
         <section className="mt-16 border-t border-[var(--border)] pt-10">
           <div className="max-w-3xl space-y-5 font-serif text-xl italic leading-relaxed text-[#554a43]">
             <p>
-              The Japan eVisa process is genuinely fast and straightforward once
-              you know what to prepare.
+              The Japan eVisa process is genuinely fast and straightforward. 
             </p>
             <p>Safe travels ✈️</p>
             <p>- Dee</p>

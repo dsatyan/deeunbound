@@ -24,8 +24,14 @@ const JAPAN_PAGES: JapanPage[] = [
     title: "Japan eVisa - Indian Passport, US Resident (H1B)",
     description: "Step-by-step: how to apply online, what got our application rejected the first time, applying for a family member, and the full timeline from submission to issuance.",
     emoji: "📋",
-    readingTime: "10 min read",
-    tags: ["visa", "eVisa", "H1B", "Indian passport"],
+    tags: ["Visa", "eVisa", "H1B", "Indian passport"],
+  },
+  {
+    slug: "japan-immigration-qr-code",
+    title: "Japan immigration QR code is a must — register before you fly",
+    description: "Do this at the gate. How to register on Visit Japan Web and get your QR code.",
+    emoji: "✈️",
+    tags: ["Visa", "Immigration", "Customs"],
   },
   // ↓ Add new Japan pages here
   // {
