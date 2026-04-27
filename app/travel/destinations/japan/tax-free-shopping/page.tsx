@@ -201,9 +201,7 @@ export default function JapanTaxFreeShoppingPage() {
                 },
               ].map(store => (
                 <div key={store.store} className={`rounded-2xl border overflow-hidden ${store.color}`}>
-                  <div className={`border-b px-6 py-4 flex items-center gap-3 ${store.headerColor}`}>
-                    <span className="text-2xl">{store.icon}</span>
-                    <div>
+                  <div className={`border-b px-6 py-4 flex items-center gap-3 ${store.headerColor}`}>                    <div>
                       <p className={`font-serif text-lg font-semibold ${store.titleColor}`}>{store.store}</p>
                       <p className={`text-sm font-medium ${store.titleColor} opacity-80`}>{store.method}</p>
                     </div>

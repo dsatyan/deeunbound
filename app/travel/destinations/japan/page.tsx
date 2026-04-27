@@ -40,6 +40,13 @@ const JAPAN_PAGES: JapanPage[] = [
     emoji: "🛍️",
     tags: ["shopping", "money", "tips"],
   },
+  {
+  slug: "suica-ic-card",
+  title: "Japan IC Card / Suica Setup Guide for Tourists",
+  description: "Green vs red Suica explained, how to top up, Shinkansen e-ticket registration, coin lockers, and what happens when you lose one.",
+  emoji: "🚆",
+  tags: ["transport", "suica", "getting around", "essentials"],
+},
   // ↓ Add new Japan pages here
   // {
   //   slug: "tokyo",
