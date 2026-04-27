@@ -24,7 +24,9 @@ export default function JapanImmigrationQRPage() {
   return (
     <PageShell
       breadcrumbs={[
-        { label: "Blog", href: "/blog" },
+        { label: "Travel", href: "/travel" },
+        { label: "Destinations", href: "/travel/destinations" },
+        { label: "Japan", href: "/travel/destinations/japan" },
         { label: "Japan immigration QR code" },
       ]}
     >
@@ -48,8 +50,8 @@ export default function JapanImmigrationQRPage() {
         <div className="mt-10 flex items-center gap-6 border-b border-[var(--border)] pb-10 text-sm text-[var(--muted)]">
           <span>By Dee</span>
           <span className="h-1 w-1 rounded-full bg-neutral-300" />
-          <span>5 min read</span>
-        </div>
+          <span>April 2026</span>
+        </div> 
  
         <div className="mt-14 space-y-16">
  
@@ -123,12 +125,24 @@ export default function JapanImmigrationQRPage() {
                   warn: false,
                 },
                 {
-                  n: "2",
-                  title: "Complete the tax-free shopping registration",
-                  detail: "After your basic info, the site will ask if you want to register for tax-free shopping. Go through this section — it doesn't take long and is useful when shopping in Japan.",
-                  warn: false,
+                    n: "2",
+                    title: "Complete the tax-free shopping registration",
+                    detailNode: (
+                        <>
+                        After your basic info, the site will ask if you want to register for
+                        tax-free shopping. Go through this section — it doesn't take long and
+                        is useful when shopping in Japan.{" "}
+                        <Link
+                            href="/travel/destinations/japan/tax-free-shopping"
+                            className="font-medium text-teal-700 underline underline-offset-2 hover:text-teal-900"
+                        >
+                            More on this in the tax-free shopping guide →
+                        </Link>
+                        </>
+                    ),
+                    warn: false,
                 },
-                {
+                { 
                   n: "3",
                   title: "⚠️ Explicitly click on the Immigration section — it will not take you there automatically",
                   detail: "This is the part most people miss. After completing the main form, you have to manually click on the Immigration section and fill in the questionnaire there. The site does not redirect you automatically. If you skip this, you will not get the immigration QR code.",
@@ -157,7 +171,9 @@ export default function JapanImmigrationQRPage() {
                     </span>
                     <div>
                       <p className="font-medium text-[var(--text)]">{step.title}</p>
-                      <p className="mt-1 text-base leading-7 text-neutral-600">{step.detail}</p>
+                      <p className="mt-1 text-base leading-7 text-neutral-600">
+                        {step.detailNode ?? step.detail}
+                      </p>
                     </div>
                   </div>
                 </div>

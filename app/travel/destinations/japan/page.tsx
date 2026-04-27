@@ -33,6 +33,13 @@ const JAPAN_PAGES: JapanPage[] = [
     emoji: "✈️",
     tags: ["Visa", "Immigration", "Customs"],
   },
+  {
+    slug: "tax-free-shopping",
+    title: "Tax-Free Shopping in Japan — What Actually Happens Store by Store",
+    description: "How to use the Visit Japan Web QR code, why you must carry your passport, and how Uniqlo, Zara, and department stores each handle it differently.",
+    emoji: "🛍️",
+    tags: ["shopping", "money", "tips"],
+  },
   // ↓ Add new Japan pages here
   // {
   //   slug: "tokyo",
