@@ -2,50 +2,19 @@
 //
 // HOW TO ADD A NEW COUNTRY:
 //   1. Create app/travel/destinations/[country]/page.tsx
-//   2. Add one entry to the COUNTRIES array below - done.
+//   2. Add one entry to COUNTRIES in lib/destinations-data.ts — done.
+//      The nav dropdown and this page both update automatically.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import Link from "next/link";
 import PageShell from "@/components/page-shell";
+import { COUNTRIES, CONTINENT_ORDER } from "@/lib/destinations-data";
 
-type Country = {
-  slug: string;       // folder name, e.g. "japan"
-  name: string;       // display name, e.g. "Japan"
-  emoji: string;      // flag or representative emoji
-  description: string;
-  continent: string;
-  postCount: number;  // update manually as you add pages
-};
-
-// ── ✏️  ADD NEW COUNTRIES HERE (keep alphabetical by name) ───────────────────
-const COUNTRIES: Country[] = [
-  {
-    slug: "japan",
-    name: "Japan",
-    emoji: "🇯🇵",
-    description: "Visa guide, city notes, and trip planning for Japan from the US on an Indian passport.",
-    continent: "Asia",
-    postCount: 1,
-  },
-  {
-    slug: "new-zealand",
-    name: "New Zealand",
-    emoji: "🇳🇿",
-    description: "South + North Island road trip, Milford Sound, and everything in between.",
-    continent: "Oceania",
-    postCount: 1,
-  },
-];
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Group by continent for the index view
-const byContinent = COUNTRIES.reduce<Record<string, Country[]>>((acc, c) => {
+const byContinent = COUNTRIES.reduce<Record<string, typeof COUNTRIES>>((acc, c) => {
   if (!acc[c.continent]) acc[c.continent] = [];
   acc[c.continent].push(c);
   return acc;
 }, {});
-
-const CONTINENT_ORDER = ["Asia", "Europe", "Africa", "North America", "South America", "Oceania", "Antarctica"];
 
 export default function TravelDestinationsPage() {
   const sortedContinents = CONTINENT_ORDER.filter((c) => byContinent[c]);
@@ -69,7 +38,7 @@ export default function TravelDestinationsPage() {
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
             Destination notes, visa guides, itinerary ideas, and city-by-city
-            travel pages - from an Indian passport holder based in the US.
+            travel pages — from an Indian passport holder based in the US.
           </p>
           <div className="mt-6 h-px w-16 bg-[var(--accent)]" />
         </div>

@@ -73,12 +73,12 @@ export default function JapanPage() {
                 Japan
               </h1>
             </div>
-          </div>
+          </div> 
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            一期一会 Ichi-go ichi-e -  "One time, one meeting" 
+            侘寂 Wabi-sabi 
           </p>
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            This moment will never come again.
+            Finding beauty in imperfection and impermanence.
           </p>
           <div className="mt-6 h-px w-16 bg-[var(--accent)]" />
         </div>
