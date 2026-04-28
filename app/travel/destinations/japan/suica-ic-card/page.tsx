@@ -63,8 +63,6 @@ export default function SuicaICCardPage() {
           <span>By Dee</span>
           <span className="h-1 w-1 rounded-full bg-neutral-300" />
           <span>April 2026</span>
-          <span className="h-1 w-1 rounded-full bg-neutral-300" />
-          <span>8 min read</span>
         </div>
 
         <div className="mt-14 space-y-16">

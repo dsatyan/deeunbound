@@ -46,7 +46,14 @@ const JAPAN_PAGES: JapanPage[] = [
   description: "Green vs red Suica explained, how to top up, Shinkansen e-ticket registration, coin lockers, and what happens when you lose one.",
   emoji: "🚆",
   tags: ["transport", "suica", "getting around", "essentials"],
-},
+  },
+  {
+  slug: "narita-arrival-guide",
+  title: "What to Do After Landing in Japan — Airport, Cash, Suica & Transport",
+  description: "We landed at 3pm and were on a train by 4:30pm. Here's exactly what to do in order — immigration, ATM fees, Suica, and the Google Maps trick for choosing your train.",
+  emoji: "✈️",
+  tags: ["arrival", "airport", "transport", "narita", "first time"],
+  },
   // ↓ Add new Japan pages here
   // {
   //   slug: "tokyo",
