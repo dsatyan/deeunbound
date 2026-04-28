@@ -2,6 +2,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageShell from "@/components/page-shell";
+import Image from "next/image";
+import { photoUrl } from "@/lib/photo-url";
+
 
 export const metadata: Metadata = {
   title: "Japan IC Card / Suica Setup Guide for Tourists (2026) | Dee Unbound",
@@ -173,27 +176,49 @@ export default function SuicaICCardPage() {
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
               Green vs red Suica — what the staff was actually explaining
             </h2>
-            <p className="text-lg leading-8 text-neutral-700">
-              When we arrived Narita Airport, the JR staff in front of the counter steered us
-              towards the green card. So we got our Suica card from the
-              green machine. You can select to purchase a new Suica card, and then
-              can select between Blank Suica or Name-Inscribed Suica. Name-Inscribed 
-              Suica can be reissued if lost. We preferred the Name-Inscribed Suica, 
-              a good souvenir to remember our trip.
+            
+            {/* Photo + text float layout */}
+            <div className="overflow-hidden">
+            {/* Photo — floats right on desktop, sits above on mobile */}
+            <div className="mb-4 ml-6 overflow-hidden rounded-xl border border-[var(--border)] shadow-sm float-right w-48 sm:w-56 md:w-64 clear-right">
+                <div className="relative aspect-[3/4] w-full">
+                <Image
+                    src={photoUrl(
+                    "travel/japan/Suica", // ← replace with your Cloudinary public ID
+                    "w_400,h_533,c_fill,q_auto,f_auto"
+                    )}
+                    alt="Dee holding her green Suica card at the hotel in Japan"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
+                />
+                </div>
+                <p className="bg-[var(--surface)] px-3 py-2 text-[10px] italic leading-4 text-[var(--muted)]">
+                Our green Suica — name printed, penguin and all.
+                </p>
+            </div>
 
-              <br />
-              <br />
-              Green and Red Suica are functionally identical. Both cards work on
-              exactly the same trains, subways, buses, stores, and vending
-              machines. The difference is purely about validity period,
-              deposit, and refundability. For a trip under 28 days, either
-              works. For repeat visitors to Japan or longer stays, the regular
-              green Suica is the better long-term choice.
-              <br />
-              <br />
-              Here's the real difference — and why Green
-              was good advice for us.
+            {/* Text wraps around the photo */}
+            <p className="text-lg leading-8 text-neutral-700">
+                When we arrived Narita Airport, the JR staff in front of the counter steered us
+                towards the green card. So we got our Suica card from the
+                green machine. You can select to purchase a new Suica card, and then
+                can select between Blank Suica or Name-Inscribed Suica. Name-Inscribed
+                Suica can be reissued if lost. We preferred the Name-Inscribed Suica,
+                a good souvenir to remember our trip.
             </p>
+            <p className="mt-4 text-lg leading-8 text-neutral-700">
+                Green and Red Suica are functionally identical. Both cards work on
+                exactly the same trains, subways, buses, stores, and vending
+                machines. The difference is purely about validity period,
+                deposit, and refundability. For a trip under 28 days, either
+                works. For repeat visitors to Japan or longer stays, the regular
+                green Suica is the better long-term choice.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-neutral-700">
+                Here's the real difference — and why green was good advice for us.
+            </p>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
               {[
