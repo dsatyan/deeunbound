@@ -174,8 +174,24 @@ export default function SuicaICCardPage() {
               Green vs red Suica — what the staff was actually explaining
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
-              When we arrived, the JR staff in front of the counter steered us
-              towards the green card. Here's the real difference — and why that
+              When we arrived Narita Airport, the JR staff in front of the counter steered us
+              towards the green card. So we got our Suica card from the
+              green machine. You can select to purchase a new Suica card, and then
+              can select between Blank Suica or Name-Inscribed Suica. Name-Inscribed 
+              Suica can be reissued if lost. We preferred the Name-Inscribed Suica, 
+              a good souvenir to remember our trip.
+
+              <br />
+              <br />
+              Green and Red Suica are functionally identical. Both cards work on
+              exactly the same trains, subways, buses, stores, and vending
+              machines. The difference is purely about validity period,
+              deposit, and refundability. For a trip under 28 days, either
+              works. For repeat visitors to Japan or longer stays, the regular
+              green Suica is the better long-term choice.
+              <br />
+              <br />
+              Here's the real difference — and why Green
               was good advice for us.
             </p>
 
@@ -232,15 +248,6 @@ export default function SuicaICCardPage() {
                 </div>
               ))}
             </div>
-
-            <NoteBox>
-              <strong>Functionally identical.</strong> Both cards work on
-              exactly the same trains, subways, buses, stores, and vending
-              machines. The difference is purely about validity period,
-              deposit, and refundability. For a trip under 28 days, either
-              works. For repeat visitors to Japan or longer stays, the regular
-              green Suica is the better long-term choice.
-            </NoteBox>
           </section>
 
           {/* ── iPhone option ── */}
@@ -253,7 +260,9 @@ export default function SuicaICCardPage() {
               genuinely the best option if you have an iPhone or Apple Watch.
               You set it up before you leave home, top up via Apple Pay, and
               tap your phone at every gate. No queuing at the airport, no
-              physical card to lose.
+              physical card to lose. Go to your Wallet app, tap on '+' icon on the 
+              top right corner, select Transit Card, select Suica and follow the instructions to pay, and
+              you're good to go.
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
               {[
@@ -272,7 +281,7 @@ export default function SuicaICCardPage() {
             </div>
             <div className="rounded-2xl border border-teal-300 bg-[#dce7e6] px-5 py-4">
               <p className="font-medium text-teal-900 text-sm mb-1">Welcome Suica Mobile — official JR East page</p>
-              <a href="https://www.jreast.co.jp/e/welcomesuica/welcomesuica.html" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.jreast.co.jp/en/multi/wsmlp/" target="_blank" rel="noopener noreferrer"
                 className="text-sm text-teal-700 underline underline-offset-2 hover:text-teal-900">
                 jreast.co.jp/e/welcomesuica ↗
               </a>
@@ -288,7 +297,7 @@ export default function SuicaICCardPage() {
               {[
                 {
                   method: "Ticket vending machines at any station",
-                  detail: "The most common method. Look for machines with the IC card symbol. Insert your card, select 'Charge', choose an amount (¥1,000 / ¥2,000 / ¥3,000 / ¥5,000 / ¥10,000), and insert cash. Most machines accept bills only, not coins.",
+                  detail: "The most common method. Look for machines with the IC card symbol. Insert your card, select 'Charge', choose an amount (¥1,000 / ¥2,000 / ¥3,000 / ¥5,000 / ¥10,000), and insert cash.",
                   tag: "Most common",
                   tagColor: "bg-teal-100 text-teal-800",
                 },
@@ -304,6 +313,12 @@ export default function SuicaICCardPage() {
                   tag: "iPhone only",
                   tagColor: "bg-purple-100 text-purple-800",
                 },
+                {
+                  method: "Buses",
+                  detail: "Tell the driver you want to charge your Suica, place the card on the reader and insert money.",
+                  tag: "",
+                  tagColor: "bg-purple-100 text-purple-800",
+                },
               ].map(item => (
                 <div key={item.method} className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-4">
                   <div className="flex items-center gap-3 mb-2">
@@ -315,7 +330,7 @@ export default function SuicaICCardPage() {
               ))}
             </div>
             <NoteBox>
-              <strong>Maximum balance is ¥20,000.</strong> Keep at least
+              Keep at least
               ¥2,000–¥3,000 on the card at all times. Some rural stations don't
               have top-up machines, so running low between towns can be
               stressful. If you run out mid-journey, look for a fare adjustment
@@ -329,8 +344,7 @@ export default function SuicaICCardPage() {
               Linking your Suica to a Shinkansen e-ticket — tap and go
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
-              This is one of the most useful things about having a registered
-              Suica — you can associate your card with a Shinkansen e-ticket
+              You can associate your card with a Shinkansen e-ticket
               booked on the Eki-Net system, then just tap your card at the
               Shinkansen gate. No paper ticket, no stopping at a counter.
             </p>
@@ -360,35 +374,14 @@ export default function SuicaICCardPage() {
               </div>
             </div>
 
-            <div className="space-y-3">
-              {[
-                { n:"1", text: "Create an Eki-Net account at eki-net.com" },
-                { n:"2", text: "Book your Shinkansen e-ticket" },
-                { n:"3", text: "Add your Suica card number to your Eki-Net membership profile" },
-                { n:"4", text: "On the booking confirmation, select 'Specify IC card'" },
-                { n:"5", text: "At the station, tap your Suica at the Shinkansen gate — done" },
-              ].map(step => (
-                <div key={step.n} className="flex items-center gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-3">
-                  <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#dce7e6] text-sm font-medium text-teal-700">{step.n}</span>
-                  <p className="text-sm text-neutral-700">{step.text}</p>
-                </div>
-              ))}
-            </div>
-
             <div className="rounded-2xl border border-teal-300 bg-[#dce7e6] px-5 py-4">
-              <p className="font-medium text-teal-900 text-sm mb-1">Eki-Net — JR East online ticket booking</p>
-              <a href="https://www.eki-net.com/en/jreast-train-reservation/Top/Index" target="_blank" rel="noopener noreferrer"
+              <p className="font-medium text-teal-900 text-sm mb-1">Eki-Net — JR East online ticket booking- IC registration guide</p>
+              <a href="https://www.eki-net.com/top/tr/guide/registration/" target="_blank" rel="noopener noreferrer"
                 className="text-sm text-teal-700 underline underline-offset-2 hover:text-teal-900">
                 eki-net.com (English) ↗
               </a>
             </div>
 
-            <NoteBox>
-              <strong>Keep your Suica and JR Pass in separate pockets.</strong>{" "}
-              If both are near the gate reader at the same time, the reader
-              picks up two cards and errors out. Keep them in different pockets
-              — this catches a lot of people off guard.
-            </NoteBox>
           </section>
 
           {/* ── Coin lockers ── */}
@@ -441,10 +434,10 @@ export default function SuicaICCardPage() {
                   bg: "bg-teal-50",
                   border: "border-teal-200",
                   steps: [
-                    "Report to any JR East station immediately",
+                    "Report to any JR East station immediately, carry your passport",
                     "Card is suspended — no one else can use your balance",
-                    "Balance transferred to a new card (minus small fee)",
-                    "Takes a few days — you'll need your reference paper",
+                    "Balance transferred to a new card (minus processing fee of approximately 1000 JPY)",
+                    "You will only be able to receive your new card from the next day."
                   ],
                 },
               ].map(card => (
@@ -463,6 +456,12 @@ export default function SuicaICCardPage() {
                 </div>
               ))}
             </div>
+
+            <p>
+              We did not have time to find the nearest JR East station to report our 
+              lost card, also we never overloaded the card with too much money, 
+              so we just bought a new one.
+            </p>
 
             <NoteBox>
               <strong>Screenshot your card number when you first get it.</strong>{" "}
@@ -499,83 +498,6 @@ export default function SuicaICCardPage() {
             </div>
           </section>
 
-          {/* ── Practical tips ── */}
-          <section className="space-y-5">
-            <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Practical tips from the trip
-            </h2>
-            <div className="space-y-3">
-              {[
-                {
-                  tip: "Get it before you leave the airport",
-                  detail: "Don't wait until you reach your hotel or a city station. The airport machines are in English, well-signposted, and you'll need your card the moment you board the train into Tokyo.",
-                  icon: "✈️",
-                },
-                {
-                  tip: "Keep ¥2,000–¥3,000 balance at all times",
-                  detail: "Rural stations sometimes don't have top-up machines. If you're heading somewhere outside the city, top up beforehand. Running low between towns is unnecessarily stressful.",
-                  icon: "💴",
-                },
-                {
-                  tip: "Use it for coin lockers — much easier than coins",
-                  detail: "Just tap to lock, tap to open. Fee deducted automatically. Works at major stations across Japan.",
-                  icon: "🧳",
-                },
-                {
-                  tip: "Use leftover balance at vending machines and konbini before leaving",
-                  detail: "If you have balance remaining at the end of the trip, spend it at a vending machine, 7-Eleven, or airport shop before you leave. Refund process requires going to a JR East office.",
-                  icon: "🛒",
-                },
-                {
-                  tip: "Don't put Suica and JR Pass in the same pocket",
-                  detail: "The gate reader picks up both and errors out. Keep them in separate pockets, always.",
-                  icon: "⚠️",
-                },
-                {
-                  tip: "If you visit Japan again — keep the green card",
-                  detail: "Regular Suica is valid for 10 years from last use. If you have any remaining balance, just keep the card. Next time you visit Japan, it'll still work — same balance and everything.",
-                  icon: "🔄",
-                },
-              ].map(item => (
-                <div key={item.tip} className="flex items-start gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-4">
-                  <span className="text-xl flex-shrink-0 mt-0.5">{item.icon}</span>
-                  <div>
-                    <p className="font-medium text-[var(--text)] text-sm">{item.tip}</p>
-                    <p className="mt-1 text-sm leading-7 text-neutral-600">{item.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* ── Quick reference ── */}
-          <section className="rounded-2xl border border-[var(--border)] bg-[var(--card)] px-8 py-8">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--accent)] mb-5">
-              Quick reference
-            </p>
-            <div className="grid gap-2 sm:grid-cols-2">
-              {[
-                "Get Suica at the airport as soon as you land",
-                "iPhone? Use Welcome Suica Mobile app instead",
-                "Green card = 10 years, refundable deposit",
-                "Red (Welcome) = 28 days, no deposit, no refund",
-                "Top up with cash at any station or konbini",
-                "Max balance: ¥20,000",
-                "Works on all trains, subways, buses, konbini, lockers",
-                "Does NOT cover Shinkansen or long-distance fares",
-                "Link to Eki-Net Shinkansen e-ticket for tap-and-go",
-                "Keep Suica and JR Pass in separate pockets",
-                "If lost unregistered: balance gone, buy a new card",
-                "Keep card on return — valid 10 years for next trip",
-              ].map(item => (
-                <div key={item} className="flex items-center gap-3 text-sm text-neutral-700">
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-teal-600" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </section>
-
           {/* ── Official resources ── */}
           <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-8 py-8">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--muted)] mb-4">
@@ -586,7 +508,6 @@ export default function SuicaICCardPage() {
                 { label: "JR East — Suica official page", href: "https://www.jreast.co.jp/e/pass/suica.html" },
                 { label: "JR East — Welcome Suica Mobile app", href: "https://www.jreast.co.jp/e/welcomesuica/welcomesuica.html" },
                 { label: "Eki-Net — JR East online Shinkansen booking (English)", href: "https://www.eki-net.com/en/jreast-train-reservation/Top/Index" },
-                { label: "JR East — Suica recharge locations", href: "https://www.jreast.co.jp/e/charge/" },
               ].map(link => (
                 <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-between rounded-lg border border-[var(--border)] bg-white px-4 py-3 text-sm font-medium text-teal-700 hover:border-teal-400 transition-colors">
