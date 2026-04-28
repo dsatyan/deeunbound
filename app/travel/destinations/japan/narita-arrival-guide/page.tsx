@@ -113,16 +113,44 @@ export default function NaritaArrivalGuidePage() {
             </NoteBox>
           </section>
 
+          {/* ── eSIM ── */}
+          <section className="space-y-5 text-lg leading-8 text-neutral-700">
+            <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
+              Step 2 - get your eSIM
+            </h2>
+            <p>
+              While waiting in the immigration line, you can register for an eSIM. I used airalo and it was super easy - 
+              connect to airport wifi first and then just download their app, choose a plan, and activate it right from your phone. 
+              You can do this even before you land if you want. I chose the unlimited 15-day plan for $45. 
+            </p>
+            <p>
+              If you plan to buy a physical SIM card, you can explore them at the airport. Whether it is eSIM or physical SIM, 
+              it's better to have it ready before you leave the airport.
+            </p>
+
+            <div className="rounded-2xl border border-teal-300 bg-[#dce7e6] px-5 py-5">
+              <p className="font-medium text-teal-900 mb-2">
+                Full eSIM guide - how to install and activate it
+              </p>
+              <Link
+                href="/travel/essentials/esim"
+                className="inline-flex items-center gap-2 rounded-lg bg-teal-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-teal-800 transition-colors"
+              >
+                Read the eSIM installation guide →
+              </Link>
+            </div>
+          </section>
+
           {/* ── Visitors Center + ATM ── */}
           <section className="space-y-5">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Step 2 - Visitors Centre and the 7-Eleven ATM
+              Step 3 - Visitors Centre and the 7-Eleven ATM
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
               After collecting your bags, head to the Visitors Centre on the
               arrival floor before going down to the train station. It's a
               useful stop for a few reasons: there's a cluster of ATMs right
-              behind it, free WiFi, eSIM counters, and information desks if
+              behind it, SIM counters, bathrooms, resting area and information desks if
               you have any questions.
             </p>
 
@@ -171,7 +199,7 @@ export default function NaritaArrivalGuidePage() {
           {/* ── Suica ── */}
           <section className="space-y-5 text-lg leading-8 text-neutral-700">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Step 3 - get your Suica IC card
+              Step 4 - get your Suica IC card
             </h2>
             <p>
               After the ATM, head down to the train station area (basement
@@ -201,7 +229,7 @@ export default function NaritaArrivalGuidePage() {
           {/* ── JR Pass note ── */}
           <section className="space-y-5 text-lg leading-8 text-neutral-700">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Step 4 - JR Pass collection (read this before you assume you can collect anywhere)
+              Step 5 - JR Pass collection (read this before you assume you can collect anywhere)
             </h2>
             <p>
               If you've pre-purchased a JR East Pass or JR Pass, there's a JR
@@ -236,7 +264,7 @@ export default function NaritaArrivalGuidePage() {
           {/* ── Transport to Tokyo ── */}
           <section className="space-y-5">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Step 5 - getting to Tokyo from Narita
+              Step 6 - getting to Tokyo from Narita
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
               Narita is about 60km from central Tokyo. You have four realistic

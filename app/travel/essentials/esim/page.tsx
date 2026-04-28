@@ -275,10 +275,6 @@ export default function EsimPage() {
                     fix: 'Go to Settings → Cellular → your eSIM line → turn on "Data Roaming". This is off by default on most phones and is the #1 missed step.',
                   },
                   {
-                    problem: "Airplane mode toggle not helping",
-                    fix: "Remove the eSIM and re-add it. In Airalo, your QR code is still there - just scan it again. Your data balance is saved on the carrier side, not the QR code.",
-                  },
-                  {
                     problem: "eSIM plan shows in settings but won't connect",
                     fix: 'Check that you set the eSIM as your default data line. iPhone: Settings → Cellular → Cellular Data → select your eSIM. Android: Settings → Connections → SIM Manager → Mobile Data.',
                   },
@@ -288,7 +284,11 @@ export default function EsimPage() {
                   },
                   {
                     problem: "Ran out of data mid-trip",
-                    fix: "Airalo lets you top up without buying a new plan. In the app, find your active eSIM and tap 'Top Up'. The new data is added instantly.",
+                    fix: "Airalo lets you top up without buying a new plan. In the app, find your active eSIM and tap 'Top Up'. The new data is added instantly. Again, you need a stable Wi-Fi connection to do this.",
+                  },
+                  {
+                    problem: "Internet not working mid-trip",
+                    fix: "Airalo lets you choose the local network to use. iPhone: Settings → Cellular → select your eSIM. There you see a list of available networks - pick the one with the best coverage for your location. By default it's set to Auto select and it works fine most of the time. But sometimes when it doesn't work, I switch to a different network and it starts working.",
                   },
                 ].map((item) => (
                   <div
@@ -322,24 +322,14 @@ export default function EsimPage() {
                       'Rename them in Settings so you know which is which - "Home" and "Turkey 2025" is much easier to manage than "Primary" and "Unknown Carrier".',
                   },
                   {
-                    tip: "Keep Wi-Fi Calling on your home line",
-                    detail:
-                      "You can still receive calls and texts on your regular number over Wi-Fi even while using the eSIM for data. Useful for 2FA codes or calls from home.",
-                  },
-                  {
-                    tip: "Don't delete the eSIM after your trip",
-                    detail:
-                      "If you return to the same country, the old eSIM profile may still have data or let you top up cheaply. Delete only when you're sure you won't be back.",
-                  },
-                  {
-                    tip: "Check the APN settings if data won't connect",
-                    detail:
-                      "Airalo's app shows the correct APN settings for each carrier. Copy them into Settings → Cellular → Cellular Data Network if the auto-configuration didn't work.",
-                  },
-                  {
                     tip: "Buy slightly more data than you think you need",
                     detail:
                       "Going from 1 GB to 3 GB usually costs only $2–3 more on Airalo. The stress of watching your data tick down isn't worth the saving.",
+                  },
+                  {
+                    tip: "The signal bars you see aren't always accurate, always test it",
+                    detail:
+                      "Once you are connected, remove wifi and test your connection to make sure it's working well. So many times it has happened that I assumed my eSIM was working but once I stepped outside the building, I realized it wasn't.",
                   },
                 ].map((item) => (
                   <li key={item.tip} className="flex items-start gap-3">
