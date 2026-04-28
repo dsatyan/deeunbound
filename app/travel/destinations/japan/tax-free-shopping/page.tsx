@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageShell from "@/components/page-shell";
+import Image from "next/image";
+import { photoUrl } from "@/lib/photo-url";
 
 export const metadata: Metadata = {
   title: "Tax-Free Shopping in Japan — What Actually Happens Store by Store | Dee Unbound",
@@ -107,43 +109,58 @@ export default function JapanTaxFreeShoppingPage() {
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
               Step 2 — generate your tax-free QR code on Visit Japan Web
             </h2>
-            <p>
-              Once you have your passport stamp and sticker, open Visit Japan
-              Web on your phone, go to the tax-free shopping section, and take
-              a photo of the QR sticker in your passport when prompted. The
-              site then generates your personal tax-free shopping QR code.
-            </p>
-            <p>
-              Keep a tab open in your browser for the Visit Japan Web site
-              throughout your trip — you'll be logging in frequently. The
-              tax-free QR code is dynamic, like an Amazon Prime in-store code.
-              It changes and is timed, so you can't download it once and use
-              it forever. Every time you shop, you log in and pull up a fresh
-              code.
-            </p>
-
-            <div className="rounded-2xl border border-teal-300 bg-[#dce7e6] px-6 py-5">
-              <p className="font-medium text-teal-900 mb-3">Official Visit Japan Web</p>
-              <a
-                href="https://services.digital.go.jp/en/visit-japan-web/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-teal-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-teal-800 transition-colors"
-              >
-                Visit Japan Web — Open here ↗
-              </a>
-              <p className="mt-3 text-sm text-teal-800">
-                WiFi is required to load the QR code at stores. Most large
-                stores and shopping centres have free WiFi available.
-              </p>
+            {/* Float layout — photo right, text wraps around */}
+            <div className="overflow-hidden">
+                <div className="mb-4 ml-6 float-right clear-right w-44 overflow-hidden rounded-xl border border-[var(--border)] shadow-sm sm:w-52 md:w-60">
+                <div className="relative aspect-[9/16] w-full">
+                    <Image
+                    src={photoUrl(
+                        "travel/japan/taxFreeQRCode", // ← replace with your Cloudinary public ID
+                        "w_400,h_711,c_fill,q_auto,f_auto"
+                    )}
+                    alt="Tax-free QR code screen on Visit Japan Web — showing live QR code with timestamp"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, 240px"
+                    />
+                </div>
+                <p className="bg-[var(--surface)] px-3 py-2 text-[10px] italic leading-4 text-[var(--muted)]">
+                    The tax-free QR code on Visit Japan Web — live, timed, refreshes each session.
+                </p>
+                </div>
+                <p className="text-lg leading-8 text-neutral-700">
+                Once you have your passport stamp and sticker, open Visit Japan
+                Web on your phone, go to the tax-free shopping section, and take
+                a photo of the QR sticker in your passport when prompted. The
+                site then generates your personal tax-free shopping QR code.
+                </p>
+                <p>
+                    <br></br>
+                </p>
+                <p className="text-lg leading-8 text-neutral-700">
+                Keep a tab open in your browser for the "Visit Japan Web site"
+                throughout your trip — you'll be logging in frequently. 
+                Screenshots are not accepted. Stores scan the
+                live QR code directly from the Web site on your
+                phone. 
+                </p>
+                <p>
+                    <br></br>
+                </p>
+                <p className="font-medium text-teal-900 mb-3">Official Visit Japan Web</p>
+                <a
+                    href="https://services.digital.go.jp/en/visit-japan-web/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-teal-700 px-4 py-2.5 text-sm font-medium text-white hover:bg-teal-800 transition-colors"
+                >
+                    Visit Japan Web — Open here ↗
+                </a>
+                <p className="mt-3 text-sm text-teal-800">
+                    WiFi is required to load the QR code at stores. Most large
+                    stores and shopping centres have free WiFi available.
+                </p>
             </div>
-
-            <NoteBox>
-              <strong>Screenshots are not accepted.</strong> Stores scan the
-              live QR code directly from the Visit Japan Web site on your
-              phone. A screenshot will not work. You need an active internet
-              connection to display it.
-            </NoteBox>
           </section>
 
           {/* ── Step 3: At the store ── */}
