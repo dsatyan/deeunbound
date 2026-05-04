@@ -56,17 +56,24 @@ const JAPAN_PAGES: JapanPage[] = [
   },
   {
   slug: "train-tickets-explained",
-  title: "Japan Train Tickets Explained — Why You Get Multiple & How to Use Them",
+  title: "Japan Train Tickets Explained - Why You Get Multiple & How to Use Them",
   description: "The gate blocked us at Nagoya with 12 minutes to spare. Here's exactly why Japan gives you multiple tickets and what to do with them.",
   emoji: "🎫",
   tags: ["transport", "trains", "tips", "tickets"],
   },
   {
   slug: "jr-pass-mistakes",
-  title: "JR Pass Mistakes We Made — And What You Should Do Instead",
+  title: "JR Pass Mistakes We Made - And What You Should Do Instead",
   description: "We tried to collect our JR East Pass at Otsuki. It wasn't possible. Here's what went wrong and the right way to collect and activate your pass.",
   emoji: "🚫",
   tags: ["trains", "JR pass", "mistakes", "rail pass"],
+ },
+ {
+  slug: "train-travel-tips",
+  title: "Japan Train Travel Tips: How Trains Work for First-Time Travelers",
+  description: "Five types of trains, food etiquette, 30-minute connection rule, navigating huge stations, WiFi, luggage rules - everything we learned on our trip.",
+  emoji: "🚆",
+  tags: ["trains", "transport", "tips", "first time", "etiquette"],
  },
   // ↓ Add new Japan pages here
   // {
@@ -103,10 +110,7 @@ export default function JapanPage() {
             </div>
           </div> 
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            侘寂 Wabi-sabi 
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            Finding beauty in imperfection and impermanence.
+            侘寂 Wabi-sabi - Finding beauty in imperfection and impermanence.
           </p>
           <div className="mt-6 h-px w-16 bg-[var(--accent)]" />
         </div>
