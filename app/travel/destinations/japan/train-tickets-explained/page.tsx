@@ -46,7 +46,7 @@ export default function TrainTicketsExplainedPage() {
         </span>
 
         <h1 className="max-w-5xl font-serif text-5xl font-semibold leading-[1.08] tracking-tight text-[var(--text)] md:text-6xl">
-          Japan train tickets explained - why you get multiple tickets and how to use them
+          Japan Train Tickets Explained: Why You Get Multiple Tickets (And How to Use Them)
         </h1>
 
         <div className="mt-10 flex items-center gap-6 border-b border-[var(--border)] pb-10 text-sm text-[var(--muted)]">
@@ -60,7 +60,7 @@ export default function TrainTicketsExplainedPage() {
           {/* ── Why multiple tickets ── */}
           <section className="space-y-5">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Why Japan gives you multiple tickets
+              Why You Get Multiple Train Tickets in Japan
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
               Japan's train system separates the cost of travel into two
@@ -134,7 +134,7 @@ export default function TrainTicketsExplainedPage() {
           {/* ── The Nagoya mistake ── */}
           <section className="space-y-5">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              The mistake we made at Nagoya Station
+              What happens if you insert only one ticket? 
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
               Our route was Takayama → Nagoya → Kyoto. For the first leg
@@ -188,7 +188,7 @@ export default function TrainTicketsExplainedPage() {
           {/* ── How to use multiple tickets at the gate ── */}
           <section className="space-y-5">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              How to actually use multiple tickets at the gate
+              How to use multiple tickets at the gate
             </h2>
             <p className="text-lg leading-8 text-neutral-700">
               This is the part nobody explains clearly. When you have two or
@@ -240,7 +240,7 @@ export default function TrainTicketsExplainedPage() {
           {/* ── Buy transfer tickets in advance ── */}
           <section className="space-y-5 text-lg leading-8 text-neutral-700">
             <h2 className="font-serif text-3xl font-semibold text-[var(--text)]">
-              Buy your connecting tickets before you reach the transfer station
+              Why You Should Buy Transfer Tickets Early
             </h2>
             <p>
               This is the most important practical lesson from our Nagoya
@@ -282,15 +282,26 @@ export default function TrainTicketsExplainedPage() {
               Tokaido Shinkansen, Takayama line) and some other regional
               operators. When you book online, the ticket is tied to the credit
               card you paid with. To collect the physical ticket at the station
-              machine or counter, you insert that same card - it identifies
+              machine, you insert that same card - it identifies
               your reservation.
+              If you don't have it, go to the staffed JR Ticket Office (Midori-no-madoguchi) and explain the situation. They may be able to help with ID verification.
             </p>
             <p>
-              If you booked on one card and left it at home, you cannot collect
-              the ticket. This is different from JR East, where you can often
-              link a Suica and just tap through. Different regions, different
-              systems.
+            If you chose "pay at station": you collect using your QR code or reservation number + the 4-digit ID you set when booking. No credit card needed.
+Either way - carry your booking confirmation email and know your reservation number. That's your safety net.
             </p>
+
+            <div className="rounded-2xl border border-teal-300 bg-[#dce7e6] px-5 py-4">
+              <p className="font-medium text-teal-900 text-sm mb-2">Official JR Pass Site - How to Receive Your Ticket</p>
+              <a
+                href="https://www.westjr.co.jp/global/en/howto/train-reservation/receive/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-teal-700 underline underline-offset-2 hover:text-teal-900"
+              >
+                www.westjr.co.jp/global/en/howto/train-reservation/receive/ ↗
+              </a>
+            </div>
           </section>
 
           {/* ── Related guides ── */}

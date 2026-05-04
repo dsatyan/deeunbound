@@ -61,6 +61,13 @@ const JAPAN_PAGES: JapanPage[] = [
   emoji: "🎫",
   tags: ["transport", "trains", "tips", "tickets"],
   },
+  {
+  slug: "jr-pass-mistakes",
+  title: "JR Pass Mistakes We Made — And What You Should Do Instead",
+  description: "We tried to collect our JR East Pass at Otsuki. It wasn't possible. Here's what went wrong and the right way to collect and activate your pass.",
+  emoji: "🚫",
+  tags: ["trains", "JR pass", "mistakes", "rail pass"],
+ },
   // ↓ Add new Japan pages here
   // {
   //   slug: "tokyo",
