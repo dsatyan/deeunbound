@@ -28,14 +28,14 @@ const JAPAN_PAGES: JapanPage[] = [
   },
   {
     slug: "japan-immigration-qr-code",
-    title: "Japan immigration QR code is a must — register before you fly",
+    title: "Japan immigration QR code is a must - register before you fly",
     description: "Do this at the gate. How to register on Visit Japan Web and get your QR code.",
     emoji: "✈️",
     tags: ["Visa", "Immigration", "Customs"],
   },
   {
     slug: "tax-free-shopping",
-    title: "Tax-Free Shopping in Japan — What Actually Happens Store by Store",
+    title: "Tax-Free Shopping in Japan - What Actually Happens Store by Store",
     description: "How to use the Visit Japan Web QR code, why you must carry your passport, and how Uniqlo, Zara, and department stores each handle it differently.",
     emoji: "🛍️",
     tags: ["shopping", "money", "tips"],
@@ -49,10 +49,17 @@ const JAPAN_PAGES: JapanPage[] = [
   },
   {
   slug: "narita-arrival-guide",
-  title: "What to Do After Landing in Japan — Airport, Cash, Suica & Transport",
-  description: "We landed at 3pm and were on a train by 4:30pm. Here's exactly what to do in order — immigration, ATM fees, Suica, and the Google Maps trick for choosing your train.",
+  title: "What to Do After Landing in Japan - Airport, Cash, Suica & Transport",
+  description: "We landed at 3pm and were on a train by 4:30pm. Here's exactly what to do in order - immigration, ATM fees, Suica, and the Google Maps trick for choosing your train.",
   emoji: "✈️",
   tags: ["arrival", "airport", "transport", "narita", "first time"],
+  },
+  {
+  slug: "train-tickets-explained",
+  title: "Japan Train Tickets Explained — Why You Get Multiple & How to Use Them",
+  description: "The gate blocked us at Nagoya with 12 minutes to spare. Here's exactly why Japan gives you multiple tickets and what to do with them.",
+  emoji: "🎫",
+  tags: ["transport", "trains", "tips", "tickets"],
   },
   // ↓ Add new Japan pages here
   // {
