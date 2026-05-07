@@ -75,6 +75,14 @@ const JAPAN_PAGES: JapanPage[] = [
   emoji: "🚆",
   tags: ["trains", "transport", "tips", "first time", "etiquette"],
  },
+ {
+  slug: "jr-pass-worth-it",
+  title: "Is the JR Pass Worth It in 2026? Real Cost Breakdown",
+  description: "We ran the actual numbers from our April 2026 trip. Every ticket, every yen, and why we skipped the nationwide JR Pass.",
+  emoji: "💴",
+  tags: ["JR pass", "trains", "budget", "rail pass", "planning"],
+ },
+
   // ↓ Add new Japan pages here
   // {
   //   slug: "tokyo",
