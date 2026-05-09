@@ -82,6 +82,13 @@ const JAPAN_PAGES: JapanPage[] = [
   emoji: "💴",
   tags: ["JR pass", "trains", "budget", "rail pass", "planning"],
  },
+ {
+  slug: "japan-travel-mistakes",
+  title: "Things We Got Wrong in Japan (So You Don't Have To)",
+  description: "Real Japan travel mistakes we learned the hard way. From trains and luggage to cash, taxis, and etiquette, here’s what to avoid on your first trip.",
+  emoji: "🚫",
+  tags: ["japan tips", "travel mistakes", "etiquette", "first time japan", "travel guide"],
+ },
 
   // ↓ Add new Japan pages here
   // {
